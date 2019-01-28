@@ -5,9 +5,6 @@ class AnswersController < ApplicationController
   def new
   end
 
-  def show
-  end
-
   def edit
   end
 
@@ -24,7 +21,8 @@ class AnswersController < ApplicationController
   end
 
   def destroy
-
+    answer.destroy
+    redirect_to questions_path
   end
 
   private
