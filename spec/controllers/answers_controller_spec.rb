@@ -98,7 +98,7 @@ RSpec.describe AnswersController, type: :controller do
     context 'user is not an author of the answer' do
       let!(:new_user) { create(:user) }
       before { log_in(new_user) } 
-      
+
       it 'does not change answers attributes' do
         patch :update, params: { id: answer, answer: { body: "New Body" }}
         answer.reload
@@ -111,15 +111,28 @@ RSpec.describe AnswersController, type: :controller do
   describe 'DELETE #destroy' do
     let!(:question) { create(:question) }
     let!(:answer) { create :answer, question: question, user: user }
-    before { log_in(answer.user) }    
 
-    it 'deletes the answer' do
-      expect { delete :destroy, params: { id: answer } }.to change(Answer, :count).by(-1) 
+    context 'user is the author of answer' do
+      before { log_in(answer.user) }    
+
+      it 'deletes the answer' do
+        expect { delete :destroy, params: { id: answer } }.to change(Answer, :count).by(-1) 
+      end
+
+      it 'redirects to questions index' do
+        delete :destroy, params: { id: answer }
+        expect(response).to redirect_to questions_path
+      end
     end
 
-    it 'redirects to questions index' do
-      delete :destroy, params: { id: answer }
-      expect(response).to redirect_to questions_path
+    context 'user is not the author of answer' do
+      let!(:new_user) { create(:user) }
+      before { log_in(new_user) } 
+
+      it 'does not delete the answer' do
+        delete :destroy, params: { id: answer }
+        expect(response).to redirect_to question
+      end
     end
   end
 end
