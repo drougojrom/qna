@@ -130,7 +130,7 @@ RSpec.describe AnswersController, type: :controller do
       before { log_in(new_user) } 
 
       it 'does not delete the answer' do
-        delete :destroy, params: { id: answer }
+        expect { delete :destroy, params: { id: answer } }.to change(Answer, :count).by(0)         
         expect(response).to redirect_to question
       end
     end
