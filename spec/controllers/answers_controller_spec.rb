@@ -60,36 +60,50 @@ RSpec.describe AnswersController, type: :controller do
   end
 
   describe 'PATCH #update' do
-    before { log_in(answer.user) }
-    
-    context 'with valid attributes' do
-      it 'assigns requested answer to @answer' do
-        patch :update, params: { id: answer, answer: attributes_for(:answer) }
-        expect(assigns(:answer)).to eq answer
-      end
-      it 'changes answers attributes' do
-        patch :update, params: { id: answer, answer: { body: "New Body" }}
-        answer.reload
+    context 'user is the author of answer' do
+      before { log_in(answer.user) }
 
-        expect(answer.body).to eq "New Body"
+      context 'with valid attributes' do
+        it 'assigns requested answer to @answer' do
+          patch :update, params: { id: answer, answer: attributes_for(:answer) }
+          expect(assigns(:answer)).to eq answer
+        end
+        it 'changes answers attributes' do
+          patch :update, params: { id: answer, answer: { body: "New Body" }}
+          answer.reload
+
+          expect(answer.body).to eq "New Body"
+        end
+        it 'redirects to updated answer' do
+          patch :update, params: { id: answer, answer: { body: "New Body" }}
+          expect(response).to redirect_to answer
+        end
       end
-      it 'redirects to updated answer' do
-        patch :update, params: { id: answer, answer: { body: "New Body" }}
-        expect(response).to redirect_to answer
+
+      context 'with invalid attributes' do
+        before { patch :update, params: { id: answer, answer: attributes_for(:answer, :invalid) } }
+
+        it 'does not change the question' do
+          answer.reload
+
+          expect(answer.body).to eq "MyText"
+        end
+
+        it 'renders edit' do
+          expect(response).to render_template :edit
+        end
       end
     end
 
-    context 'with invalid attributes' do
-      before { patch :update, params: { id: answer, answer: attributes_for(:answer, :invalid) } }
-
-      it 'does not change the question' do
+    context 'user is not an author of the answer' do
+      let!(:new_user) { create(:user) }
+      before { log_in(new_user) } 
+      
+      it 'does not change answers attributes' do
+        patch :update, params: { id: answer, answer: { body: "New Body" }}
         answer.reload
 
-        expect(answer.body).to eq "MyText"
-      end
-
-      it 'renders edit' do
-        expect(response).to render_template :edit
+        expect(answer.body).not_to eq "New Body"
       end
     end
   end
