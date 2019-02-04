@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe QuestionsController, type: :controller do
   let(:question) { create(:question) }
   let(:user) { create(:user) }
+  before { log_in(user) }
   
   describe 'GET #index' do
     let!(:questions) { create_list(:question, 3) }
@@ -69,7 +70,7 @@ RSpec.describe QuestionsController, type: :controller do
   end
 
   describe 'PATCH #update' do
-    before { log_in(user) }
+    before { log_in(question.user) }
     
     context 'with valid attributes' do
       it 'assigns requested question to @question' do
@@ -107,8 +108,8 @@ RSpec.describe QuestionsController, type: :controller do
   end
 
   describe 'DELETE #destroy' do
-    before { log_in(user) }
     let!(:question) { create(:question) }
+    before { log_in(question.user) }    
 
     it 'deletes the question' do
       expect { delete :destroy, params: { id: question } }.to change(Question, :count).by(-1) 

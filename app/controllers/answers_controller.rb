@@ -1,6 +1,6 @@
 class AnswersController < ApplicationController
-
   before_action :find_question, only: %i[new create]
+  before_action :authored?, only: %i[update destroy]
 
   def new
   end
@@ -21,6 +21,7 @@ class AnswersController < ApplicationController
 
   def create
     @answer = @question.answers.new(answer_params)
+    @answer.user = current_user
     if @answer.save
       redirect_to @answer, notice: 'Your answer successfully created'
     else
@@ -47,5 +48,11 @@ class AnswersController < ApplicationController
 
   def answer
     @answer ||= params[:id] ? Answer.find(params[:id]) : Answer.new
+  end
+
+  def authored?
+    unless current_user.is_author?(answer)
+      redirect_to find_question, notice: "You aren't an author of that question"
+    end
   end
 end

@@ -1,8 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe AnswersController, type: :controller do
+  let(:user) { create(:user) }  
   let(:question) { create(:question) }
-  let(:answer) { create :answer, question: question }
+  let(:answer) { create :answer, question: question, user: user }
 
   describe 'GET #new' do
     before { get :new, params: { question_id: question.id } }
@@ -21,6 +22,7 @@ RSpec.describe AnswersController, type: :controller do
   end
 
   describe 'GET #edit' do
+    before { log_in(answer.user) }
     before { get :edit, params: {question_id: answer.question.id, id: answer}}
 
     it 'renders edit view' do
@@ -29,6 +31,7 @@ RSpec.describe AnswersController, type: :controller do
   end
 
   describe 'POST #create' do
+    before { log_in(user) }    
     context 'with valid attributes' do
       it 'saves a new answer into db' do
         expect { post :create, params: { question_id: question.id,
@@ -38,7 +41,7 @@ RSpec.describe AnswersController, type: :controller do
       it 'redirects to question' do
         post :create, params: { question_id: answer.question.id,
                                 answer: attributes_for(:answer) }
-        expect(response).to redirect_to assigns(:question)
+        expect(response).to redirect_to assigns(:answer)
       end
     end
 
@@ -57,6 +60,8 @@ RSpec.describe AnswersController, type: :controller do
   end
 
   describe 'PATCH #update' do
+    before { log_in(answer.user) }
+    
     context 'with valid attributes' do
       it 'assigns requested answer to @answer' do
         patch :update, params: { id: answer, answer: attributes_for(:answer) }
@@ -91,7 +96,8 @@ RSpec.describe AnswersController, type: :controller do
 
   describe 'DELETE #destroy' do
     let!(:question) { create(:question) }
-    let!(:answer) { create :answer, question: question}
+    let!(:answer) { create :answer, question: question, user: user }
+    before { log_in(answer.user) }    
 
     it 'deletes the answer' do
       expect { delete :destroy, params: { id: answer } }.to change(Answer, :count).by(-1) 
