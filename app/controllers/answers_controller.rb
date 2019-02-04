@@ -1,13 +1,11 @@
 class AnswersController < ApplicationController
 
   before_action :find_question, only: %i[new create]
-  before_action :answer, only: %i[show new edit]
 
   def new
   end
 
   def show
-
   end
 
   def edit
@@ -22,9 +20,9 @@ class AnswersController < ApplicationController
   end
 
   def create
-    answer = @question.answers.new(answer_params)
-    if answer.save
-      redirect_to answer, notice: 'Your answer successfully created'
+    @answer = @question.answers.new(answer_params)
+    if @answer.save
+      redirect_to @answer, notice: 'Your answer successfully created'
     else
       render :new
     end
