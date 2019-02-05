@@ -22,6 +22,11 @@ RSpec.describe AnswersController, type: :controller do
                                          answer: attributes_for(:answer) } }.to change(question.answers, :count).by(1)
       end
 
+      it 'adds an answer to the user' do
+        expect { post :create, params: { question_id: question.id,
+                                         answer: attributes_for(:answer)} }.to change(user.answers, :count).by(1)
+      end
+
       it 'redirects to question' do
         post :create, params: { question_id: answer.question.id,
                                 answer: attributes_for(:answer) }
