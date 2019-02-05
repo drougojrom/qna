@@ -52,12 +52,14 @@ RSpec.describe AnswersController, type: :controller do
           patch :update, params: { id: answer, answer: attributes_for(:answer) }
           expect(assigns(:answer)).to eq answer
         end
+
         it 'changes answers attributes' do
           patch :update, params: { id: answer, answer: { body: "New Body" }}
           answer.reload
 
           expect(answer.body).to eq "New Body"
         end
+        
         it 'redirects to updated answer' do
           patch :update, params: { id: answer, answer: { body: "New Body" }}
           expect(response).to redirect_to answer
@@ -65,11 +67,11 @@ RSpec.describe AnswersController, type: :controller do
       end
 
       context 'with invalid attributes' do
-        before { patch :update, params: { id: answer, answer: attributes_for(:answer, :invalid) } }
+        before { patch :update, params: { id: answer,
+                                          answer: attributes_for(:answer, :invalid) } }
 
         it 'does not change the question' do
           answer.reload
-
           expect(answer.body).to eq "MyText"
         end
 
@@ -114,7 +116,7 @@ RSpec.describe AnswersController, type: :controller do
       before { log_in(new_user) } 
 
       it 'does not delete the answer' do
-        expect { delete :destroy, params: { id: answer } }.to change(Answer, :count).by(0)         
+        expect { delete :destroy, params: { id: answer } }.not_to change(Answer, :count)
         expect(response).to redirect_to question
       end
     end

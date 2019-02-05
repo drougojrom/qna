@@ -51,6 +51,7 @@ RSpec.describe QuestionsController, type: :controller do
       it 'saves a new question into db' do
         expect { post :create, params: { question: attributes_for(:question) }}.to change(Question, :count).by(1)
       end
+      
       it 'redirects to show' do
         post :create, params: { question: attributes_for(:question) }
         expect(response).to redirect_to assigns(:question)
@@ -78,6 +79,7 @@ RSpec.describe QuestionsController, type: :controller do
           patch :update, params: { id: question, question: attributes_for(:question) }
           expect(assigns(:question)).to eq question
         end
+
         it 'changes question attributes' do
           patch :update, params: { id: question, question: { title: "New Title", body: "New Body" }}
           question.reload
@@ -85,6 +87,7 @@ RSpec.describe QuestionsController, type: :controller do
           expect(question.title).to eq "New Title"
           expect(question.body).to eq "New Body"
         end
+
         it 'redirects to updated question' do
           patch :update, params: { id: question, question: { title: "New Title", body: "New Body" }}
           expect(response).to redirect_to question
@@ -99,7 +102,6 @@ RSpec.describe QuestionsController, type: :controller do
 
           expect(question.title).to eq "MyString"
           expect(question.body).to eq "MyText"
-
         end
 
         it 'renders edit' do
@@ -143,10 +145,9 @@ RSpec.describe QuestionsController, type: :controller do
       before { log_in(new_user) }
 
       it 'does not delete the question' do
-        expect { delete :destroy, params: { id: question } }.to change(Question, :count).by(0)         
+        expect { delete :destroy, params: { id: question } }.not_to change(Question, :count)    
         expect(response).to redirect_to question
       end
-
     end
   end
 end
