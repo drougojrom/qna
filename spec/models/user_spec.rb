@@ -6,11 +6,9 @@ RSpec.describe User, type: :model do
   it { should have_many(:questions) }
   it { should have_many(:answers) }
 
-  context 'is author' do
-    let!(:question) { create(:question) }
+  let(:question) { create(:question) }
 
-    it 'user is the author of question' do
-      expect(question.user.is_author?(question)).to be(true)
-    end
+  it 'user is the author of question' do
+    expect(question.user.is_author?(question)).to be(true)
   end
 end
