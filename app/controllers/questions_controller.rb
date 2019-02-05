@@ -1,7 +1,4 @@
 class QuestionsController < ApplicationController
-
-  before_action :authenticate_user!
-  before_action :question, only: [:show, :new, :edit]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :authored?, only: [:update, :destroy]
 
@@ -30,7 +27,7 @@ class QuestionsController < ApplicationController
 
   def update
     if question.update(question_params)
-      redirect_to @question
+      redirect_to question
     else
       render :edit
     end
@@ -55,7 +52,7 @@ class QuestionsController < ApplicationController
 
   def authored?
     unless current_user.is_author?(question)
-      redirect_to @question, notice: "You aren't an author of that question"
+      redirect_to question, notice: "You aren't an author of that question"
     end
   end
 end

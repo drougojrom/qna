@@ -5,22 +5,6 @@ RSpec.describe AnswersController, type: :controller do
   let(:question) { create(:question) }
   let(:answer) { create :answer, question: question, user: user }
 
-  describe 'GET #new' do
-    before { get :new, params: { question_id: question.id } }
-
-    it 'renders new view' do
-      expect(response).to render_template :new
-    end
-  end
-
-  describe 'GET #show' do
-    before { get :show, params: { id: answer }}
-
-    it 'renders show view' do
-      expect(response).to render_template :show
-    end
-  end
-
   describe 'GET #edit' do
     before { log_in(answer.user) }
     before { get :edit, params: {question_id: answer.question.id, id: answer}}
@@ -41,7 +25,7 @@ RSpec.describe AnswersController, type: :controller do
       it 'redirects to question' do
         post :create, params: { question_id: answer.question.id,
                                 answer: attributes_for(:answer) }
-        expect(response).to redirect_to assigns(:answer)
+        expect(response).to redirect_to answer.question
       end
     end
 
