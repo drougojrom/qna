@@ -18,11 +18,15 @@ feature 'User can delete an answer for a question', %q{
       expect(page).to have_content 'Your answer was deleted'
     end
 
-    scenario 'user is not the author of answer' do
-      visit question_path(answer.question)      
+    context 'user is not the author of answer' do
+      let!(:new_user) { create(:user) }
+      it 'does not allow to delete an answer' do
+        sign_in(new_user)
+        visit question_path(answer.question)      
 
-      expect(page).to_not have_link 'Delete'
-      expect(current_path).to eq question_path(answer.question)
+        expect(page).to_not have_link 'Delete'
+        expect(current_path).to eq question_path(answer.question)
+      end
     end
   end
 
