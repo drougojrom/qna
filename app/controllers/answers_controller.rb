@@ -21,7 +21,7 @@ class AnswersController < ApplicationController
     if @answer.save
       redirect_to @question, notice: 'Your answer successfully created'
     else
-      render :new
+      redirect_to @question, notice: "Body can't be blank"
     end
   end
 

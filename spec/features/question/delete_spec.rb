@@ -17,6 +17,7 @@ feature 'User can delete a question', %q{
       expect(page).to have_link 'Delete'
       click_on 'Delete'
       expect(page).to have_content 'Your question was deleted'
+      expect(page).to_not have_content question      
     end
 
     scenario 'user is not the author of the question' do

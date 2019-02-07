@@ -11,11 +11,12 @@ feature 'User can delete an answer for a question', %q{
 
   describe 'An authenticated user tries to delete an answer' do
     scenario 'user is the author of answer' do
-      sign_in(answer.user)
+      sign_in(user)
       visit question_path(answer.question)      
       expect(page).to have_link 'Delete'
       click_on 'Delete'
       expect(page).to have_content 'Your answer was deleted'
+      expect(page).to_not have_content answer
     end
 
     context 'user is not the author of answer' do
