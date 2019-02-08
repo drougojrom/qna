@@ -1,13 +1,7 @@
 class AnswersController < ApplicationController
 
-  before_action :find_question, only: %i[new create]
-
-  def new
-  end
-
-  def show
-
-  end
+  before_action :authenticate_user!  
+  before_action :authored?, only: %i[update destroy]
 
   def edit
   end
@@ -21,26 +15,23 @@ class AnswersController < ApplicationController
   end
 
   def create
-    answer = @question.answers.new(answer_params)
-    if answer.save
-      redirect_to @question
+    @answer = question.answers.new(answer_params)
+    @answer.user = current_user
+    if @answer.save
+      redirect_to question, notice: 'Your answer successfully created'
     else
-      render :new
+      render 'questions/show'
     end
   end
 
   def destroy
     answer.destroy
-    redirect_to questions_path
+    redirect_to questions_path, notice: 'Your answer was deleted'
   end
 
   private
 
-  helper_method :answer
-
-  def find_question
-    @question = Question.find(params[:question_id])
-  end
+  helper_method :answer, :question
 
   def answer_params
     params.require(:answer).permit(:body)
@@ -48,5 +39,15 @@ class AnswersController < ApplicationController
 
   def answer
     @answer ||= params[:id] ? Answer.find(params[:id]) : Answer.new
+  end
+
+  def question
+    @question ||= params[:question_id] ? Question.find(params[:question_id]) : answer.question 
+  end
+
+  def authored?
+    unless current_user.author_of?(answer)
+      redirect_to answer.question, notice: "You aren't an author of that question"
+    end
   end
 end

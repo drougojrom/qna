@@ -1,9 +1,13 @@
 class QuestionsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authored?, only: [:update, :destroy]
+
   def index
     @questions = Question.all
   end
 
   def show
+    @answer = Answer.new
   end
 
   def new
@@ -13,9 +17,9 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @question = Question.new(question_params)
+    @question = current_user.questions.new(question_params)
     if @question.save 
-      redirect_to @question
+      redirect_to @question, notice: 'Your question successfully created'
     else
       render :new
     end
@@ -23,7 +27,7 @@ class QuestionsController < ApplicationController
 
   def update
     if question.update(question_params)
-      redirect_to @question
+      redirect_to question
     else
       render :edit
     end
@@ -31,7 +35,7 @@ class QuestionsController < ApplicationController
 
   def destroy
     question.destroy
-    redirect_to questions_path
+    redirect_to questions_path, notice: 'Your question was deleted'
   end
 
   private
@@ -44,5 +48,11 @@ class QuestionsController < ApplicationController
 
   def question_params
     params.require(:question).permit(:title, :body)
+  end
+
+  def authored?
+    unless current_user.author_of?(question)
+      redirect_to question, notice: "You aren't an author of that question"
+    end
   end
 end
