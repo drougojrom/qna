@@ -124,7 +124,6 @@ RSpec.describe QuestionsController, type: :controller do
 
         expect(question.body).not_to eq "New Body"
       end
-
     end
   end
 

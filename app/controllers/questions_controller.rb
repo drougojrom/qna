@@ -51,7 +51,7 @@ class QuestionsController < ApplicationController
   end
 
   def authored?
-    unless current_user.is_author?(question)
+    unless current_user.author_of?(question)
       redirect_to question, notice: "You aren't an author of that question"
     end
   end

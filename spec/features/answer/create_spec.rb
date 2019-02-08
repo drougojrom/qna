@@ -8,20 +8,19 @@ feature 'User can create an answer for a question', %q{
   given(:user) { create(:user) }
   given(:question) { create(:question) }
 
-  describe 'An authenticated user answers on the question' do
+  describe 'An authenticated user' do
     background do
       sign_in(user)
       visit question_path(question)
-      click_on 'Answer'
     end
 
-    scenario 'answer on a question with errors' do
+    scenario 'answers on a question with errors' do
       click_on 'Answer'
 
       expect(page).to have_content "Body can't be blank"
     end
 
-    scenario 'answer on a question' do
+    scenario 'answers on a question' do
       fill_in 'Body', with: 'test answer'
       click_on 'Answer'
 

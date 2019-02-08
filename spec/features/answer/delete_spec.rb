@@ -16,7 +16,7 @@ feature 'User can delete an answer for a question', %q{
       expect(page).to have_link 'Delete'
       click_on 'Delete'
       expect(page).to have_content 'Your answer was deleted'
-      expect(page).to_not have_content answer
+      expect(page).to_not have_content answer.body
     end
 
     context 'user is not the author of answer' do
