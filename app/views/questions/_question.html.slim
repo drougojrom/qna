@@ -7,7 +7,7 @@ p= question.body
 .answer-errors
   = render 'shared/errors', resource: @answer
 
-= form_with model: [question, @answer], remote: true do |f|
+= form_with model: [question, @answer], remote: true, class: 'new-answer' do |f|
   = render 'shared/errors', resource: @answer
   = f.label :body
   = f.text_area :body
