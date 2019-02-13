@@ -6,8 +6,7 @@ p= answer.body
       = link_to 'Delete', answer, method: :delete
     p
       = link_to 'Edit', '#', class: 'edit-answer-link', data: { answer_id: answer.id }
-
-= form_with model: answer, class: 'hidden', html: { id: "edit-answer-#{answer.id}" } do |f|
-  =f.label :body, 'Your answer'
-  =f.text_area :body
-  =f.submit 'Update'
+    = form_with model: answer, class: 'hidden', html: { id: "edit-answer-#{answer.id}" } do |f|
+      =f.label :body, 'Your answer'
+      =f.text_area :body
+      =f.submit 'Update'
