@@ -24,7 +24,6 @@ feature 'User can create an answer for a question', %q{
       fill_in 'Body', with: 'test answer'
       click_on 'Answer'
 
-      expect(page).to have_content 'Your answer successfully created'
       expect(page).to have_content 'test answer'
     end
   end
