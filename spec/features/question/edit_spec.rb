@@ -5,7 +5,6 @@ feature 'User can edit his question', %q{
   an author of question should be able to 
   edit his question
 } do
-  given(:user) { create(:user) }
   given(:question) { create(:question) }
 
   scenario 'Unauthenticated user can not edit an question' do
@@ -15,31 +14,33 @@ feature 'User can edit his question', %q{
 
   describe 'Authenticated user' do
     scenario 'edits his question', js: true do
-      sign_in(user)
+      sign_in(question.user)
       visit question_path(question)
 
-      click_on 'Edit'
-
       within '.question' do
-        fill_in 'Body', with: 'edited question'
+      click_on 'Edit'
+        
+        fill_in 'Question title', with: 'edited question title'
+        fill_in 'Question body', with: 'edited question body'
         click_on 'Update'
 
-        expect(page).to_not have_content answer.body
-        expect(page).to have_content 'edited question'
+        expect(page).to_not have_content question.title
+        expect(page).to_not have_content question.body
+        expect(page).to have_content 'edited question body'
+        expect(page).to have_content 'edited question title'
         expect(page).to_not have_selector 'textarea'
       end
     end
-    scenario 'edits his answer with errors' do
-      sign_in user
+    scenario 'edits his question with errors', js: true do
+      sign_in question.user
       visit question_path question
 
       click_on 'Edit'
       within '.question' do
-        fill_in 'Body', with: ''
+        fill_in 'Question body', with: ''
         click_on 'Update'
 
-        expect(page).to have_content answer.body
-        expect(page).to_not have_content ''
+        expect(page).to have_content question.body
         expect(page).to have_selector 'textarea'
       end
     end
