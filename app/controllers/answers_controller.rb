@@ -21,7 +21,9 @@ class AnswersController < ApplicationController
 
   def destroy
     answer.destroy
-    redirect_to questions_path, notice: 'Your answer was deleted'
+    respond_to do |f|
+      f.js
+    end
   end
 
   private
