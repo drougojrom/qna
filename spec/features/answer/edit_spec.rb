@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-feature 'User can edit his question', %q{
+feature 'User can edit his answer', %q{
   In order to correct the mistakes
   an author of answer should be able to 
-  edit his question
+  edit his answer
 } do
   given(:user) { create(:user) }
   given(:question) { create(:question) }
@@ -30,7 +30,7 @@ feature 'User can edit his question', %q{
         expect(page).to_not have_selector 'textarea'
       end
     end
-    scenario 'edits his answer with errors' do
+    scenario 'edits his answer with errors', js: true do
       sign_in user
       visit question_path answer.question
 
@@ -40,7 +40,6 @@ feature 'User can edit his question', %q{
         click_on 'Update'
 
         expect(page).to have_content answer.body
-        expect(page).to_not have_content ''
         expect(page).to have_selector 'textarea'
       end
     end
