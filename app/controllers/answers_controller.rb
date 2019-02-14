@@ -21,9 +21,6 @@ class AnswersController < ApplicationController
 
   def destroy
     answer.destroy
-    respond_to do |f|
-      f.js
-    end
   end
 
   private
