@@ -55,7 +55,7 @@ RSpec.describe AnswersController, type: :controller do
 
           expect(answer.body).to eq "New Body"
         end
-        
+
         it 'redirects to updated answer' do
           patch :update, params: { id: answer, answer: { body: "New Body" }}, format: :js
           expect(response).to redirect_to question
@@ -114,6 +114,43 @@ RSpec.describe AnswersController, type: :controller do
       it 'does not delete the answer' do
         expect { delete :destroy, params: { id: answer } }.not_to change(Answer, :count)
         expect(response).to redirect_to question
+      end
+    end
+  end
+
+  describe 'PATCH #right_answer' do
+    context 'user is the author of question' do
+      let!(:question) { create(:question) }
+      let!(:answer) { create :answer, question: question, user: user }
+      before { log_in(answer.question.user) }
+      before { patch :right_answer, params: {id: answer}, format: :js }
+
+      context 'answer is not the right one' do
+        it 'makes the answer right' do
+          expect(response).to render_template :right_answer
+        end
+
+        it 'assigns the answer to question' do
+          expect(assigns(:answer).question.right_answer).to eq answer
+        end
+
+        it 'just one right answer' do
+          expect(question.answers.where(right_answer: true).count).to eq 1
+        end
+
+        it 'sets right answer flag to true' do
+          expect(assigns(:answer).right_answer).to eq true
+        end
+      end
+    end
+
+    context 'user is not the author of question' do
+      before { patch :right_answer, params: {id: answer}, format: :js }
+
+      it 'does not change the right answer for question' do
+        sign_in user
+        question.reload
+        expect(question.right_answer).to_not eq answer
       end
     end
   end

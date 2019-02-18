@@ -10,4 +10,13 @@ RSpec.describe Question, type: :model do
     it { should validate_presence_of :title }
     it { should validate_presence_of :body }
   end
+
+  let(:user) { create :user }
+  let(:question) { create :question, user: user }
+  let!(:right_answer) { create :answer, question: question, user: user, right_answer: true }
+  let!(:answer) { create :answer, question: question, user: user, right_answer: false }
+
+  it 'right answer on question should be equal to answer' do
+    expect(question.right_answer).to eq right_answer
+  end
 end

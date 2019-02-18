@@ -23,6 +23,16 @@ class AnswersController < ApplicationController
     answer.destroy
   end
 
+  def right_answer
+    answer.make_right_answer(current_user, true)
+  end
+
+  def not_right_answer
+    if answer.make_right_answer(current_user, false)
+      render :right_answer
+    end
+  end
+
   private
 
   helper_method :answer, :question
