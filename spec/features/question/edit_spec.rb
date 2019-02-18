@@ -18,8 +18,8 @@ feature 'User can edit his question', %q{
       visit question_path(question)
 
       within '.question' do
-      click_on 'Edit'
-        
+        click_on 'Edit'
+
         fill_in 'Question title', with: 'edited question title'
         fill_in 'Question body', with: 'edited question body'
         click_on 'Update'
@@ -42,6 +42,7 @@ feature 'User can edit his question', %q{
 
         expect(page).to have_content question.body
         expect(page).to have_selector 'textarea'
+        expect(page).to have_content "Body can't be blank"
       end
     end
     scenario 'tries to edit other users question' do

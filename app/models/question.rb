@@ -5,6 +5,6 @@ class Question < ApplicationRecord
   validates :title, :body, presence: true
 
   def right_answer
-    self.answers.where("right_answer = ?", true).first
+    self.answers.correct_answers.first
   end
 end
