@@ -23,13 +23,16 @@ RSpec.describe Answer, type: :model do
       question_with_right_answers.answers.reload
     end
 
-    it 'validates that right answer changes' do
-      expect(right_answer.right_answer).to eq true
-      expect(answer.right_answer).to eq false
+    it 'validates right answer change to false' do
+      right_answer.make_right_answer(answer.question.user, false)
+      right_answer.reload
+      expect(right_answer.right_answer).to eq false
+    end
+
+    it 'validates wrong answer chage to true' do
       answer.make_right_answer(answer.question.user, true)
       right_answer.reload
-      expect(answer.right_answer).to eq true
-      expect(right_answer.right_answer).to eq false
+      expect(answer.right_answer).to eq true      
     end
 
     it 'is only one right answer' do
@@ -42,7 +45,6 @@ RSpec.describe Answer, type: :model do
 
     it 'first answer is the right one' do
       expect(question_with_right_answers.answers.first.right_answer).to eq true
-      expect(question_with_right_answers.answers.last.right_answer).to eq false
     end
   end
 
