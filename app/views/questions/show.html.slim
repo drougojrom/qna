@@ -3,9 +3,11 @@
 .answers
   = render question.answers
 
+.answer-errors
+  = render 'shared/errors', resource: answer
+
 .new-answer
   = form_for [question, answer], remote: true, class: 'new-answer' do |f|
-    = render 'shared/errors', resource: answer
     = f.label :body
     = f.text_area :body
     = f.submit 'Answer'

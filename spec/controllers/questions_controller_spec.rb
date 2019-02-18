@@ -99,8 +99,8 @@ RSpec.describe QuestionsController, type: :controller do
           expect(question.body).to eq "MyText"
         end
 
-        it 'renders edit' do
-          expect(response).to render_template :edit
+        it 'renders update' do
+          expect(response).to render_template :update
         end
       end
     end

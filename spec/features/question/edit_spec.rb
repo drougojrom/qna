@@ -42,8 +42,8 @@ feature 'User can edit his question', %q{
 
         expect(page).to have_content question.body
         expect(page).to have_selector 'textarea'
-        expect(page).to have_content "Body can't be blank"
       end
+      expect(page).to have_content "Body can't be blank"
     end
     scenario 'tries to edit other users question' do
       visit question_path(question)      
