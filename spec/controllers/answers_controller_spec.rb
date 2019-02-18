@@ -154,4 +154,34 @@ RSpec.describe AnswersController, type: :controller do
       end
     end
   end
+
+  describe 'PATCH #not_right_answer' do
+    context 'user is the author of question' do
+      let!(:question) { create :question }
+      let!(:answer) { create :answer, question: question, user: user }
+      before { log_in(answer.question.user) }
+      before { patch :not_right_answer, params: {id: answer}, format: :js }
+
+      it 'renders right answer' do
+        expect(response).to render_template :right_answer
+      end
+
+      it 'set answers flag to false' do
+        expect(assigns(:answer).right_answer).to eq false
+      end
+
+      it 'no right answers' do
+        expect(assigns(:answer).question.right_answer).to eq nil
+      end
+    end
+  end
+
+  context 'user is not the author of question' do
+    before { log_in user }
+    before { patch :not_right_answer, params: {id: answer}, format: :js }
+
+    it "render 403" do
+      expect(response.status).to eq(403)
+    end
+  end
 end

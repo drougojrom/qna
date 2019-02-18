@@ -27,7 +27,7 @@ class AnswersController < ApplicationController
     if answer.make_right_answer(current_user, false)
       render :right_answer
     else
-      render status: 403
+      head 403
     end
   end
 
