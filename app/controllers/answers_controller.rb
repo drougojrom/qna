@@ -1,5 +1,4 @@
 class AnswersController < ApplicationController
-
   before_action :authenticate_user!  
   before_action :authored?, only: %i[update destroy]
 
@@ -7,26 +6,29 @@ class AnswersController < ApplicationController
   end
 
   def update
-    if answer.update(answer_params)
-      redirect_to answer
-    else
-      render :edit
-    end
+    answer.update(answer_params)
   end
 
   def create
     @answer = question.answers.new(answer_params)
     @answer.user = current_user
-    if @answer.save
-      redirect_to question, notice: 'Your answer successfully created'
-    else
-      render 'questions/show'
-    end
+    @answer.save
   end
 
   def destroy
     answer.destroy
-    redirect_to questions_path, notice: 'Your answer was deleted'
+  end
+
+  def right_answer
+    answer.make_right_answer(current_user, true)
+  end
+
+  def not_right_answer
+    if answer.make_right_answer(current_user, false)
+      render :right_answer
+    else
+      head 403
+    end
   end
 
   private

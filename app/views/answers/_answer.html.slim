@@ -1,5 +1,21 @@
-p= answer.body
-
 - unless answer.new_record?
-  - if current_user&.author_of?(answer)
-    = link_to 'Delete', answer, method: :delete
+  .answer.container id="answer-#{answer.id}" 
+    table.table
+    tr
+      td
+        - if current_user&.author_of?(answer.question)
+          - if answer.right_answer && current_user&.author_of?(answer)
+            =link_to 'Not right answer', not_right_answer_answer_path(answer), method: :patch, remote: true
+          - else
+            =link_to 'Right answer', right_answer_answer_path(answer), method: :patch, remote: true
+      td
+        p= answer.body
+        - if current_user&.author_of?(answer)
+          p
+            = link_to 'Delete', answer, method: :delete, data: {confirm: "Are you sure?"}, remote: true, class: 'delete-answer'
+          p
+            = link_to 'Edit', '#', class: 'edit-answer-link', data: { answer_id: answer.id }
+            = form_with model: answer, class: 'hidden', html: { id: "edit-answer-#{answer.id}" } do |f|
+              =f.label :body, 'Your answer'
+              =f.text_area :body
+              =f.submit 'Update'
