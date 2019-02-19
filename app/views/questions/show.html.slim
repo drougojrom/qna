@@ -8,9 +8,16 @@
 
 .new-answer
   = form_for [question, answer], remote: true, class: 'new-answer' do |f|
-    = f.label :body
-    = f.text_area :body
-    = f.submit 'Answer'
+    p
+      = f.label :body
+      = f.text_area :body
+
+    p
+      = f.label :files
+      = f.file_field :files, multiple: true
+
+    p
+      = f.submit 'Answer'
 
 = link_to 'Back', questions_path
 
