@@ -1,0 +1,3918 @@
+[
+  {
+    "Id": "41983a34-2bc7-4d2c-bf28-206387e83693",
+    "Name": "Alternative",
+    "SubGenres": [
+      {
+        "Id": "bbdf684a-82f5-433a-9a0b-082aee4b841f",
+        "Name": "Alternative rock"
+      },
+      {
+        "Id": "f722187b-afb2-4386-8c24-49c902463c5f",
+        "Name": "Anime"
+      },
+      {
+        "Id": "e2df644f-2bac-4fc8-acb9-9470fd8cb352",
+        "Name": "Art punk"
+      },
+      {
+        "Id": "de905fea-4d38-49e2-9f85-c62f4e1c2a9f",
+        "Name": "Chinese Alt"
+      },
+      {
+        "Id": "298ab390-d268-4228-8bc9-c24044e65a92",
+        "Name": "College Rock"
+      },
+      {
+        "Id": "e2bdfb49-7395-4f3f-8b32-827a9a101d81",
+        "Name": "Experimental rock"
+      },
+      {
+        "Id": "4bde56e2-b667-487c-9ca2-914da9bc6663",
+        "Name": "Folk punk"
+      },
+      {
+        "Id": "15f3ee8e-fdf3-4eb0-815b-ee674a8e5399",
+        "Name": "Goth Rock"
+      },
+      {
+        "Id": "4afa9ff0-358a-4111-a886-901c1c6e7333",
+        "Name": "Grunge"
+      },
+      {
+        "Id": "d3629166-119e-4db4-8f80-090b971885a3",
+        "Name": "Hardcore punk"
+      },
+      {
+        "Id": "f2b68ddd-6e0f-4902-a20c-e6f39b36be93",
+        "Name": "Indie Rock"
+      },
+      {
+        "Id": "c9bca6e9-f1eb-4ef1-9110-85f72bc0a400",
+        "Name": "Korean Indie"
+      },
+      {
+        "Id": "e9dfc1c7-944c-489a-b49a-2f45d416c976",
+        "Name": "New Wave"
+      },
+      {
+        "Id": "d7512d27-8a2d-42a2-af92-106cd1b2c55b",
+        "Name": "Progressive rock"
+      },
+      {
+        "Id": "bd4e3e77-46f3-4562-b1da-f4589a221d18",
+        "Name": "Punk"
+      }
+    ]
+  },
+  {
+    "Id": "169d4425-15b2-4c83-9174-6ba91f2625b2",
+    "Name": "Blues",
+    "SubGenres": [
+      {
+        "Id": "cb38053f-638e-432f-8b22-0b17e3c34e42",
+        "Name": "Acoustic Blues"
+      },
+      {
+        "Id": "aa32cae0-6cd9-42c3-8fdf-78cf7266ab70",
+        "Name": "African blues"
+      },
+      {
+        "Id": "c24b3012-3f3d-4b2e-9fcd-076b0c32c706",
+        "Name": "Blues rock"
+      },
+      {
+        "Id": "e0832d94-b51a-4519-b55b-11083b2cbabb",
+        "Name": "Blues shouter"
+      },
+      {
+        "Id": "80975b01-862f-4a7e-bf4b-d8faf804590c",
+        "Name": "British blues"
+      },
+      {
+        "Id": "4a68bb3a-24c4-4b28-97a4-11f0ed200132",
+        "Name": "Canadian blues"
+      },
+      {
+        "Id": "cad81b4a-197a-4d71-b7c6-3d3d9059d570",
+        "Name": "Chicago Blues"
+      },
+      {
+        "Id": "ec06139f-07b3-4d27-bfc9-7d6db582f4ba",
+        "Name": "Classic Blues"
+      },
+      {
+        "Id": "211971b7-5b86-4123-bd14-e3ce3e40c767",
+        "Name": "Classic female blues"
+      },
+      {
+        "Id": "38bb715b-e6be-4807-9f60-713b9eb65c49",
+        "Name": "Contemporary Blues"
+      },
+      {
+        "Id": "bedbc216-9a74-4b06-bf11-bc89f8970371",
+        "Name": "Country Blues"
+      },
+      {
+        "Id": "2f2a8a6c-ed55-4cbe-bac3-5874ba0d8cb8",
+        "Name": "Delta Blues"
+      },
+      {
+        "Id": "8f510b7b-d019-4d84-85cd-d4415aa2a301",
+        "Name": "Detroit blues"
+      },
+      {
+        "Id": "414556fb-5fb7-4a6c-b997-1a91ae45f4b2",
+        "Name": "Electric Blues"
+      },
+      {
+        "Id": "0fab6cf1-e7d7-4b53-9e69-56ae5d48831a",
+        "Name": "Gospel blues"
+      },
+      {
+        "Id": "35dbea63-20bf-4ded-8bc5-df199d52c49d",
+        "Name": "Hill country blues"
+      },
+      {
+        "Id": "cc84b888-fa9b-455c-8ca2-179d618eb7f1",
+        "Name": "Hokum blues"
+      },
+      {
+        "Id": "094e2949-163e-4d0f-bb77-498666f7eb68",
+        "Name": "Jump blues"
+      },
+      {
+        "Id": "b1874061-ed19-4316-8d36-8c8a3ec16fda",
+        "Name": "Kansas City blues"
+      },
+      {
+        "Id": "02477b99-82ef-401e-abf2-1e08b440ab54",
+        "Name": "Louisiana blues"
+      },
+      {
+        "Id": "8fb6688e-3aee-45a2-a6ee-01fb3cf5d8bc",
+        "Name": "Memphis blues"
+      },
+      {
+        "Id": "2cfc6f89-4675-42f5-ad09-72e8105fda44",
+        "Name": "Piedmont blues"
+      },
+      {
+        "Id": "7f5dd0e8-07ff-45fa-b8c4-90e9815d562c",
+        "Name": "Punk blues"
+      },
+      {
+        "Id": "d86f74b3-3926-4600-8e48-86049899ac37",
+        "Name": "Rhythm and blues"
+      },
+      {
+        "Id": "6a5ad664-fb8a-4170-9d78-8ae0c7666e91",
+        "Name": "Soul blues"
+      },
+      {
+        "Id": "44087d4a-ed06-4d8c-bb50-81badf66bb28",
+        "Name": "St. Louis blues"
+      },
+      {
+        "Id": "c7a2a857-dced-484b-a486-6dfe787690cb",
+        "Name": "Swamp blues"
+      },
+      {
+        "Id": "aedeacd3-c34e-4cae-96bc-7aa74502986e",
+        "Name": "Texas blues"
+      },
+      {
+        "Id": "0f914f1a-c030-4bf0-bbf4-9dd8875630ff",
+        "Name": "West Coast blues"
+      }
+    ]
+  },
+  {
+    "Id": "f1c791fe-a85a-475e-b221-c4581352f981",
+    "Name": "Children's Music",
+    "SubGenres": [
+      {
+        "Id": "d04ce181-4ee6-46b0-bbaf-a80e6dca1c19",
+        "Name": "Lullabies"
+      },
+      {
+        "Id": "4ebe2a0e-c02d-4656-bc14-e6c07b7a8396",
+        "Name": "Sing-Along"
+      },
+      {
+        "Id": "db570c32-d47d-4b1e-adb2-0a288f093ddf",
+        "Name": "Stories"
+      }
+    ]
+  },
+  {
+    "Id": "b91207cd-8f0f-402e-9c02-7dde37394837",
+    "Name": "Classical",
+    "SubGenres": [
+      {
+        "Id": "f9c986e4-b388-46c2-bc3f-a2f309539078",
+        "Name": "Avant-Garde"
+      },
+      {
+        "Id": "5e5f8fcd-6b4e-4d19-8d94-27fede8c4099",
+        "Name": "Baroque"
+      },
+      {
+        "Id": "f30f29a1-e750-46d2-be14-4d9f9cc72420",
+        "Name": "Chamber Music"
+      },
+      {
+        "Id": "5da48eee-63b8-4e16-816a-a19df1661599",
+        "Name": "Chant"
+      },
+      {
+        "Id": "1e188646-7823-42a1-9cf0-d0e68976e9de",
+        "Name": "Chinese Classical"
+      },
+      {
+        "Id": "600c9c5d-1a22-4de0-800e-7858a6c89527",
+        "Name": "Chinese Flute"
+      },
+      {
+        "Id": "7a06ba09-3b26-471f-ac54-48b5a49a7d96",
+        "Name": "Chinese Orchestral"
+      },
+      {
+        "Id": "e50156d5-11b4-46b4-8b85-4daefae4eddd",
+        "Name": "Chinese Strings"
+      },
+      {
+        "Id": "28d276b5-ba4e-4267-8d2a-417cca058fbb",
+        "Name": "Choral"
+      },
+      {
+        "Id": "b730f7dd-4c98-44d8-babc-e620a9b89742",
+        "Name": "Classical Crossover"
+      },
+      {
+        "Id": "c8db8202-ba44-4675-bc26-73679a50ea99",
+        "Name": "Classic Christian"
+      },
+      {
+        "Id": "785b8c9f-29ea-46e4-8b03-2f09d9020747",
+        "Name": "Early Music"
+      },
+      {
+        "Id": "cf9d13ec-1b8d-48a3-97af-bb600f173d65",
+        "Name": "Electroacoustic"
+      },
+      {
+        "Id": "917618b6-f4a7-47ce-b56a-fbfcea50e01c",
+        "Name": "Experimental music"
+      },
+      {
+        "Id": "cd11eb54-4526-43af-be3b-3babff7d995b",
+        "Name": "High Classical"
+      },
+      {
+        "Id": "3b6b26d3-98be-4761-928e-b7582c0d3a6b",
+        "Name": "Impressionist"
+      },
+      {
+        "Id": "a192a842-b3ac-4c3f-8bdc-dce530ed727e",
+        "Name": "Korean Classical"
+      },
+      {
+        "Id": "ae6c9148-70b2-46ab-aedb-d86c9dc7f9aa",
+        "Name": "Lo-fi"
+      },
+      {
+        "Id": "a009f9e6-cda9-4f8a-8198-44f7f0448920",
+        "Name": "Medieval"
+      },
+      {
+        "Id": "553d5f51-145d-42a2-a76d-921bb7a91333",
+        "Name": "Minimalism"
+      },
+      {
+        "Id": "e4f6ebba-39aa-4fce-99e9-797540353ec3",
+        "Name": "Modern Composition"
+      },
+      {
+        "Id": "0008aa78-990c-406b-b126-820a561254db",
+        "Name": "Noise"
+      },
+      {
+        "Id": "33fdc0ed-8a9f-420d-bbd9-ca897b6eb7bc",
+        "Name": "Orchestral"
+      },
+      {
+        "Id": "5e92119f-4216-4b39-85be-40a9ddf54395",
+        "Name": "Renaissance"
+      },
+      {
+        "Id": "d7771b98-84c0-4d0b-b9a7-f3646106aa0a",
+        "Name": "Romantic"
+      },
+      {
+        "Id": "33694da7-68b7-412e-a72a-71a4fd6874f0",
+        "Name": "Wedding Music"
+      }
+    ]
+  },
+  {
+    "Id": "45954e08-8795-4c33-ae20-1161e729ddd9",
+    "Name": "Comedy",
+    "SubGenres": [
+      {
+        "Id": "bc50cacd-bbc2-4451-a731-636c2439b34d",
+        "Name": "Comedy music"
+      },
+      {
+        "Id": "21caca51-c2d8-49a0-a057-5b224a479930",
+        "Name": "Comedy rock"
+      },
+      {
+        "Id": "a2225194-90c9-43a6-90ce-47cf3f54642d",
+        "Name": "Novelty"
+      },
+      {
+        "Id": "69746147-0889-4e0c-95e0-62274f432592",
+        "Name": "Novelty music"
+      },
+      {
+        "Id": "7afe46e2-f603-4f19-bfa0-79cca5772228",
+        "Name": "Parody music"
+      },
+      {
+        "Id": "a4facaa8-2fbf-4d6a-a6fa-886b6d0fcfdb",
+        "Name": "Standup Comedy"
+      }
+    ]
+  },
+  {
+    "Id": "7e1e9c6a-0bad-44ec-b3fd-907556a3c0bc",
+    "Name": "Country",
+    "SubGenres": [
+      {
+        "Id": "2ab65194-a80e-4101-ad7f-e23169426876",
+        "Name": "Alternative Country"
+      },
+      {
+        "Id": "05cdc8d0-c468-42d7-8954-68d20b794230",
+        "Name": "Americana"
+      },
+      {
+        "Id": "10f0a970-4d13-426f-839e-1238ac83778e",
+        "Name": "Australian country music"
+      },
+      {
+        "Id": "7c0430b1-0a72-4a04-8eb5-7c0e98c08fee",
+        "Name": "Bakersfield sound"
+      },
+      {
+        "Id": "9cb6bdcc-51d2-4054-a9d9-7e49a8991271",
+        "Name": "Bluegrass"
+      },
+      {
+        "Id": "543299b1-12c1-4cf4-b776-bf2949039e16",
+        "Name": "Blues country"
+      },
+      {
+        "Id": "84db42cd-004c-49c2-b3a9-4bc6e925e350",
+        "Name": "Christian country"
+      },
+      {
+        "Id": "ceb1edec-ea68-4259-9ec8-8b35bc432ede",
+        "Name": "Classic country"
+      },
+      {
+        "Id": "99293369-8120-482e-a25b-313b9b568671",
+        "Name": "Close harmony"
+      },
+      {
+        "Id": "74c3bba4-9e9e-48fd-a5b4-2de5c2b8667b",
+        "Name": "Contemporary Bluegrass"
+      },
+      {
+        "Id": "b4c5667d-6f6e-4c44-b8a1-b36f17c28e90",
+        "Name": "Contemporary Country"
+      },
+      {
+        "Id": "cea02291-ed61-4ca7-a9a8-994984e0518e",
+        "Name": "Country Gospel"
+      },
+      {
+        "Id": "f11c27e7-6837-4fb8-b4e1-c765e8b50a5d",
+        "Name": "Country-rap"
+      },
+      {
+        "Id": "75f902a9-839a-4f51-948d-e32172cf6ddd",
+        "Name": "Country rock"
+      },
+      {
+        "Id": "111d87ab-a2a7-4b22-9349-bd5b5d6fef12",
+        "Name": "Dansband music"
+      },
+      {
+        "Id": "d76c6787-6e81-44f9-b4c9-815746bcd3dd",
+        "Name": "Franco-country"
+      },
+      {
+        "Id": "2d877d68-3af2-4577-8644-ac6bf9a668ce",
+        "Name": "Hellbilly music"
+      },
+      {
+        "Id": "30359173-d146-4a88-a92c-86fe824f846b",
+        "Name": "Hokum"
+      },
+      {
+        "Id": "fb219382-5e6e-4348-a5fc-78e9f71db32e",
+        "Name": "Honky Tonk"
+      },
+      {
+        "Id": "ccec4e09-5f70-4ed0-a481-5e4c586029b1",
+        "Name": "Instrumental country"
+      },
+      {
+        "Id": "501f1b71-4057-4041-9095-33f67fc36041",
+        "Name": "Nashville sound"
+      },
+      {
+        "Id": "8e62e4a0-18e0-4d82-a849-3242365745c8",
+        "Name": "Neotraditional country"
+      },
+      {
+        "Id": "57b5c512-fff8-4bb2-ae62-92ba7840a03d",
+        "Name": "Outlaw Country"
+      },
+      {
+        "Id": "fb231ed9-9b01-4698-a9e7-2da12ac57657",
+        "Name": "Progressive bluegrass"
+      },
+      {
+        "Id": "8b14e5ad-8043-437e-82a0-cf9ba7b1e0de",
+        "Name": "Progressive country"
+      },
+      {
+        "Id": "efcad441-a640-4770-849e-6cbf1621ea4d",
+        "Name": "Reactionary bluegrass"
+      },
+      {
+        "Id": "6afb87ed-ab76-4f1e-bc40-87999466ceaf",
+        "Name": "Red Dirt"
+      },
+      {
+        "Id": "54fb9238-9446-4cbf-bf79-32ef59dd2243",
+        "Name": "Texas country"
+      },
+      {
+        "Id": "b4aa66e2-b01e-4151-af38-2479b037fc1f",
+        "Name": "Traditional Bluegrass"
+      },
+      {
+        "Id": "10f941f0-2742-493f-99ad-cf464745900d",
+        "Name": "Traditional Country"
+      },
+      {
+        "Id": "82f063a6-42fa-4c5c-97ac-409efdb0b2b7",
+        "Name": "Traditional country music"
+      },
+      {
+        "Id": "0350b9f4-0ce9-48f4-a2cf-f6f91dfb36d4",
+        "Name": "Truck-driving country"
+      },
+      {
+        "Id": "a114b1f2-1879-47dc-b18c-06581391752c",
+        "Name": "Urban Cowboy"
+      },
+      {
+        "Id": "a1d99519-62fa-4527-98cf-e988dbcef570",
+        "Name": "Western swing"
+      }
+    ]
+  },
+  {
+    "Id": "6bcc9577-7806-46fd-80a8-632eed7a6534",
+    "Name": "Dance",
+    "SubGenres": [
+      {
+        "Id": "ead1fc34-3f5d-4216-b0c1-ce97ab2e0574",
+        "Name": "Breakbeat"
+      },
+      {
+        "Id": "a688b048-0c67-43af-b5a3-c850e8216879",
+        "Name": "Breakcore"
+      },
+      {
+        "Id": "271094cb-b740-4b5c-a732-f3bc58e8dff5",
+        "Name": "Dubstep"
+      },
+      {
+        "Id": "21d980ea-ff4f-48e4-8dd8-314ead586d07",
+        "Name": "Easy Listening"
+      },
+      {
+        "Id": "464d604e-ad3d-4a72-be27-0147759ad6f8",
+        "Name": "Exercise"
+      },
+      {
+        "Id": "56530e60-49d5-4548-a92a-14ae504bd7dc",
+        "Name": "Hard Dance"
+      },
+      {
+        "Id": "60f7ff20-f3bd-44f8-9453-445b45d1c9c8",
+        "Name": "House"
+      },
+      {
+        "Id": "fd795c2c-fa04-4371-8a7a-af668be432b0",
+        "Name": "Jungle/Drum'n'bass"
+      },
+      {
+        "Id": "d3c4b0e9-4d36-4c9d-9d2a-b8c9c5440f75",
+        "Name": "Lounge"
+      },
+      {
+        "Id": "044afa4b-1bdf-4b63-96df-2c76421f35dc",
+        "Name": "Trance"
+      }
+    ]
+  },
+  {
+    "Id": "3e3463e8-4c59-4d41-86eb-35072b80ce8d",
+    "Name": "Electronic",
+    "SubGenres": [
+      {
+        "Id": "0523c398-2fc1-4849-b4d3-0e15712a450c",
+        "Name": "2-step garage"
+      },
+      {
+        "Id": "92f28661-a6d4-45c5-a8a1-2cafbb9404c0",
+        "Name": "4-beat"
+      },
+      {
+        "Id": "e1b4c1cb-0322-4920-af43-1198e304a6d9",
+        "Name": "Acid breaks"
+      },
+      {
+        "Id": "06a3793d-1374-40fe-9fa8-a7f76c0c5a24",
+        "Name": "Acid house"
+      },
+      {
+        "Id": "fc3d760d-fed8-4ca3-b3c2-b123e6f41a5c",
+        "Name": "Acid jazz"
+      },
+      {
+        "Id": "c4f298ff-0b0e-403d-8518-982b98443f56",
+        "Name": "Acid techno"
+      },
+      {
+        "Id": "7d5aaf4e-b5b1-49e3-8e92-982471ebab65",
+        "Name": "Acid trance"
+      },
+      {
+        "Id": "9c5ebc6f-814b-46a1-9c0c-b8d2bc833190",
+        "Name": "Acousmatic music"
+      },
+      {
+        "Id": "c2e12dec-3d51-418b-b945-f6238cea7006",
+        "Name": "Afro / Cosmic disco"
+      },
+      {
+        "Id": "b3756d6a-4ac1-4d87-9a24-5d7bdeb1b236",
+        "Name": "Alternative dance"
+      },
+      {
+        "Id": "c8e9cb2e-4452-497e-9a5c-bae8a9de74d3",
+        "Name": "Ambient"
+      },
+      {
+        "Id": "114910f7-fcda-45bb-8b8e-1279847bb0f7",
+        "Name": "Ambient dub"
+      },
+      {
+        "Id": "8546c974-6df0-4114-910d-0b7e6385e431",
+        "Name": "Ambient house"
+      },
+      {
+        "Id": "be460d7e-6f56-4532-816e-aa5e16e6667f",
+        "Name": "Baile Funk"
+      },
+      {
+        "Id": "50116d1e-eb9e-4cf7-a53d-705bdba176cd",
+        "Name": "Balearic beat"
+      },
+      {
+        "Id": "a99433e3-f352-4383-be8c-e830ba28a977",
+        "Name": "Balearic trance"
+      },
+      {
+        "Id": "2887635f-e97a-4609-a3e0-d27918e22c3c",
+        "Name": "Baltimore club"
+      },
+      {
+        "Id": "b5dd3296-0a64-42bd-9d39-71a9fcc47faa",
+        "Name": "Bassline/4x4 garage"
+      },
+      {
+        "Id": "a95b064f-8108-4270-bdfb-85efe3df482f",
+        "Name": "Big beat"
+      },
+      {
+        "Id": "6ed62c9a-ce5d-4e56-a627-841b8cede41e",
+        "Name": "Big room"
+      },
+      {
+        "Id": "8b168af1-a996-4143-9fa0-a92459f13066",
+        "Name": "Bitpop"
+      },
+      {
+        "Id": "1e23b302-ff39-4c10-aeb8-4c6ca05e51b2",
+        "Name": "Boogie"
+      },
+      {
+        "Id": "39458b25-faa7-488f-8155-1f31878f9ac3",
+        "Name": "Bouncy house"
+      },
+      {
+        "Id": "1121674a-610b-427a-962b-cd3db5e364fe",
+        "Name": "Bouncy techno"
+      },
+      {
+        "Id": "62aeee1f-e812-4d6d-a767-748fee79ecc0",
+        "Name": "Breakbeat hardcore"
+      },
+      {
+        "Id": "61c71fe0-d155-4a2b-af2c-489c3862701f",
+        "Name": "Breaks"
+      },
+      {
+        "Id": "644f763d-229a-4112-9062-c85482f9c4ec",
+        "Name": "Breaks | Acid"
+      },
+      {
+        "Id": "d5380f85-95f5-4e39-8dd5-1a74b1145e11",
+        "Name": "Breaks | Big Beat"
+      },
+      {
+        "Id": "138aea12-4809-45f5-abe5-8d0781399444",
+        "Name": "Breaks | Electro"
+      },
+      {
+        "Id": "e549d282-9ffe-42d1-8a8c-61187d997de5",
+        "Name": "Breaks | Funky Breaks"
+      },
+      {
+        "Id": "ec3ddd41-1875-4dc2-b1da-1f16e3e4b2f1",
+        "Name": "Breaks | Hardcore Breaks"
+      },
+      {
+        "Id": "d622eadf-760a-492d-85d0-9f61c16bba40",
+        "Name": "Breaks | Nu Skool"
+      },
+      {
+        "Id": "13e59bb0-5708-430e-ad26-443d8e8bdd41",
+        "Name": "Breaks | Progressive"
+      },
+      {
+        "Id": "a2e0e8b9-6630-4b9f-98e8-0c9f7c959445",
+        "Name": "Breakstep"
+      },
+      {
+        "Id": "eb9a5421-d9ea-4351-ae0a-f34d51fb8187",
+        "Name": "Brick City club"
+      },
+      {
+        "Id": "30bbb426-f390-41f3-becb-585c65006645",
+        "Name": "Broken beat"
+      },
+      {
+        "Id": "5d819f3f-0873-4c2b-acd5-bcec51044a8b",
+        "Name": "Brostep"
+      },
+      {
+        "Id": "4b73d710-34ee-45cb-8d45-7e3ea65d46f8",
+        "Name": "Bubblegum dance"
+      },
+      {
+        "Id": "db3d5639-e9b4-4779-947d-3f80b8457fab",
+        "Name": "Chicago house"
+      },
+      {
+        "Id": "ca773c31-2a7a-4317-8e6d-9603e29e4650",
+        "Name": "Chill-out"
+      },
+      {
+        "Id": "ed50d57d-d5b2-4fd7-a8ab-6a04b1b746fb",
+        "Name": "Chillstep"
+      },
+      {
+        "Id": "9036fbe4-b21c-4304-99c8-8f73e70efee1",
+        "Name": "Chillwave"
+      },
+      {
+        "Id": "fc0a365e-7e8a-4deb-bb5d-8dd5fa43268d",
+        "Name": "Chiptune"
+      },
+      {
+        "Id": "287750df-0653-441c-b836-e7602b0decf1",
+        "Name": "Dance-punk"
+      },
+      {
+        "Id": "bbe8f544-c0bc-4a41-82c2-8e8ca34445c5",
+        "Name": "Dance-rock"
+      },
+      {
+        "Id": "9839abfd-e6ce-4c34-99b9-7d7351e2869e",
+        "Name": "Dark ambient"
+      },
+      {
+        "Id": "01e4e58f-a817-402e-82c3-c1f6531ae4c1",
+        "Name": "Darkcore"
+      },
+      {
+        "Id": "088b4a5c-4428-4ad5-b62a-0af8f000fc5f",
+        "Name": "Darkcore jungle"
+      },
+      {
+        "Id": "288c3b94-7c10-4d79-b25b-3782dc01b8b6",
+        "Name": "Dark electro"
+      },
+      {
+        "Id": "c5386feb-118d-445b-a707-b8ecddb7d719",
+        "Name": "Darkstep"
+      },
+      {
+        "Id": "71feed7d-0fc7-4fda-9bd7-3af611f8ec5c",
+        "Name": "Dark wave"
+      },
+      {
+        "Id": "6d6138eb-1093-4e06-bc50-a0bf3f510d0f",
+        "Name": "Death industrial"
+      },
+      {
+        "Id": "80034618-5113-4934-a76d-a0da2690f816",
+        "Name": "Deep House"
+      },
+      {
+        "Id": "d20be7b7-3169-4a5b-b7f5-1cbcdb3d7d59",
+        "Name": "Detroit techno"
+      },
+      {
+        "Id": "0614bd6e-e107-43ba-96c4-000a6774ab30",
+        "Name": "Diva house/Handbag house"
+      },
+      {
+        "Id": "07ad7d2d-6cd7-4ffc-b834-cdbcd2aa276a",
+        "Name": "DJ Tools"
+      },
+      {
+        "Id": "a82e9e1b-54f8-4ba4-8fda-964550362e30",
+        "Name": "DJ Tools | Acapellas"
+      },
+      {
+        "Id": "a2eff454-0810-4cf3-9c51-494a34f19b0e",
+        "Name": "DJ Tools | loops"
+      },
+      {
+        "Id": "3ecb061d-73a2-4e31-bdf0-1db22503b17b",
+        "Name": "DJ Tools | Reprise"
+      },
+      {
+        "Id": "95f90ca6-6b3c-4b6d-994c-d5e5e447d791",
+        "Name": "Doomcore"
+      },
+      {
+        "Id": "30fb575f-5127-41b8-8b13-2f52bf079ae0",
+        "Name": "Downtempo"
+      },
+      {
+        "Id": "4af28964-5515-4010-917c-1ab1c20e03f2",
+        "Name": "Dream trance"
+      },
+      {
+        "Id": "ddd0883e-46ea-4333-90ae-d21cb881f38c",
+        "Name": "Drill and bass"
+      },
+      {
+        "Id": "4b99e778-44ae-4edf-8c75-60af28c13c42",
+        "Name": "Drone music"
+      },
+      {
+        "Id": "86b83c17-7caf-413a-a652-f727e8af7cb9",
+        "Name": "Drum & Bass"
+      },
+      {
+        "Id": "e1cd540d-d6e0-4306-a0d8-e21b52dcb4d8",
+        "Name": "Drum & Bass | Breakcore"
+      },
+      {
+        "Id": "e7d48151-d3fd-42a7-82a3-9d1d846fb31b",
+        "Name": "Drum & Bass | Dark Step"
+      },
+      {
+        "Id": "ad48772a-8358-4e65-a8c1-43ae1209e2fa",
+        "Name": "Drum & Bass | Electro Step"
+      },
+      {
+        "Id": "f61b01a2-6d56-44b7-974a-c089e195ee1a",
+        "Name": "Drum & Bass | Experimental"
+      },
+      {
+        "Id": "e671c97d-8994-4b40-9e83-024d04f89dbe",
+        "Name": "Drum & Bass | Hardstep"
+      },
+      {
+        "Id": "5740f4aa-455f-4bef-8758-ba1ff916cf99",
+        "Name": "Drum & Bass | Intelligent"
+      },
+      {
+        "Id": "0168aac1-48c0-4820-b82e-f23555e17196",
+        "Name": "Drum & Bass | Jump Up"
+      },
+      {
+        "Id": "67bf489c-2216-4262-9155-6e352145266f",
+        "Name": "Drum & Bass | Jungle"
+      },
+      {
+        "Id": "c1adef57-180e-450f-8366-b19856ecb35a",
+        "Name": "Drum & Bass | Liquid"
+      },
+      {
+        "Id": "c1e2427b-edb5-4cca-99cc-6290f37cc833",
+        "Name": "Drum & Bass | Old School"
+      },
+      {
+        "Id": "5f72b850-8adc-4aeb-9dfa-cdb1bbf441f2",
+        "Name": "Drum & Bass | Ragga"
+      },
+      {
+        "Id": "a1789b68-b6c7-474f-919c-c7e5b2b6ac9e",
+        "Name": "Drum & Bass | Techstep / Electrostep"
+      },
+      {
+        "Id": "5b104712-8939-4d26-b566-f1aeb84d2144",
+        "Name": "Drum & Bass | Vocal"
+      },
+      {
+        "Id": "31a85567-c8ed-4a21-8ad1-c2dcdf0b4139",
+        "Name": "Drumstep"
+      },
+      {
+        "Id": "52488c82-35fe-4164-b9e1-bc3282949c99",
+        "Name": "Dubstyle"
+      },
+      {
+        "Id": "fe549f92-88a9-4b10-b615-dbfce2299eed",
+        "Name": "Dub techno"
+      },
+      {
+        "Id": "28819aa7-8b70-4da2-b8eb-84aecfc25f12",
+        "Name": "Dubtronica"
+      },
+      {
+        "Id": "cf7183c0-6396-4383-83b9-319d4a32992c",
+        "Name": "Dutch house"
+      },
+      {
+        "Id": "c82f8852-7719-4dc7-875d-96f1eb25a820",
+        "Name": "Electroacoustic music"
+      },
+      {
+        "Id": "daffa99c-2ffd-4cf0-b905-2a0cb04958e6",
+        "Name": "Electroclash"
+      },
+      {
+        "Id": "fae00a48-29c5-4732-a550-5c677dba59b5",
+        "Name": "Electro-industrial"
+      },
+      {
+        "Id": "54d4c804-ee72-407f-a10b-3653c5fd44c3",
+        "Name": "Electro music"
+      },
+      {
+        "Id": "24269131-70dc-43be-9562-b5ff61cf2ef8",
+        "Name": "Electronica"
+      },
+      {
+        "Id": "88a33488-a430-48d9-973e-2200d9ccf411",
+        "Name": "Electronica | Electro"
+      },
+      {
+        "Id": "56931819-c8e8-49fa-90e9-68466e0244ba",
+        "Name": "Electronica | Experimental/Noise/Industrial"
+      },
+      {
+        "Id": "f845ccea-16ee-416f-945a-249f0058b7d6",
+        "Name": "Electronica | IDM"
+      },
+      {
+        "Id": "2486d478-a298-4e6a-8cd4-c41e468d8b5c",
+        "Name": "Electronica | Indie"
+      },
+      {
+        "Id": "79e2e51f-338f-4e4f-8407-aafdf19b7e02",
+        "Name": "Electronica | LeftField"
+      },
+      {
+        "Id": "56eb8953-7f04-4404-9c97-dbf693a06766",
+        "Name": "Electronic body music"
+      },
+      {
+        "Id": "735ab455-0678-4a34-9309-e2fc2bc84368",
+        "Name": "Electronic rock"
+      },
+      {
+        "Id": "7c544fc0-d7af-4935-ab8b-123fa0a1665a",
+        "Name": "Electropunk"
+      },
+      {
+        "Id": "99972867-ebe0-4d27-9d5c-9f5799af65f8",
+        "Name": "Electro swing"
+      },
+      {
+        "Id": "b9076ba7-52f1-419a-b97a-5a074257ebe9",
+        "Name": "Ethereal wave"
+      },
+      {
+        "Id": "604597dc-e7a0-4654-9486-ffc37f1e3478",
+        "Name": "Ethnic electronica"
+      },
+      {
+        "Id": "3d3e4653-adef-41f6-b356-09e485a4b94b",
+        "Name": "Eurodance"
+      },
+      {
+        "Id": "08631f11-d2d3-4375-9547-df6dbffaec04",
+        "Name": "Euro disco"
+      },
+      {
+        "Id": "fee670e5-beb3-4436-95b9-4189bfaf23e6",
+        "Name": "Fidget house"
+      },
+      {
+        "Id": "20a396e1-7990-4baf-8763-c88336dfa0ce",
+        "Name": "Fitness & Workout"
+      },
+      {
+        "Id": "09633c19-fa56-458f-9953-bd0184c7ee59",
+        "Name": "Florida breaks"
+      },
+      {
+        "Id": "56724184-2f2b-4f36-b182-4c8639725735",
+        "Name": "Folktronica"
+      },
+      {
+        "Id": "e8f202ac-f5f0-43b6-83a0-f81b161d31b8",
+        "Name": "Freestyle music"
+      },
+      {
+        "Id": "a527ead9-d728-446d-9c5e-7080fdfec4df",
+        "Name": "French house"
+      },
+      {
+        "Id": "077948ac-38a2-44dd-bfbe-ffa171d32afa",
+        "Name": "Funkstep"
+      },
+      {
+        "Id": "73596e10-2d96-411b-a6b8-4053060e75cb",
+        "Name": "Funktronica"
+      },
+      {
+        "Id": "0a8df2d8-7862-4aed-89a7-3c6238c07f6b",
+        "Name": "Funky house"
+      },
+      {
+        "Id": "f477d932-36c3-45d7-9b99-6d7f92091284",
+        "Name": "Future garage"
+      },
+      {
+        "Id": "f1a536a3-a2fb-4ff2-aad2-4861148a9cf5",
+        "Name": "Future house"
+      },
+      {
+        "Id": "466ae85c-d59e-46f0-904c-610daa8316d6",
+        "Name": "Futurepop"
+      },
+      {
+        "Id": "ff9968b3-9c4e-4925-b6b3-d29b8834d044",
+        "Name": "Gabba"
+      },
+      {
+        "Id": "73e0f724-9085-41fe-a3f8-4da64b3dae9b",
+        "Name": "Game Boy music"
+      },
+      {
+        "Id": "e81537ee-7ec0-488b-b93d-dd467170831e",
+        "Name": "Garage house"
+      },
+      {
+        "Id": "7753b735-c963-477b-a29f-e2a1167c3628",
+        "Name": "Ghetto house"
+      },
+      {
+        "Id": "4229a093-4409-44e9-ab22-bcad5ddbada4",
+        "Name": "Ghettotech"
+      },
+      {
+        "Id": "dcd29db4-812b-4a1f-ae01-57bc7c576952",
+        "Name": "Glitch"
+      },
+      {
+        "Id": "33a1ad1f-27a6-4310-b85f-6f5a7f1419b3",
+        "Name": "Glitch Hop"
+      },
+      {
+        "Id": "558a3b0b-5b2d-4915-93ba-b2d1b6347672",
+        "Name": "Goa trance"
+      },
+      {
+        "Id": "b146dad6-64cf-4a8d-9d2f-3eb896a0a4a8",
+        "Name": "Grime"
+      },
+      {
+        "Id": "362b33ef-ce41-418a-9c77-3d10c31018c1",
+        "Name": "Grindie"
+      },
+      {
+        "Id": "d09cdad8-fc2d-4e9f-9872-57fbda6f0187",
+        "Name": "Happy hardcore"
+      },
+      {
+        "Id": "8216ea67-7d18-42d4-a4d2-da57eb5db408",
+        "Name": "Hardcore / Hard Techno"
+      },
+      {
+        "Id": "07f89182-1dbe-4693-bddb-3ea6c85ff550",
+        "Name": "Hardcore / Hard Techno | Gabber"
+      },
+      {
+        "Id": "7aa2251e-69bd-4bad-b791-55d45b1b8e60",
+        "Name": "Hardcore / Hard Techno | Happy"
+      },
+      {
+        "Id": "0665ee20-86b0-45a7-89a0-8eaac90a8836",
+        "Name": "Hard Dance | Nu-NRG"
+      },
+      {
+        "Id": "bf773a5a-31d6-4088-a176-e00f7e39d4a5",
+        "Name": "Hard house"
+      },
+      {
+        "Id": "7695f7c0-1c2e-4eb8-b734-ac5ceafa274e",
+        "Name": "Hard NRG"
+      },
+      {
+        "Id": "6d68dced-8a0a-4ba2-8ecd-bff589e3b996",
+        "Name": "Hardstep"
+      },
+      {
+        "Id": "9aa27c13-ef52-4be2-8572-06bb8f95e48a",
+        "Name": "Hardstyle"
+      },
+      {
+        "Id": "86ae83a6-cc4b-4c48-bd3c-8e2a18ea4bb9",
+        "Name": "Hard trance"
+      },
+      {
+        "Id": "a066e9d2-14a8-4b9d-83ed-d15332e08d65",
+        "Name": "Hi-NRG"
+      },
+      {
+        "Id": "726e752a-8c12-43c4-b26c-68ee7e5b0339",
+        "Name": "Hip house"
+      },
+      {
+        "Id": "83b80c0a-06d5-4989-9e19-d20a75750775",
+        "Name": "House | Disco"
+      },
+      {
+        "Id": "f82d6925-e101-46fc-8458-d395474077df",
+        "Name": "House | Garage"
+      },
+      {
+        "Id": "d8f27dc9-24e3-44db-b8d4-d270c17c2337",
+        "Name": "House music"
+      },
+      {
+        "Id": "75f707ba-9545-4876-b498-e5156df3218e",
+        "Name": "House | Tribal"
+      },
+      {
+        "Id": "da864bf8-2874-4677-a715-24be92f4af5a",
+        "Name": "House | Vocal House"
+      },
+      {
+        "Id": "ce7deec4-cb10-4d3b-a22e-e40159aabeff",
+        "Name": "IDM"
+      },
+      {
+        "Id": "ed86c261-7422-4c22-b30e-475a0e6a31f1",
+        "Name": "IDM/Experimental"
+      },
+      {
+        "Id": "f441a362-f1a1-4a7b-bf5a-1d087d4bd555",
+        "Name": "Illbient"
+      },
+      {
+        "Id": "b3ce3ddc-5ee6-4b5c-977a-e8f6bdbc4e86",
+        "Name": "Indie Dance / Nu Disco"
+      },
+      {
+        "Id": "ed7fc3d4-dffb-4425-808a-be809d59dab3",
+        "Name": "Indietronica"
+      },
+      {
+        "Id": "4c729bbe-5c5a-4429-8cca-798c082bb86a",
+        "Name": "Industrial"
+      },
+      {
+        "Id": "75b07e0f-0d85-4aa9-bd7d-ed8bbdd5900d",
+        "Name": "Industrial music"
+      },
+      {
+        "Id": "5824eb42-d8c9-4d14-85f5-8cc70e14f30f",
+        "Name": "Isolationism"
+      },
+      {
+        "Id": "5878b319-d937-4a1d-8e42-f905bbb35e5a",
+        "Name": "Italo house"
+      },
+      {
+        "Id": "459f3dae-0f8c-46bd-9cfd-b8357c1d9112",
+        "Name": "Japanoise"
+      },
+      {
+        "Id": "3fa933c1-3f57-4a65-85d8-ae127210154b",
+        "Name": "Jazz house"
+      },
+      {
+        "Id": "1d0d2ea2-82dc-452b-8bbe-b29d25a8a8a5",
+        "Name": "Jersey club"
+      },
+      {
+        "Id": "b8385e48-55ba-4924-9147-1967ddb8e0ef",
+        "Name": "Jumpstyle"
+      },
+      {
+        "Id": "e61787a3-e84f-49c7-9354-76ec5b5e3798",
+        "Name": "Jungle"
+      },
+      {
+        "Id": "2e5ec651-6e20-40e1-9cb4-4907651ff0f1",
+        "Name": "Kwaito"
+      },
+      {
+        "Id": "0b05010e-c973-4399-811a-8db4711fee3b",
+        "Name": "Laptronica"
+      },
+      {
+        "Id": "0ad21804-ceec-4634-bd84-a06e50aa28ca",
+        "Name": "Latin house"
+      },
+      {
+        "Id": "d9b0feb0-b604-4d82-9424-0115493dd79c",
+        "Name": "Lento violento"
+      },
+      {
+        "Id": "16148018-ae00-4e36-82ff-d50c9aea1e08",
+        "Name": "Liquid dubstep"
+      },
+      {
+        "Id": "92abff47-d5be-4e81-af3c-fd14d85d88a9",
+        "Name": "Liquid funk"
+      },
+      {
+        "Id": "a171cc05-983f-4f6a-9112-b893be34eeb2",
+        "Name": "Livetronica"
+      },
+      {
+        "Id": "652d1b15-6f46-460f-bed6-c26197f7497b",
+        "Name": "Mákina"
+      },
+      {
+        "Id": "831f0a98-b5b7-4ba3-94d1-6bf0db4b6233",
+        "Name": "Melbourne bounce"
+      },
+      {
+        "Id": "c53c2f41-a44d-45a9-92a2-2d72db62f286",
+        "Name": "Miami bass"
+      },
+      {
+        "Id": "9f396bd1-2ac6-40ff-8ed3-3e0abffaaabf",
+        "Name": "Microhouse/Minimal house"
+      },
+      {
+        "Id": "7881420e-5ff0-423a-9c46-b5ceade3b9d2",
+        "Name": "Minimal"
+      },
+      {
+        "Id": "e12cf248-065e-42ca-8ac6-514787752eb9",
+        "Name": "Minimal techno"
+      },
+      {
+        "Id": "6eb1b837-ceb7-47aa-a3f6-3f9d8b9eddd2",
+        "Name": "Minimal wave"
+      },
+      {
+        "Id": "202fb8b4-a7b6-4013-bab2-504dfc265ef0",
+        "Name": "Moombahcore"
+      },
+      {
+        "Id": "de444095-2639-498d-82cc-ea6b89a146b8",
+        "Name": "Moombahton"
+      },
+      {
+        "Id": "9c6955b9-8430-450a-96a8-167fa787b7b6",
+        "Name": "Neurofunk"
+      },
+      {
+        "Id": "2a48e1ac-829b-4fb2-974a-d847a6ca83ab",
+        "Name": "Neurohop"
+      },
+      {
+        "Id": "31b25a97-47a8-4180-b71a-2234ebe6ea04",
+        "Name": "New-age music"
+      },
+      {
+        "Id": "9a4cd4ba-7f71-4bc2-badb-6df8892f92f3",
+        "Name": "New beat"
+      },
+      {
+        "Id": "51aaf251-1892-458b-9eff-d1b36073f6b7",
+        "Name": "New rave"
+      },
+      {
+        "Id": "07e1e35d-4f98-410f-b398-015cbbb34688",
+        "Name": "Nintendocore"
+      },
+      {
+        "Id": "b3adca15-b7f4-41e0-882c-0c2f16ddfa16",
+        "Name": "Nitzhonot"
+      },
+      {
+        "Id": "13eb2c17-40f6-4ab5-9612-72defa7c49ba",
+        "Name": "Nortec"
+      },
+      {
+        "Id": "7eae3133-9110-46a1-8a3a-eb31203ce87a",
+        "Name": "Nu-disco"
+      },
+      {
+        "Id": "3e9e11a4-ec81-43ae-9e5c-3e6b86890c92",
+        "Name": "Nu-funk"
+      },
+      {
+        "Id": "77cd196e-19fd-4d08-8b1d-d2466a6b0fbb",
+        "Name": "Nu-gaze"
+      },
+      {
+        "Id": "8066e5f7-6c4c-4266-8e6d-95fbc4b6f897",
+        "Name": "Nu-NRG"
+      },
+      {
+        "Id": "b5216a59-ffdd-4b95-ba01-aa1cd6e2170e",
+        "Name": "Nu skool breaks"
+      },
+      {
+        "Id": "88bce492-4b91-42fa-8b6e-ec8416171617",
+        "Name": "Outsider house"
+      },
+      {
+        "Id": "8f64bbf4-46a8-4a77-9585-65d5a780d119",
+        "Name": "Post-disco"
+      },
+      {
+        "Id": "ecba61d7-bb02-4858-b6ce-16388c6514cd",
+        "Name": "Power electronics"
+      },
+      {
+        "Id": "caa5be2c-c736-4d21-9d23-b518c59efb0d",
+        "Name": "Power noise"
+      },
+      {
+        "Id": "576cc23f-6cfb-478d-a848-b8ea5afdeef8",
+        "Name": "Progressive House"
+      },
+      {
+        "Id": "eef69bc1-2f62-46eb-959a-a33dae712700",
+        "Name": "Progressive trance"
+      },
+      {
+        "Id": "c71be787-f41d-4509-bb89-13bcef4bc3ff",
+        "Name": "Psybient"
+      },
+      {
+        "Id": "59c4ea98-a008-470c-9aa2-87afcececf5b",
+        "Name": "Psychedelic trance"
+      },
+      {
+        "Id": "09bec545-fb7a-4646-8705-b87448845c23",
+        "Name": "Psy-Trance"
+      },
+      {
+        "Id": "db31c6c8-079e-4aca-a33c-c296a2adc79b",
+        "Name": "Raggacore"
+      },
+      {
+        "Id": "8d7753d2-588b-42cc-999a-6eaa29be8e31",
+        "Name": "Rara tech"
+      },
+      {
+        "Id": "9b23da11-150c-4470-8749-6dbda41fdc3f",
+        "Name": "Reggae / Dub"
+      },
+      {
+        "Id": "ce27fac9-a0c8-492a-ac48-b8c285282f2d",
+        "Name": "Reggaestep"
+      },
+      {
+        "Id": "927e45c3-31cc-4155-82d8-e2f7ef9ab8cc",
+        "Name": "Sambass"
+      },
+      {
+        "Id": "f6aba686-df21-4388-b576-4cf01f861681",
+        "Name": "Skweee"
+      },
+      {
+        "Id": "0ce2742b-f1b2-4360-bd7b-3868dd59760f",
+        "Name": "Space disco"
+      },
+      {
+        "Id": "7991a6cd-b89a-41aa-9e2a-1514ba6c8b26",
+        "Name": "Space music"
+      },
+      {
+        "Id": "5e5617f8-4ef8-419a-94ab-c9d08cc1d5f7",
+        "Name": "Speedcore"
+      },
+      {
+        "Id": "c540d678-a145-485b-a89b-7d5e5d8ff4f4",
+        "Name": "Speed garage"
+      },
+      {
+        "Id": "271fee6e-dfeb-425d-904a-fb19ac160c31",
+        "Name": "Synthwave"
+      },
+      {
+        "Id": "f30937bc-5f4a-469d-be4b-51a131f9c63d",
+        "Name": "Techdombe"
+      },
+      {
+        "Id": "cb0c55ca-390d-4af7-81ae-510d3b90b55b",
+        "Name": "Tech House"
+      },
+      {
+        "Id": "ddbd98f0-997d-4e83-869b-42627bdea80a",
+        "Name": "Tech House | Acid"
+      },
+      {
+        "Id": "60b22618-ab3b-47e5-8ff9-501a3551af0a",
+        "Name": "Techno"
+      },
+      {
+        "Id": "e11aadc3-07b4-4421-b5f6-b4722db8ba1b",
+        "Name": "Techno | Acid"
+      },
+      {
+        "Id": "b2570f02-0644-4bd8-aae9-ec50ee973e5a",
+        "Name": "Techno | Detroit Techno"
+      },
+      {
+        "Id": "5f86f55c-1539-43ca-aaf5-15dc6b409a27",
+        "Name": "Techno | Dub Techno"
+      },
+      {
+        "Id": "3980a45c-9d19-46ae-a713-f10fc986cbea",
+        "Name": "Techno | Ghetto-Tek"
+      },
+      {
+        "Id": "0c1dfb98-d3a5-4f0e-a136-abd927c6f751",
+        "Name": "Techno | Hard Techno"
+      },
+      {
+        "Id": "c9ea08b8-0066-4b5e-aefe-946f61c51b4f",
+        "Name": "Techno | Melodic "
+      },
+      {
+        "Id": "8cc5fe4e-ad1e-4768-8a5b-5d1098c0ccad",
+        "Name": "Techstep"
+      },
+      {
+        "Id": "7ee6caf2-28ff-4841-9aa0-46c740c135aa",
+        "Name": "Tech trance"
+      },
+      {
+        "Id": "cc70a8b4-3904-436f-b24b-9f0317d758d3",
+        "Name": "Tecno brega"
+      },
+      {
+        "Id": "49c86213-a620-407c-8b66-2ac57db4b690",
+        "Name": "Trance | Acid"
+      },
+      {
+        "Id": "70195418-00a1-4bb3-b186-e25bfcc5247e",
+        "Name": "Trance | Epic"
+      },
+      {
+        "Id": "af4bbab0-4d87-47b9-991b-319fe889e621",
+        "Name": "Trance | Hard"
+      },
+      {
+        "Id": "4f9f8d72-2b0c-4754-90e3-a25077e1403c",
+        "Name": "Trance music"
+      },
+      {
+        "Id": "ef490ff4-17db-4bd6-882e-89d288e058d0",
+        "Name": "Trance | Progressive"
+      },
+      {
+        "Id": "bcf8c7ff-f242-4a9e-b730-b7b3b0fd6bbd",
+        "Name": "Trance | Tech"
+      },
+      {
+        "Id": "3213a802-182c-4d2d-a741-8648fa3abd0e",
+        "Name": "Trance | Tribal"
+      },
+      {
+        "Id": "985ab06c-b369-49b6-a355-9e27a4ab9965",
+        "Name": "Trapstep"
+      },
+      {
+        "Id": "52be1aa3-f8f9-421b-ad68-7e96a756aaf4",
+        "Name": "Tribal house"
+      },
+      {
+        "Id": "a87f25d7-f572-43a8-86bc-972a7a680c61",
+        "Name": "Trip hop"
+      },
+      {
+        "Id": "85b96a9b-ee7c-4acb-8fdd-de9b1271ece3",
+        "Name": "Trival"
+      },
+      {
+        "Id": "3cb73a47-9160-4513-8b10-8129fd176fa3",
+        "Name": "Tropical house"
+      },
+      {
+        "Id": "da88c362-a9f6-4394-9ea9-ccd9295b6cec",
+        "Name": "Turntablism"
+      },
+      {
+        "Id": "b81e803c-24f5-4596-ab16-5d9e5e498536",
+        "Name": "UK funky"
+      },
+      {
+        "Id": "8d7431ea-7db1-4ac7-afbe-109ac6740416",
+        "Name": "UK garage"
+      },
+      {
+        "Id": "3165d42b-0a74-4526-a9c2-d75c888dbeb3",
+        "Name": "UK hardcore"
+      },
+      {
+        "Id": "24afc225-9bd0-4d74-82d4-8d2fa61d246b",
+        "Name": "Uplifting trance"
+      },
+      {
+        "Id": "79578237-cc3d-43e0-9503-7d8ecd151fcb",
+        "Name": "Vaporwave"
+      },
+      {
+        "Id": "db6030e1-d4f4-4f68-bbed-fdb9d206cfe2",
+        "Name": "Video game music"
+      },
+      {
+        "Id": "d459d06e-b824-448e-a27b-88a287fc712f",
+        "Name": "Vocal trance"
+      },
+      {
+        "Id": "d3baf53f-7d3b-46ca-bf73-91e312bc15c7",
+        "Name": "Witch house"
+      },
+      {
+        "Id": "5b0afe7c-783b-4d46-848f-8ffaa871f7b1",
+        "Name": "Wonky"
+      }
+    ]
+  },
+  {
+    "Id": "69dd1306-b55e-47ce-9e23-9d4ac5b4849e",
+    "Name": "Folk",
+    "SubGenres": [
+      {
+        "Id": "28144107-f5d9-4e6b-98c8-ac2ee18279c9",
+        "Name": "Alternative Folk"
+      },
+      {
+        "Id": "46f272a9-c5c1-41a7-82e6-4804bbf2ce0f",
+        "Name": "American folk revival"
+      },
+      {
+        "Id": "7ce1dc8e-9929-4baa-a48c-a79573bc854b",
+        "Name": "Anti-folk"
+      },
+      {
+        "Id": "f9c54f51-bfd6-4ca7-bcea-5137117ab4f4",
+        "Name": "British folk revival"
+      },
+      {
+        "Id": "7241f5d8-562a-437a-a5fe-153684ba1678",
+        "Name": "Celtic music"
+      },
+      {
+        "Id": "34f1c04d-d368-4af1-bd1b-aa2484bd94d3",
+        "Name": "Chinese Regional Folk"
+      },
+      {
+        "Id": "2b5810e3-7710-44c2-a09c-a3642fe82c0c",
+        "Name": "Contemporary Folk"
+      },
+      {
+        "Id": "87a0fdd7-2352-4a37-b3fc-a2fa77fcc1e2",
+        "Name": "Cowboy/Western music"
+      },
+      {
+        "Id": "7eda8223-3398-41a0-84e6-e13933f6222f",
+        "Name": "Filk music"
+      },
+      {
+        "Id": "8e7df786-4965-49cb-b3cc-83f843f693fe",
+        "Name": "Freak folk"
+      },
+      {
+        "Id": "60da79f6-6ba7-4d7f-bd7c-1ca2de445b53",
+        "Name": "Indie folk"
+      },
+      {
+        "Id": "c037e261-1b9b-483c-8f81-f69652766ed1",
+        "Name": "Industrial folk"
+      },
+      {
+        "Id": "b4c83e34-6788-443c-be8c-2841502fd29e",
+        "Name": "Neofolk"
+      },
+      {
+        "Id": "1ff828d3-ebd3-403d-af64-a15dc164c855",
+        "Name": "Progressive folk"
+      },
+      {
+        "Id": "ef41b16c-e33e-4d09-a8bc-2c462752e703",
+        "Name": "Protest song"
+      },
+      {
+        "Id": "7c1ed70d-8941-4491-b312-40c842ff8e4f",
+        "Name": "Psychedelic folk"
+      },
+      {
+        "Id": "cde32c5c-db14-41fb-be86-a0839f42bf37",
+        "Name": "Singer-songwriter movement"
+      },
+      {
+        "Id": "91d7de23-7bde-45f7-af91-2a41d54e6f32",
+        "Name": "Skiffle"
+      },
+      {
+        "Id": "3e7ab314-946a-49f0-8d17-e6ca23cb8e4b",
+        "Name": "Sung poetry"
+      },
+      {
+        "Id": "b5f17031-c362-40a7-941f-a293a6e2a263",
+        "Name": "Taiwanese Folk"
+      },
+      {
+        "Id": "a93cb3dc-9d68-4e28-a900-c2217962a4b7",
+        "Name": "Traditional Folk"
+      }
+    ]
+  },
+  {
+    "Id": "5112c42c-7df0-4dc7-9747-78a4f5995695",
+    "Name": "Hip Hop/Rap",
+    "SubGenres": [
+      {
+        "Id": "a7f803d8-a8de-4f7e-be01-624fc4c0031d",
+        "Name": "Alternative hip hop"
+      },
+      {
+        "Id": "9ab9db7a-e248-491c-885c-573f16df4d33",
+        "Name": "Chopped and screwed"
+      },
+      {
+        "Id": "209068d5-e241-404a-b066-85698141d7f3",
+        "Name": "Conscious hip hop"
+      },
+      {
+        "Id": "50eb1ed0-865b-4a4e-a58f-17539d933355",
+        "Name": "Country rap"
+      },
+      {
+        "Id": "1ae58785-039c-485d-a89e-f15a02a3da10",
+        "Name": "Crunk"
+      },
+      {
+        "Id": "27bc7a98-33ef-47b8-a692-2dbe40e6e8e3",
+        "Name": "Crunkcore"
+      },
+      {
+        "Id": "9749e2be-0ce2-442c-82d3-18ff49a9098e",
+        "Name": "Cumbia rap"
+      },
+      {
+        "Id": "dcfce4cb-fe50-4b66-bd1b-02aa01e1bcb5",
+        "Name": "Dirty South"
+      },
+      {
+        "Id": "3741dba4-626d-47eb-9f98-b9747ecb0ec4",
+        "Name": "East Coast Rap"
+      },
+      {
+        "Id": "6740d183-10c5-49ad-9ef0-dc7247a39db4",
+        "Name": "Experimental hip hop"
+      },
+      {
+        "Id": "783c87fa-5634-4e2e-a48f-8765c6c605a9",
+        "Name": "Gangsta Rap"
+      },
+      {
+        "Id": "d5958f4f-b983-4ae3-b52f-a222e20b48ba",
+        "Name": "G-funk"
+      },
+      {
+        "Id": "55dfa4d7-40a7-4b72-b693-72f8ab35d3fb",
+        "Name": "Grime"
+      },
+      {
+        "Id": "513f0c90-389e-4fc3-a59a-ff4e60f18ad4",
+        "Name": "Hardcore Rap"
+      },
+      {
+        "Id": "b6fa25fc-e30a-461d-803b-e631c68da513",
+        "Name": "Hip pop"
+      },
+      {
+        "Id": "195024a9-8475-4875-997d-c2b17517d1ec",
+        "Name": "Horrorcore"
+      },
+      {
+        "Id": "150f85b2-efd4-45ce-9201-5735130f401f",
+        "Name": "Hyphy"
+      },
+      {
+        "Id": "47b311c1-14ef-4b51-bc73-17c7f9ad0bfc",
+        "Name": "Industrial hip hop"
+      },
+      {
+        "Id": "55c2354f-6bc2-428d-8f36-ec8af5575327",
+        "Name": "Instrumental hip hop"
+      },
+      {
+        "Id": "1430c033-a6d1-434b-837c-b566b98bee94",
+        "Name": "Korean Hip-Hop"
+      },
+      {
+        "Id": "bb94c51e-dee0-4593-a390-bca22f769d5e",
+        "Name": "Latin Rap"
+      },
+      {
+        "Id": "adfd3708-717f-4c3c-ab10-98afc2f6d7d0",
+        "Name": "Nerdcore"
+      },
+      {
+        "Id": "377d4d22-2c93-42eb-8b06-af0ca9ac18ef",
+        "Name": "New school hip hop"
+      },
+      {
+        "Id": "c385742a-d509-443c-babe-a3d95adc24fb",
+        "Name": "Old school hip hop"
+      },
+      {
+        "Id": "6eb4eca3-c37c-41e7-b3f7-a117389ad5a9",
+        "Name": "Political hip hop"
+      },
+      {
+        "Id": "e04302eb-b0e4-4781-9d1c-2f3633e90035",
+        "Name": "Ragga"
+      },
+      {
+        "Id": "631a51a3-4c09-45cd-8dbd-bdc695d3c2eb",
+        "Name": "Rap"
+      },
+      {
+        "Id": "4760b677-441f-46da-bda3-1921da6e10ec",
+        "Name": "Rap opera"
+      },
+      {
+        "Id": "25a6e8d4-0b52-4773-8f9b-8d9a6d06ab15",
+        "Name": "Reggaeton"
+      },
+      {
+        "Id": "e38061a4-600a-479a-b427-e743ed72b275",
+        "Name": "Southern hip hop"
+      },
+      {
+        "Id": "47811919-c12a-4a02-8937-221db4248d80",
+        "Name": "Trap"
+      },
+      {
+        "Id": "cd664d88-281b-4804-b25d-5cf65b2395c9",
+        "Name": "Underground hip hop"
+      },
+      {
+        "Id": "277aae81-d42a-4358-b19d-51560c31e100",
+        "Name": "West Coast hip hop"
+      }
+    ]
+  },
+  {
+    "Id": "e5906e6d-bcca-4f46-a446-333bd8395b28",
+    "Name": "Holiday",
+    "SubGenres": [
+      {
+        "Id": "90ca62b9-dbd8-4641-ab28-b8d40206ae16",
+        "Name": "Chanukah"
+      },
+      {
+        "Id": "5912ddcb-b6db-4e1a-bbf5-a533c6e7b417",
+        "Name": "Christmas"
+      },
+      {
+        "Id": "a108d88e-178b-4606-82d0-277c0ed4ef9b",
+        "Name": "Christmas: Children's"
+      },
+      {
+        "Id": "f94e68ea-bc63-4dfe-aa6a-3e3859013489",
+        "Name": "Christmas: Classic"
+      },
+      {
+        "Id": "768f3002-41a3-485f-ac17-df056fd8eda4",
+        "Name": "Christmas: Classical"
+      },
+      {
+        "Id": "25ab7d1a-bee9-40d5-90bb-85110cff482e",
+        "Name": "Christmas: Jazz"
+      },
+      {
+        "Id": "f0289e0f-9f62-4a58-a2aa-3160134ab71e",
+        "Name": "Christmas: Modern"
+      },
+      {
+        "Id": "ecdabb63-813b-4619-b811-076e24b78236",
+        "Name": "Christmas: Pop"
+      },
+      {
+        "Id": "5c8e4cf0-f898-4acc-b024-790949876a74",
+        "Name": "Christmas: R&B"
+      },
+      {
+        "Id": "fe00ac58-d5e6-43b6-baa6-c78d5cf3339b",
+        "Name": "Christmas: Religious"
+      },
+      {
+        "Id": "5c87cdd1-c5fa-4153-9098-cdef696db995",
+        "Name": "Christmas: Rock"
+      },
+      {
+        "Id": "8f857aa6-79d4-4d16-8d14-baddca93287f",
+        "Name": "Easter"
+      },
+      {
+        "Id": "24b2d35a-b3db-453d-8c07-469f183882b7",
+        "Name": "Halloween"
+      },
+      {
+        "Id": "84b4777f-33d0-4d40-a0fa-5783bae57340",
+        "Name": "Holiday: Other"
+      },
+      {
+        "Id": "cbd5ca0c-464d-4198-8f11-e2f38ca5f2ba",
+        "Name": "Instrumental"
+      },
+      {
+        "Id": "4ac93e9e-078a-41cc-9a99-4ff64fb1aa15",
+        "Name": "Thanksgiving"
+      }
+    ]
+  },
+  {
+    "Id": "7f82328f-bdcd-4d2f-b8ba-75f12a411adb",
+    "Name": "Inspirational",
+    "SubGenres": [
+      {
+        "Id": "ed7ba7a8-daa8-4daf-8010-238dfabcdd02",
+        "Name": "Background music"
+      },
+      {
+        "Id": "c01ec90f-8248-45c4-bd91-48672194515c",
+        "Name": "Chill Out"
+      },
+      {
+        "Id": "df3f009f-0f88-411c-9878-9923477a29fa",
+        "Name": "Chill Out | Acid Jazz"
+      },
+      {
+        "Id": "acf2f7ce-aff2-4aa5-8142-31506937bba3",
+        "Name": "Chill Out | Ambient"
+      },
+      {
+        "Id": "04257136-4cf5-4c82-94e0-3cf5a9627faa",
+        "Name": "Chill Out | Downtempo"
+      },
+      {
+        "Id": "137e52bc-2284-45c3-9c02-355b38fa5224",
+        "Name": "Chill Out | Nu-Jazz"
+      },
+      {
+        "Id": "39c3fb44-6c89-4fae-9bec-9dbeed9bbe0a",
+        "Name": "Chill Out | Trip-Hop"
+      },
+      {
+        "Id": "661e57b6-b17f-4ce4-bdc3-b28c78a1b547",
+        "Name": "Elevator music"
+      },
+      {
+        "Id": "89e54b6a-28a2-4278-866a-a2b31a5d989b",
+        "Name": "Gospel"
+      },
+      {
+        "Id": "d8c5de62-99a4-4716-afcc-51a375bc1da6",
+        "Name": "Inspirational"
+      },
+      {
+        "Id": "c00ab021-21b0-412a-93b3-62c60bcec1cf",
+        "Name": "Lounge music"
+      },
+      {
+        "Id": "745c8ea8-0a27-4600-91c3-b1727ffac458",
+        "Name": "Lowercase"
+      },
+      {
+        "Id": "5ae8a492-213c-4c2c-934a-4b068f6d45fd",
+        "Name": "Southern Gospel"
+      },
+      {
+        "Id": "bfb4f3f4-1a32-4e29-a114-68e4b969f3eb",
+        "Name": "Traditional Gospel"
+      }
+    ]
+  },
+  {
+    "Id": "84f0cf06-a7b0-4352-91a4-084385a59e82",
+    "Name": "Jazz",
+    "SubGenres": [
+      {
+        "Id": "eb1ae7c7-c614-4050-97ff-e562cb9bd88f",
+        "Name": "Afro-Cuban jazz"
+      },
+      {
+        "Id": "29fc96d1-aba9-48a8-a601-d05b833c7906",
+        "Name": "Asian American jazz"
+      },
+      {
+        "Id": "1f039e3a-f374-4a6b-8c38-8bba2a9dc767",
+        "Name": "Avant-Garde Jazz"
+      },
+      {
+        "Id": "43f908c1-0c7d-40e9-8dd8-43f6fc240581",
+        "Name": "Bebop"
+      },
+      {
+        "Id": "f8d1b3f4-2e45-4957-8432-23f4c47467cd",
+        "Name": "Big Band"
+      },
+      {
+        "Id": "1c0e9f16-f52b-4d47-be0b-1cfb61120b29",
+        "Name": "Boogie-woogie"
+      },
+      {
+        "Id": "1a5bb429-58cc-4384-8aec-d6c69511d39b",
+        "Name": "Bossa Nova"
+      },
+      {
+        "Id": "e0c7f505-4a29-4269-bd65-e23c8bfa2227",
+        "Name": "British dance band"
+      },
+      {
+        "Id": "7b8821c9-9414-4b09-ba99-5374e549ab65",
+        "Name": "Chamber jazz"
+      },
+      {
+        "Id": "00b38ec7-da3f-4058-acae-15154cd0bfb7",
+        "Name": "Contemporary Jazz"
+      },
+      {
+        "Id": "88cbab3f-4257-4a89-977b-a7f8273949ff",
+        "Name": "Continental jazz"
+      },
+      {
+        "Id": "0ab12665-94c3-43f0-941b-8ae24dda13fd",
+        "Name": "Cool"
+      },
+      {
+        "Id": "7330776b-2b74-49db-aa53-d0a37a9dd526",
+        "Name": "Cool jazz"
+      },
+      {
+        "Id": "dea9033d-5847-493a-8756-0b921e9a59b5",
+        "Name": "Crossover Jazz"
+      },
+      {
+        "Id": "c472ed72-544c-48c5-9d29-81c5c67a7821",
+        "Name": "Dixieland"
+      },
+      {
+        "Id": "18b15987-1d7b-47a8-85d6-aae175e0beda",
+        "Name": "Ethno jazz"
+      },
+      {
+        "Id": "11988f8b-496d-4b8f-9064-d52a23c1debb",
+        "Name": "European free jazz"
+      },
+      {
+        "Id": "9d834bc3-439f-44c9-adff-899a119b8bf4",
+        "Name": "Free funk"
+      },
+      {
+        "Id": "bb1e4eb6-a12e-458f-ab76-b3b58f9a6ca2",
+        "Name": "Free improvisation"
+      },
+      {
+        "Id": "4486f812-a75b-4ceb-9bd7-a1a8cfdbc3f0",
+        "Name": "Free jazz"
+      },
+      {
+        "Id": "6e1e7742-41ee-4264-a613-8ca131a73a0e",
+        "Name": "Fusion"
+      },
+      {
+        "Id": "22031a75-54f6-423f-91b4-9cf5ec15176c",
+        "Name": "Gypsy jazz"
+      },
+      {
+        "Id": "94f42043-afd9-4a53-afea-6f76acf6945c",
+        "Name": "Hard Bop"
+      },
+      {
+        "Id": "41d99ce9-4daf-4f87-ae1a-02bed8590552",
+        "Name": "Jazz blues"
+      },
+      {
+        "Id": "53dc35a4-aea7-4c79-8e92-88c329b12c29",
+        "Name": "Jazz-funk"
+      },
+      {
+        "Id": "607c6ab7-390e-4284-9ba0-8a0f5f4bac5b",
+        "Name": "Jazz fusion"
+      },
+      {
+        "Id": "917f2f6d-d656-4d7f-ad41-c5b91e18592d",
+        "Name": "Kansas City jazz"
+      },
+      {
+        "Id": "1477012e-308b-41fc-9dea-2740a9bfc16d",
+        "Name": "Latin Jazz"
+      },
+      {
+        "Id": "f0043a92-874d-4fc1-8bc9-39da937b66c6",
+        "Name": "Mainstream Jazz"
+      },
+      {
+        "Id": "aa089ba7-dcc4-4556-8e52-02d8af9c9b70",
+        "Name": "M-Base"
+      },
+      {
+        "Id": "3f2832f4-9ea8-4222-ab23-30eb79cb13eb",
+        "Name": "Modal jazz"
+      },
+      {
+        "Id": "4606c3bd-deff-4a90-a29f-0d76962afe55",
+        "Name": "Neo-bop jazz"
+      },
+      {
+        "Id": "d0d775b6-a5dd-4dfd-b5ef-78a54b05b0cb",
+        "Name": "Neo-swing"
+      },
+      {
+        "Id": "3592e9f1-d821-418b-bca9-794e7a50b369",
+        "Name": "Novelty ragtime"
+      },
+      {
+        "Id": "6de27147-5f60-4ad4-ab33-abfdaa764af6",
+        "Name": "Nu jazz"
+      },
+      {
+        "Id": "ee6f99c9-23a2-46c0-af08-6e9938413b97",
+        "Name": "Orchestral jazz"
+      },
+      {
+        "Id": "7604b26f-7cb5-43c3-8f8a-19a75203be53",
+        "Name": "Post-bop"
+      },
+      {
+        "Id": "11310fb8-65de-4dd6-b583-da56dd118131",
+        "Name": "Punk jazz"
+      },
+      {
+        "Id": "637ef20d-9514-48d6-b333-2f3f13f4ad4f",
+        "Name": "Ragtime"
+      },
+      {
+        "Id": "a072b76c-25e8-4893-b505-ae548d911543",
+        "Name": "Shibuya-kei"
+      },
+      {
+        "Id": "8c639eee-d76f-4422-afa8-663e262aeda6",
+        "Name": "Ska jazz"
+      },
+      {
+        "Id": "5bf5be9e-3896-4609-91c7-ffed84c13d52",
+        "Name": "Smooth Jazz"
+      },
+      {
+        "Id": "37e4c3ab-7a19-404f-aad9-f285580132ae",
+        "Name": "Soul jazz"
+      },
+      {
+        "Id": "14d3ec72-0930-40e4-b853-6652855e06f3",
+        "Name": "Straight-ahead jazz"
+      },
+      {
+        "Id": "f9748648-6f07-4cde-8cc3-7ca5c66d4b1c",
+        "Name": "Stride jazz"
+      },
+      {
+        "Id": "531bbfe9-71de-48bc-a9f1-8ae59d7a468a",
+        "Name": "Swing"
+      },
+      {
+        "Id": "30fdba96-52c0-4590-a400-345c98631966",
+        "Name": "Third stream"
+      },
+      {
+        "Id": "04dbe03a-3735-485a-a241-280521bd0046",
+        "Name": "Trad Jazz"
+      },
+      {
+        "Id": "5fb26fef-6ff5-4999-a4b2-bb3329f5c07f",
+        "Name": "West Coast jazz"
+      }
+    ]
+  },
+  {
+    "Id": "b91a9132-b975-4e9d-b3d1-3cab0be079a3",
+    "Name": "Latin",
+    "SubGenres": [
+      {
+        "Id": "d269dfd1-49e3-4203-b4a9-26986ba78f96",
+        "Name": "Alternativo & Rock Latino"
+      },
+      {
+        "Id": "cb846a90-bfd6-4908-ad67-ae3825483901",
+        "Name": "Axé"
+      },
+      {
+        "Id": "2e67fcab-47a0-4ff6-91a5-92a31129669f",
+        "Name": "Bachata"
+      },
+      {
+        "Id": "bba06a36-97a6-4576-b4b7-45f83776c1f1",
+        "Name": "Baladas y Boleros"
+      },
+      {
+        "Id": "74871ee9-21e6-4e6e-b372-e30d16f9b807",
+        "Name": "Banda"
+      },
+      {
+        "Id": "39f2fbfc-c0b7-41b8-b235-ea8e012d15b1",
+        "Name": "Bolero"
+      },
+      {
+        "Id": "c695ade1-a7fb-40e5-828a-54a2eb4f404b",
+        "Name": "Brazilian"
+      },
+      {
+        "Id": "0bf93b51-c1fa-4546-b8bc-0a40946e674f",
+        "Name": "Brazilian rock"
+      },
+      {
+        "Id": "c11815df-90f3-4bec-96a9-b0f091447562",
+        "Name": "Brega"
+      },
+      {
+        "Id": "995f74cd-a53f-43ae-ac32-330d0f72a860",
+        "Name": "Bullerengue"
+      },
+      {
+        "Id": "db362590-a72c-4b16-a922-a2762d57350d",
+        "Name": "cha cha cha"
+      },
+      {
+        "Id": "3b7d7dc8-0a83-4a1e-91fd-8173ccbc97d4",
+        "Name": "Chicha"
+      },
+      {
+        "Id": "120b5180-e431-4d27-9373-0308d20d2b56",
+        "Name": "Choro"
+      },
+      {
+        "Id": "688167fa-e217-4aa7-b958-f39693f3367f",
+        "Name": "Compas"
+      },
+      {
+        "Id": "505d7b34-9cf2-495a-a301-798384a181a6",
+        "Name": "Contemporary Latin"
+      },
+      {
+        "Id": "569a8eba-4eeb-4032-9afc-64dac8b1338a",
+        "Name": "Criolla"
+      },
+      {
+        "Id": "8766640a-4e2f-401f-a91d-39cdef2d1f48",
+        "Name": "Cumbia"
+      },
+      {
+        "Id": "4b6f3a9b-80c6-49e9-9bab-bccd0f71652f",
+        "Name": "Flamenco"
+      },
+      {
+        "Id": "ce4f35ce-2132-4d76-8033-73e45819323b",
+        "Name": "Forró"
+      },
+      {
+        "Id": "73410f03-c353-4153-b5c5-fea7716dfc9c",
+        "Name": "Frevo"
+      },
+      {
+        "Id": "b64b9727-ff22-465d-b42b-58db4fbc1cde",
+        "Name": "Funk Carioca"
+      },
+      {
+        "Id": "8935ee08-ec66-4441-9f28-06f984ab1065",
+        "Name": "Grupera"
+      },
+      {
+        "Id": "f14c1fcd-886a-4de7-aba3-7eddeeace203",
+        "Name": "Guajira"
+      },
+      {
+        "Id": "809c8836-b961-496a-89c9-fadd0da19f98",
+        "Name": "Huayno"
+      },
+      {
+        "Id": "5c287a9b-bdef-4176-8784-161285302122",
+        "Name": "Lambada"
+      },
+      {
+        "Id": "30e4e959-6ed4-41e4-b323-8b69e0cdf5ee",
+        "Name": "Latin alternative"
+      },
+      {
+        "Id": "b89aaf36-8b43-4d31-819a-b2ee52bcc8ed",
+        "Name": "Latin Christian"
+      },
+      {
+        "Id": "9cb9d29f-2956-47df-b825-be9baae71137",
+        "Name": "Latin rock"
+      },
+      {
+        "Id": "010b49d1-4633-46ff-8513-0a255bfe881c",
+        "Name": "Latin swing"
+      },
+      {
+        "Id": "b45187b1-b4eb-4753-bfd6-6bb052dad51a",
+        "Name": "Mambo"
+      },
+      {
+        "Id": "40d9f213-9278-4185-b09c-3018ffbd7cbc",
+        "Name": "Maracatu"
+      },
+      {
+        "Id": "e193a6a5-687c-497f-9636-125e18d53ad6",
+        "Name": "Mariachi"
+      },
+      {
+        "Id": "00373782-70c9-4fbc-b51e-2e27c3f5aeec",
+        "Name": "Merengue"
+      },
+      {
+        "Id": "1e08f77b-4c76-4800-9edc-1ac6bb680786",
+        "Name": "Mexican son"
+      },
+      {
+        "Id": "0a706362-eb0e-464f-8ee8-6e837dd5c6b0",
+        "Name": "Música criolla"
+      },
+      {
+        "Id": "7f6dc224-0ccf-4ff1-8866-b7d41c3ffd40",
+        "Name": "Música popular brasileira"
+      },
+      {
+        "Id": "a9616965-84f1-49d5-9e48-e3741ad7da24",
+        "Name": "Música sertaneja"
+      },
+      {
+        "Id": "2ec11240-7052-4b9a-a9be-61558c2d6cad",
+        "Name": "Norteño"
+      },
+      {
+        "Id": "6e86f9ed-b794-4634-b25a-d41f131a05d2",
+        "Name": "Nueva canción"
+      },
+      {
+        "Id": "4d43b5bd-bfa7-4180-8618-8ed8394c4ac3",
+        "Name": "Pagode"
+      },
+      {
+        "Id": "b8314be0-54a8-40e5-b2f5-637f7d39ba00",
+        "Name": "Pop Latino"
+      },
+      {
+        "Id": "e0657484-13f4-4a4c-81ae-f9fa519458f3",
+        "Name": "Porro"
+      },
+      {
+        "Id": "b41abb0b-6e44-4a86-b520-2bc0bc5286de",
+        "Name": "Raices"
+      },
+      {
+        "Id": "d2797032-abd7-4a47-a4c7-097924c53a27",
+        "Name": "Ranchera"
+      },
+      {
+        "Id": "3d34f1af-9516-4efd-b85c-14c6287f4c12",
+        "Name": "Reggaeton y Hip-Hop"
+      },
+      {
+        "Id": "9c32eaf7-9d36-48a7-a1a4-3affb6d5c84e",
+        "Name": "Regional Mexican"
+      },
+      {
+        "Id": "96d51601-dded-4e4a-9387-f64a97e525d5",
+        "Name": "Regional Mexicano"
+      },
+      {
+        "Id": "b6ae58eb-4df6-4190-8e49-5bdc12832e9d",
+        "Name": "Rock en Español"
+      },
+      {
+        "Id": "e65e44a4-16f5-47b6-b661-ac7ae1a6d3de",
+        "Name": "Rumba"
+      },
+      {
+        "Id": "02666376-bf91-4eee-abe6-ec96cb1fcb6a",
+        "Name": "Salsa"
+      },
+      {
+        "Id": "b9212dfb-6e16-495a-84b6-0540895eaba2",
+        "Name": "Salsa romántica"
+      },
+      {
+        "Id": "e359995b-3c5a-4a67-a74f-ece1ad3d36a6",
+        "Name": "Salsa y Tropical"
+      },
+      {
+        "Id": "7e79b3fb-6c0c-4b72-87f8-0a31af0c8771",
+        "Name": "Samba"
+      },
+      {
+        "Id": "958d0161-5c0d-47a5-89f8-691331ea99f5",
+        "Name": "Samba rock"
+      },
+      {
+        "Id": "81306c1b-6a24-4444-a8f8-11473690f6b3",
+        "Name": "Son"
+      },
+      {
+        "Id": "28467cdb-8c62-4beb-bbf5-4e1dc82cf1e5",
+        "Name": "Tango"
+      },
+      {
+        "Id": "21a774dc-f994-4d60-b3ff-5de0931c7082",
+        "Name": "Tecnobrega"
+      },
+      {
+        "Id": "c6a25b28-88c9-4f89-ab51-fe77a1c93637",
+        "Name": "Tejano"
+      },
+      {
+        "Id": "36cd4ef5-58af-4fe0-abdc-7a2e6831a0d6",
+        "Name": "Timba"
+      },
+      {
+        "Id": "0330a2c6-4a86-4182-b4e7-78617c10bb23",
+        "Name": "Tropical"
+      },
+      {
+        "Id": "4497da15-aaf4-4fee-bf1b-76488e8084a3",
+        "Name": "Tropicalia"
+      },
+      {
+        "Id": "cdbb0cfb-fcd7-4281-be2a-7eee5ae56db4",
+        "Name": "Tropipop"
+      },
+      {
+        "Id": "f04d1877-ebff-4265-9f9a-8e7102644c82",
+        "Name": "Vallenato"
+      },
+      {
+        "Id": "91ea184e-0ddf-42a0-93e8-4a5ead3881ec",
+        "Name": "Zouk-Lambada"
+      }
+    ]
+  },
+  {
+    "Id": "50f6cfe7-a333-4ba6-a1ce-470e62d03a35",
+    "Name": "New Age",
+    "SubGenres": [
+      {
+        "Id": "b81e35f6-f24d-4d3c-9124-5ec0435707d1",
+        "Name": "Environmental"
+      },
+      {
+        "Id": "0d853a7c-9ece-4198-99db-7b4140908b85",
+        "Name": "Healing"
+      },
+      {
+        "Id": "f98cc389-1815-4ea2-8429-a70560c07298",
+        "Name": "Meditation"
+      },
+      {
+        "Id": "6329c506-e994-4693-bfc6-8f896c74d728",
+        "Name": "Nature"
+      },
+      {
+        "Id": "5057f0b9-ec09-4e94-b9a7-9eeb1830049b",
+        "Name": "Relaxation"
+      },
+      {
+        "Id": "a3a6b290-6399-467e-b8a1-83938c2ae5ff",
+        "Name": "Travel"
+      }
+    ]
+  },
+  {
+    "Id": "bfd6e6dc-1133-4ca8-a777-cadc2be96aef",
+    "Name": "Opera",
+    "SubGenres": [
+      {
+        "Id": "1a999a37-6e4f-470d-bf52-fa411abbb728",
+        "Name": "Chinese Opera"
+      },
+      {
+        "Id": "cade2287-2f66-43a5-aec8-ffb17335df81",
+        "Name": "Opera"
+      }
+    ]
+  },
+  {
+    "Id": "61cd4d4f-6e43-46b8-b7e1-880992118baa",
+    "Name": "Pop",
+    "SubGenres": [
+      {
+        "Id": "740cd696-23ec-441a-afdc-0fef8a30eaaa",
+        "Name": "Adult Contemporary"
+      },
+      {
+        "Id": "1c715ec0-5127-4552-a400-fcdafaea5622",
+        "Name": "Arab pop"
+      },
+      {
+        "Id": "3a545f22-c9b6-47b1-a04d-6f4f8ff08bd0",
+        "Name": "Austropop"
+      },
+      {
+        "Id": "f78a4eca-1950-42cc-952a-d9458c8bb09a",
+        "Name": "Baroque pop"
+      },
+      {
+        "Id": "acb1eefd-8786-44f5-a553-1445e87abff5",
+        "Name": "Brill Building"
+      },
+      {
+        "Id": "31cdfb8f-27c3-41cb-b6b9-b1513bb12247",
+        "Name": "Britpop"
+      },
+      {
+        "Id": "85c01c4a-cabe-4c25-afc1-df6277f35a11",
+        "Name": "Bubblegum pop"
+      },
+      {
+        "Id": "7fd27268-a17b-46d4-b75c-e7b62efb6344",
+        "Name": "Canción"
+      },
+      {
+        "Id": "626c2d73-d061-4867-9ad2-01eeb7ac5e6c",
+        "Name": "Cantopop"
+      },
+      {
+        "Id": "0454239f-164a-44b4-b4b9-27d596a61b28",
+        "Name": "Cantopop/HK-Pop"
+      },
+      {
+        "Id": "9d864e5d-4dca-4505-914f-b314fb43da1b",
+        "Name": "Canzone"
+      },
+      {
+        "Id": "38ef168a-31a8-4af9-af3b-0e4fa28baaca",
+        "Name": "CCM"
+      },
+      {
+        "Id": "22412dc9-93c0-41a8-beab-ea1ef6620e5e",
+        "Name": "Chalga"
+      },
+      {
+        "Id": "68f21848-2ff4-44d4-9acf-34f2fb96828a",
+        "Name": "Chanson"
+      },
+      {
+        "Id": "39cd9784-9a69-4970-b7e4-daa24341880d",
+        "Name": "Christian Pop"
+      },
+      {
+        "Id": "dec55439-b152-4c1e-8f6a-1363d5c7f8de",
+        "Name": "Contemporary Gospel"
+      },
+      {
+        "Id": "8668d154-dd32-44c1-9216-e8b09b686ea2",
+        "Name": "Contemporary Singer/Songwriter"
+      },
+      {
+        "Id": "1da09670-9b5f-454a-a188-8654a66beeb7",
+        "Name": "Country pop"
+      },
+      {
+        "Id": "36e080af-b371-435c-9319-03f43a821522",
+        "Name": "C-Pop"
+      },
+      {
+        "Id": "6db5deb1-c382-4463-acaa-6ceb52e72327",
+        "Name": "Dance-pop"
+      },
+      {
+        "Id": "3cded074-3aad-4ca4-8781-757e42670ff2",
+        "Name": "Disco polo"
+      },
+      {
+        "Id": "0e381de1-f113-4c2b-9c99-e01d0ee580ad",
+        "Name": "Electropop"
+      },
+      {
+        "Id": "2b42073c-7216-4b39-87e5-7675eb21c8f9",
+        "Name": "Eurobeat"
+      },
+      {
+        "Id": "686d1226-388e-4883-a9b0-d698524021bd",
+        "Name": "Europop"
+      },
+      {
+        "Id": "b46b2017-7591-4acb-a351-d75b57b885ad",
+        "Name": "Fado"
+      },
+      {
+        "Id": "f3d41abf-fe68-4eef-94d2-21226b5baa7f",
+        "Name": "Folk pop"
+      },
+      {
+        "Id": "adfca11c-ceed-4534-9862-5b480eb2ef81",
+        "Name": "French pop"
+      },
+      {
+        "Id": "afddbd0c-6828-49a4-b94b-371345af5a20",
+        "Name": "Hong Kong English pop"
+      },
+      {
+        "Id": "69f336ae-0710-42ed-a98c-d28cafdee5c7",
+        "Name": "Indie pop"
+      },
+      {
+        "Id": "9752977c-b8d6-4d5b-b18b-f8d8fe829cab",
+        "Name": "Indo Pop"
+      },
+      {
+        "Id": "4a07aae6-06cc-459d-ba70-19be4872b607",
+        "Name": "Iranian pop"
+      },
+      {
+        "Id": "f0b769ea-26ca-4a4c-b4ae-8603ef0c2446",
+        "Name": "Italo dance"
+      },
+      {
+        "Id": "3cd31386-fe90-453d-b473-57299baaac4f",
+        "Name": "Italo disco"
+      },
+      {
+        "Id": "b763b249-c97e-4bc9-a38f-b7564f639e2f",
+        "Name": "Jangle pop"
+      },
+      {
+        "Id": "0154448a-2dee-40aa-bceb-6e1b7540bfc0",
+        "Name": "J-pop"
+      },
+      {
+        "Id": "438c3d53-e759-447d-8cbb-051a1ef5bf8f",
+        "Name": "Karaoke"
+      },
+      {
+        "Id": "0021c787-c7e0-495a-afd3-2eeb22f2c8d6",
+        "Name": "Kayokyoku"
+      },
+      {
+        "Id": "6df096b3-3dbf-4512-8e9f-3d3e4e561071",
+        "Name": "Korean Folk-Pop"
+      },
+      {
+        "Id": "62a30785-726b-4684-9197-27d33d490584",
+        "Name": "K-Pop"
+      },
+      {
+        "Id": "81cec286-ce1d-41a0-9c48-641098872a39",
+        "Name": "Laïkó"
+      },
+      {
+        "Id": "6b6cd632-27ef-4ad6-b0a2-07b65610ed0b",
+        "Name": "Latin ballad"
+      },
+      {
+        "Id": "46d3d9af-52ff-4b49-8e6b-d4135b3fa140",
+        "Name": "Latin pop"
+      },
+      {
+        "Id": "38d09fb3-fcaf-47ab-b030-2b1f1096f2b2",
+        "Name": "Louisiana swamp pop"
+      },
+      {
+        "Id": "b5776c06-5616-4031-a17c-f5f7c2837bc5",
+        "Name": "Malaysian Pop"
+      },
+      {
+        "Id": "bb571616-f284-4270-baa9-7ba7af3fc50c",
+        "Name": "Mandopop"
+      },
+      {
+        "Id": "ddcc3e39-18a1-4035-af7e-ba4025433d3a",
+        "Name": "Mexican pop"
+      },
+      {
+        "Id": "16ea3255-715a-442f-becf-821bc55748ac",
+        "Name": "Middle of the road"
+      },
+      {
+        "Id": "92d98888-047f-4040-bdc6-8cab9b88cbcd",
+        "Name": "Nederpop"
+      },
+      {
+        "Id": "81f5a159-fc44-442a-93d0-d512777fb306",
+        "Name": "New Acoustic"
+      },
+      {
+        "Id": "e3a96955-dea6-4ca0-b5fe-a6c1f2a8d9e2",
+        "Name": "New Romanticism"
+      },
+      {
+        "Id": "e12dc586-e10d-4307-9873-be8807d6c9a9",
+        "Name": "Operatic pop"
+      },
+      {
+        "Id": "0f66b0b6-1ef1-4da7-becf-16f3257f395f",
+        "Name": "Pinoy Pop"
+      },
+      {
+        "Id": "6d206bcd-7e38-421d-885a-bb3c5513adf3",
+        "Name": "Pop"
+      },
+      {
+        "Id": "e704f969-bfca-4184-8944-210d988615c7",
+        "Name": "Pop rap"
+      },
+      {
+        "Id": "f575877e-cb51-468f-8e0d-f4d4595c777b",
+        "Name": "Pop / Rock"
+      },
+      {
+        "Id": "92489078-8474-42f3-a20f-6c3f0df34d85",
+        "Name": "Pop/Rock"
+      },
+      {
+        "Id": "d677b43a-2b28-4af3-ba3a-e133ad5c10f0",
+        "Name": "Pop soul"
+      },
+      {
+        "Id": "e36d23e2-8ba5-47b0-a35c-fba25e32fa14",
+        "Name": "Power pop"
+      },
+      {
+        "Id": "dfe1b5dc-1efc-4b99-b450-3765c970ebd1",
+        "Name": "P-pop"
+      },
+      {
+        "Id": "c710fdd5-d021-4ad3-b144-7914c74c386c",
+        "Name": "Progressive pop"
+      },
+      {
+        "Id": "37f32f20-0c82-4b77-89a3-8a1006c70b3b",
+        "Name": "Psychedelic pop"
+      },
+      {
+        "Id": "b70f4b32-9559-4a64-a42d-285ee3e50348",
+        "Name": "Rebetiko"
+      },
+      {
+        "Id": "9e170dda-b619-44fe-b133-7710082fbd47",
+        "Name": "Russian pop"
+      },
+      {
+        "Id": "4f73e0a8-b88e-4190-aabb-276d4f37a40d",
+        "Name": "Schlager"
+      },
+      {
+        "Id": "b99a095f-7994-4863-ad2e-188397444e74",
+        "Name": "Soft Rock"
+      },
+      {
+        "Id": "90e1f2c2-5e8a-4bae-9f41-5bbfb9f16f4e",
+        "Name": "Sophisti-pop"
+      },
+      {
+        "Id": "49a41c1e-d8f8-461c-8cbc-e80dc29c335f",
+        "Name": "Space age pop"
+      },
+      {
+        "Id": "97d71f18-536f-42d8-9846-56906de7fb92",
+        "Name": "Sunshine pop"
+      },
+      {
+        "Id": "b8ecacc0-15e4-4775-8206-3a83046a2207",
+        "Name": "Surf pop"
+      },
+      {
+        "Id": "f0435081-0969-4907-a8a4-d359c5189872",
+        "Name": "Synthpop"
+      },
+      {
+        "Id": "9fa2545f-ff79-43c1-a12c-2c54c141402d",
+        "Name": "Taiwanese pop"
+      },
+      {
+        "Id": "08043aa4-71d1-4a87-aedd-e6524da68d8c",
+        "Name": "Teen Pop"
+      },
+      {
+        "Id": "94f37be6-b6b0-4824-8932-e70a95bd172d",
+        "Name": "Thai Pop"
+      },
+      {
+        "Id": "43d0601c-4a24-4717-b98d-c4983ba04c94",
+        "Name": "Traditional pop music"
+      },
+      {
+        "Id": "86b2b6c5-d5a3-4972-bcb4-457b700f17e6",
+        "Name": "Turkish pop"
+      },
+      {
+        "Id": "158ddf3c-65bd-4491-8d29-54b4cd2e24e0",
+        "Name": "Vispop"
+      },
+      {
+        "Id": "ca415f35-2e3c-400e-a2c7-f9fee3a315a5",
+        "Name": "V-pop"
+      },
+      {
+        "Id": "c8a31758-d6b1-4728-af06-e0460a0e1b80",
+        "Name": "Wonky pop"
+      }
+    ]
+  },
+  {
+    "Id": "dbad3789-a917-4cea-864f-5f7082df6996",
+    "Name": "Raggae",
+    "SubGenres": [
+      {
+        "Id": "fc9807b4-d1e1-4860-9628-bb6f55831f66",
+        "Name": "Calypso"
+      },
+      {
+        "Id": "5e205851-cd59-43a3-8bd6-d895954b878e",
+        "Name": "Dancehall"
+      },
+      {
+        "Id": "889493e0-b253-4a3d-a89d-661c595de62d",
+        "Name": "Drum & Bass"
+      },
+      {
+        "Id": "d4dfcda8-62d9-4a44-b325-e88c4a99606a",
+        "Name": "Dub"
+      },
+      {
+        "Id": "4b8692d3-0997-44f0-b976-f683b560a9fd",
+        "Name": "Folk Reggae"
+      },
+      {
+        "Id": "2f693f09-97f6-4386-82da-2999f0fa5b97",
+        "Name": "Jungle"
+      },
+      {
+        "Id": "d798877f-5b63-437b-9852-d760a6402ff9",
+        "Name": "Raggamuffin "
+      },
+      {
+        "Id": "84802ad8-821b-4e72-a172-f83c0d48cd4a",
+        "Name": "Reggae Español/Spanish Reggae"
+      },
+      {
+        "Id": "83000e80-edbd-4311-9b85-090104a084ef",
+        "Name": "Riddim"
+      },
+      {
+        "Id": "b71f28c3-cd2c-46ee-a83d-fe59a745cf4c",
+        "Name": "Roots Reggae"
+      },
+      {
+        "Id": "b84743b5-5737-475d-a197-f6effd7d9d1f",
+        "Name": "Ska"
+      }
+    ]
+  },
+  {
+    "Id": "a7789740-d3fe-4f8b-831f-a255e2ca1a93",
+    "Name": "R&B/Soul",
+    "SubGenres": [
+      {
+        "Id": "636ff07e-8c6c-4f5f-ab8e-23c14203aca9",
+        "Name": "Blue-eyed soul"
+      },
+      {
+        "Id": "b07dd9f3-e746-4dc7-bf78-09d56d99d55d",
+        "Name": "Contemporary R&B"
+      },
+      {
+        "Id": "bf888b23-435d-4726-9a9d-2b6b8f848cc5",
+        "Name": "Deep funk"
+      },
+      {
+        "Id": "5784ff55-8266-4947-9146-4ec8be04bf05",
+        "Name": "Disco"
+      },
+      {
+        "Id": "98198953-948f-46d2-b88a-1e62caca7309",
+        "Name": "Doo Wop"
+      },
+      {
+        "Id": "9d4dac39-9b7e-459a-95be-777151b31e92",
+        "Name": "Funk"
+      },
+      {
+        "Id": "f3ba70ba-2448-4b60-89bb-c8229b4a3e57",
+        "Name": "Funk / R&B"
+      },
+      {
+        "Id": "f01333cf-05b6-48c4-97a8-419aaef1bf30",
+        "Name": "Go-go"
+      },
+      {
+        "Id": "eb29f989-9481-4a5c-880d-f9532313cccd",
+        "Name": "Hip hop soul"
+      },
+      {
+        "Id": "8dfe373c-d32e-4149-8e14-4fa1937de8c9",
+        "Name": "Motown"
+      },
+      {
+        "Id": "dc1ad02d-93a3-4b22-bac2-baeb0ec14376",
+        "Name": "Neo soul"
+      },
+      {
+        "Id": "9f1f3e59-ce04-4f97-976d-d7d622518a13",
+        "Name": "Neo-Soul"
+      },
+      {
+        "Id": "53bfa9f5-78e0-47ec-a996-c4f409ae20f9",
+        "Name": "Northern soul"
+      },
+      {
+        "Id": "cd442ca3-60b7-480d-b91e-9099458b0e22",
+        "Name": "P-Funk"
+      },
+      {
+        "Id": "d23182ca-69ce-4c38-937e-aea8a9fff469",
+        "Name": "Quiet Storm"
+      },
+      {
+        "Id": "4c74e48e-2d65-4a13-975c-4f633c4928bc",
+        "Name": "Soul"
+      },
+      {
+        "Id": "c1223c15-a716-480d-81a4-782f39296754",
+        "Name": "Southern soul"
+      }
+    ]
+  },
+  {
+    "Id": "b6709590-6416-4494-91fd-aa4041ec99d1",
+    "Name": "Rock",
+    "SubGenres": [
+      {
+        "Id": "5f54a07a-9cd6-4e24-b9a5-ceebb3700d94",
+        "Name": "Acid rock"
+      },
+      {
+        "Id": "e9aebf91-6c8c-410f-8bbc-9aae3e4bb829",
+        "Name": "Adult Alternative"
+      },
+      {
+        "Id": "38000de6-82a1-4f8a-906d-7b21afe118a0",
+        "Name": "Alternative metal"
+      },
+      {
+        "Id": "e252d53e-089e-466e-b0f3-c92dcb481602",
+        "Name": "American Trad Rock"
+      },
+      {
+        "Id": "0f2838f9-a6c9-4dab-aa9d-204055e9554d",
+        "Name": "Anarcho punk"
+      },
+      {
+        "Id": "ba6a2cfd-a2cf-4b07-b8f4-1634faf50a1e",
+        "Name": "Arena Rock"
+      },
+      {
+        "Id": "18c58b7e-7a78-4d2f-b2f9-3587a9b460a6",
+        "Name": "Art rock"
+      },
+      {
+        "Id": "cf968a0a-3ba6-4fde-8006-9ba230745257",
+        "Name": "Avant-garde metal"
+      },
+      {
+        "Id": "627bb8f9-9a3f-4ad2-8464-4000b91592a8",
+        "Name": "Beat music"
+      },
+      {
+        "Id": "5efb26dd-bd79-40c3-94c0-065c7959e9c5",
+        "Name": "Black metal"
+      },
+      {
+        "Id": "e7b41ce1-5a93-4af2-bbc9-695e8363d86e",
+        "Name": "Blues-Rock"
+      },
+      {
+        "Id": "4ed6773b-6919-4316-8997-073296e68124",
+        "Name": "British Invasion"
+      },
+      {
+        "Id": "03e84a2e-57fe-4276-a154-8e04c9f9d481",
+        "Name": "Canterbury scene"
+      },
+      {
+        "Id": "9c2c235e-47b6-4e41-a87e-ddbf34595fc5",
+        "Name": "Celtic metal"
+      },
+      {
+        "Id": "64428902-5fff-400d-bbea-4a701d258a21",
+        "Name": "Celtic punk"
+      },
+      {
+        "Id": "a5fefb26-d060-4530-b3e4-d650081615be",
+        "Name": "Chinese Rock"
+      },
+      {
+        "Id": "1729a607-deee-4443-ba81-7eb4245af3f2",
+        "Name": "Christian Metal"
+      },
+      {
+        "Id": "5fa77a98-f9b2-4af3-84c8-248cf5a457ee",
+        "Name": "Christian Punk"
+      },
+      {
+        "Id": "b5053706-fc72-43fc-990a-b8c0f1ba6154",
+        "Name": "Christian Rock"
+      },
+      {
+        "Id": "39e664b7-4534-4849-92c7-750718adacc5",
+        "Name": "Cowpunk"
+      },
+      {
+        "Id": "18be5bbe-d3f6-4b72-a51d-3aef0b83408c",
+        "Name": "Crossover thrash"
+      },
+      {
+        "Id": "36b7cddc-af73-40ec-8c10-03e4a8070342",
+        "Name": "Crustgrind"
+      },
+      {
+        "Id": "ae536c03-a8f2-4710-a718-b345cafd7feb",
+        "Name": "Crust punk"
+      },
+      {
+        "Id": "16c71f5a-4bc8-4292-90ff-ca6aff393ef7",
+        "Name": "Dark cabaret"
+      },
+      {
+        "Id": "a4f231fa-794f-493e-acec-69a7af9bfefe",
+        "Name": "D-beat"
+      },
+      {
+        "Id": "b088092f-e468-4805-9e22-858f6977b9ea",
+        "Name": "Deathcore"
+      },
+      {
+        "Id": "30b913fc-1116-454e-80bf-3d7cbd318779",
+        "Name": "Death-doom"
+      },
+      {
+        "Id": "f1d1c8f7-4efd-4c21-aa13-22209c54912d",
+        "Name": "Death metal"
+      },
+      {
+        "Id": "9ab26192-07c2-449b-90f1-72867f807311",
+        "Name": "Death Metal/Black Metal"
+      },
+      {
+        "Id": "b6ec7515-2081-4d9d-8740-4579abcc217a",
+        "Name": "Death 'n' roll"
+      },
+      {
+        "Id": "084fee58-ec93-4961-af90-6396fae98bc2",
+        "Name": "Deathrock"
+      },
+      {
+        "Id": "2b43045e-712c-4157-a6d8-ea0206b5a523",
+        "Name": "Desert rock"
+      },
+      {
+        "Id": "f6c815a5-2676-4d94-a0a4-7255300195c0",
+        "Name": "Digital hardcore"
+      },
+      {
+        "Id": "c98f4eb6-79e7-4304-8ed7-a954172ea349",
+        "Name": "Djent"
+      },
+      {
+        "Id": "66e25d6d-5657-4885-89ad-7bcea622782f",
+        "Name": "Doom metal"
+      },
+      {
+        "Id": "2489b877-7d55-49e0-8045-a74c2110ec53",
+        "Name": "Drone metal"
+      },
+      {
+        "Id": "cb338a94-1a8f-4cea-95ea-692581f4b846",
+        "Name": "Dunedin Sound"
+      },
+      {
+        "Id": "aceadc05-43a1-4af1-a67f-d4113ba95370",
+        "Name": "Electronicore"
+      },
+      {
+        "Id": "bb79c0af-7c28-4bae-999a-aef5aa1acd80",
+        "Name": "Emo"
+      },
+      {
+        "Id": "719d692c-990a-479d-8f7b-697d6c9dfe0f",
+        "Name": "Folk metal"
+      },
+      {
+        "Id": "8edb965f-5880-42a5-8cdf-85d2953129a6",
+        "Name": "Folk rock"
+      },
+      {
+        "Id": "fbb362be-80f6-4d0d-815e-c50b8e119e74",
+        "Name": "Freakbeat"
+      },
+      {
+        "Id": "0125ea3d-c00d-44e0-a6df-2a93fb79de2f",
+        "Name": "Funk metal"
+      },
+      {
+        "Id": "2b3987de-3a0d-42e3-9080-03579a13efbd",
+        "Name": "Garage punk"
+      },
+      {
+        "Id": "15c7ce27-d510-4912-8b9a-74a5ea63997c",
+        "Name": "Garage rock"
+      },
+      {
+        "Id": "a4b0d060-2d0e-4a4c-b1ab-83d785404387",
+        "Name": "Glam metal"
+      },
+      {
+        "Id": "6d48ba1b-8ad7-40cd-8ca5-4e9cfc83d702",
+        "Name": "Glam Rock"
+      },
+      {
+        "Id": "e5c67b51-77c5-4895-b815-b6d0ef52f829",
+        "Name": "Goregrind"
+      },
+      {
+        "Id": "2c906373-ed14-47b6-a932-219ca9910175",
+        "Name": "Gothic metal"
+      },
+      {
+        "Id": "be04123b-2a4d-4cdd-80ca-23396e32fa6d",
+        "Name": "Gothic rock"
+      },
+      {
+        "Id": "d38a99fd-bbbc-4170-83f5-68e5aa6fac6a",
+        "Name": "Grindcore"
+      },
+      {
+        "Id": "269744e5-33ff-4dca-a826-f2474a179683",
+        "Name": "Groove metal"
+      },
+      {
+        "Id": "026c6dbd-eb1f-4f09-9497-ae9b9e712e8f",
+        "Name": "Gypsy punk"
+      },
+      {
+        "Id": "f380a0eb-cdc3-4e1e-8874-ebba0487d4b2",
+        "Name": "Hair Metal"
+      },
+      {
+        "Id": "3f273140-ed32-44c9-a16f-3114ee34ccd0",
+        "Name": "Hardcore"
+      },
+      {
+        "Id": "81fc2c07-e312-4171-b35a-7a5815004483",
+        "Name": "Hard Rock"
+      },
+      {
+        "Id": "88705c0b-56a6-4399-8d7d-8593509f548e",
+        "Name": "Heavy Metal"
+      },
+      {
+        "Id": "549f6a1a-a661-4129-be76-6860295174cc",
+        "Name": "Horror punk"
+      },
+      {
+        "Id": "23c74969-4969-4240-b076-3c41a4c4fe24",
+        "Name": "Industrial metal"
+      },
+      {
+        "Id": "5d40ab2a-fd73-47b6-9938-604179b00f03",
+        "Name": "Industrial rock"
+      },
+      {
+        "Id": "968ba242-9952-471b-a42f-73783d1ef0cf",
+        "Name": "Jam Bands"
+      },
+      {
+        "Id": "95a94c60-e266-4290-926b-fa246a0ab4fa",
+        "Name": "Jazz rock"
+      },
+      {
+        "Id": "db8a69a2-ce4f-4b05-a7ed-be28d2de604e",
+        "Name": "J-rock"
+      },
+      {
+        "Id": "c7cdd845-9f9d-41fe-a709-9deceeac0647",
+        "Name": "Korean Rock"
+      },
+      {
+        "Id": "4788c8ef-c20d-4c15-9ae6-8c5829493dde",
+        "Name": "Krautrock"
+      },
+      {
+        "Id": "6317a400-c9b4-4ba2-aeac-968889538b11",
+        "Name": "Latin metal"
+      },
+      {
+        "Id": "f66d2aad-3e7d-4198-a44c-bc06fe4786dd",
+        "Name": "Mathcore"
+      },
+      {
+        "Id": "6ccd6a7b-b2d2-4ce1-876d-154aa2b2c5dc",
+        "Name": "Math rock"
+      },
+      {
+        "Id": "fb2ed2ed-5be6-4ef3-8f1d-75f82172a478",
+        "Name": "Medieval metal"
+      },
+      {
+        "Id": "ee3731e2-27d3-45b9-9bcd-7cbb0426319e",
+        "Name": "Melodic death metal"
+      },
+      {
+        "Id": "1a22dade-c708-4d5f-aefe-f8251e7f7c29",
+        "Name": "Melodic metalcore"
+      },
+      {
+        "Id": "d0779b2e-8402-4eab-9460-40e7872dd8af",
+        "Name": "Metalcore"
+      },
+      {
+        "Id": "d0693f2b-f229-4db4-8af3-f2fbc8f853e1",
+        "Name": "Nagoya kei"
+      },
+      {
+        "Id": "57ea910a-2097-42e0-bdcd-2c1c6630190c",
+        "Name": "Neoclassical metal"
+      },
+      {
+        "Id": "2168ffb7-45eb-4bb6-8338-d596b9e0f4fb",
+        "Name": "Neo-psychedelia"
+      },
+      {
+        "Id": "872a58f0-b52e-456e-8f1a-587007f5dd1b",
+        "Name": "Neue Deutsche Härte"
+      },
+      {
+        "Id": "5cf5f200-e62f-425f-9f7c-1ca9ac911ed0",
+        "Name": "New prog"
+      },
+      {
+        "Id": "136fd312-0f22-4f55-92c3-c8f3dbf7bbd6",
+        "Name": "Noisegrind"
+      },
+      {
+        "Id": "895e93b9-791f-43c4-8ac2-77d3ab72f06d",
+        "Name": "Noise rock"
+      },
+      {
+        "Id": "115f1e9d-b0f3-4aac-a0cc-d5d38bc759cd",
+        "Name": "No wave"
+      },
+      {
+        "Id": "e846a260-40b2-414e-bedf-a243eb0d680a",
+        "Name": "Nu metal"
+      },
+      {
+        "Id": "9bb6b0c6-619a-4d25-a1c3-e37f6a53ef95",
+        "Name": "Pagan metal"
+      },
+      {
+        "Id": "e58bbf98-8921-4530-b28f-3c5dd9db6e47",
+        "Name": "Paisley Underground"
+      },
+      {
+        "Id": "bf4ecbfc-aa00-4204-881f-296e1bc238db",
+        "Name": "Pop punk"
+      },
+      {
+        "Id": "56a11597-6f3d-4e47-9b1c-6474950b0f13",
+        "Name": "Pop rock"
+      },
+      {
+        "Id": "4915153b-6d49-4903-8a30-f83e8b15c1a1",
+        "Name": "Post-grunge"
+      },
+      {
+        "Id": "159aa78b-3f6f-483a-8b06-bdf51dbfc479",
+        "Name": "Post-hardcore"
+      },
+      {
+        "Id": "df3c0d73-d8d7-4b42-b648-656a95ee938e",
+        "Name": "Post-metal"
+      },
+      {
+        "Id": "e86a16c0-db94-40e7-92c8-a6e4a156e0b0",
+        "Name": "Post-punk"
+      },
+      {
+        "Id": "6b08de6f-60bd-4f84-9309-49bd1be78d4e",
+        "Name": "Post-punk revival"
+      },
+      {
+        "Id": "5bb4f180-6729-41b1-bd3d-60c66732d026",
+        "Name": "Post-rock"
+      },
+      {
+        "Id": "c407df02-6a7e-4e98-8a44-f51cedc4fc98",
+        "Name": "Power metal"
+      },
+      {
+        "Id": "aedb2d5d-0553-4b4c-978a-23b86465416d",
+        "Name": "Powerviolence"
+      },
+      {
+        "Id": "2a5ff79f-fb65-45f0-9fc4-40518578768b",
+        "Name": "Progressive metal"
+      },
+      {
+        "Id": "e3994aa2-1669-4eea-bdfe-f50c3c5b5203",
+        "Name": "Prog-Rock/Art Rock"
+      },
+      {
+        "Id": "cda41b48-48ff-4570-af07-c56e7d082d20",
+        "Name": "Psychedelic"
+      },
+      {
+        "Id": "bb4367d2-288a-4c97-bbf5-6a646e3cea1a",
+        "Name": "Psychobilly"
+      },
+      {
+        "Id": "a0653b2c-5af6-45ab-8b45-c5c4feaa0c5a",
+        "Name": "Psychobilly/Punkabilly"
+      },
+      {
+        "Id": "01930948-b5df-47b1-8be1-18acd94bbb48",
+        "Name": "Punk rock"
+      },
+      {
+        "Id": "f064f989-5a58-400e-8291-03cea81de4a7",
+        "Name": "Raga rock"
+      },
+      {
+        "Id": "eb11554c-3511-4fa7-bd4f-8d9d7b26a700",
+        "Name": "Rapcore"
+      },
+      {
+        "Id": "aee0ef03-bd4f-4761-96c8-91782e94333a",
+        "Name": "Rap metal"
+      },
+      {
+        "Id": "e37ba691-e64c-48e9-9d39-64cdc0dd06e4",
+        "Name": "Rap rock"
+      },
+      {
+        "Id": "8dfa9002-cd23-4278-8030-62f0a311ce40",
+        "Name": "Riot grrrl"
+      },
+      {
+        "Id": "addf11be-21ee-48a3-b955-d1c81e462024",
+        "Name": "Rockabilly"
+      },
+      {
+        "Id": "41f7e6d8-b79d-4b7a-9e45-422faa5cc9b4",
+        "Name": "Rock and roll"
+      },
+      {
+        "Id": "a5d24f15-3585-4b78-b327-b63afbc9e5d5",
+        "Name": "Rock in Opposition"
+      },
+      {
+        "Id": "2a216f98-b1b0-4b4e-b846-d54907677d6e",
+        "Name": "Rock & Roll"
+      },
+      {
+        "Id": "e6dfd541-bdf7-4856-ae33-39615ab75310",
+        "Name": "Roots Rock"
+      },
+      {
+        "Id": "8d9d0c48-b9c2-4478-ba01-e61341a3d46a",
+        "Name": "Sadcore"
+      },
+      {
+        "Id": "985dec6c-7444-4856-9ef6-da4bfaff46fb",
+        "Name": "Screamo"
+      },
+      {
+        "Id": "54428cc2-a94d-4dee-a5cb-ecf9366a10e6",
+        "Name": "Shoegaze"
+      },
+      {
+        "Id": "76a8e0bd-9e0a-40c3-a0f6-447f399351fc",
+        "Name": "Singer/Songwriter"
+      },
+      {
+        "Id": "6e063676-b66e-43ef-9912-c70a14727f72",
+        "Name": "Ska punk"
+      },
+      {
+        "Id": "5258f65b-3b3a-4385-8687-28bb12fb4442",
+        "Name": "Skate punk"
+      },
+      {
+        "Id": "f796204d-10c9-4be3-9dfe-cf68864d73dc",
+        "Name": "Slowcore"
+      },
+      {
+        "Id": "e351956a-eb0e-496b-9edf-42a9456601da",
+        "Name": "Sludge metal"
+      },
+      {
+        "Id": "c6a94f1b-1cb7-4f0b-91ec-ce78660fca22",
+        "Name": "Southern Rock"
+      },
+      {
+        "Id": "4ffce474-c0c4-4a9d-9f70-432aef4c66ef",
+        "Name": "Space rock"
+      },
+      {
+        "Id": "24c760b7-4899-402d-9e94-5954aec38a83",
+        "Name": "Speed metal"
+      },
+      {
+        "Id": "46e08f8f-0f85-4d51-9305-26e3fd2c29f3",
+        "Name": "Stoner rock"
+      },
+      {
+        "Id": "0a556419-1acb-49ee-8cef-43603a0d6249",
+        "Name": "Street punk"
+      },
+      {
+        "Id": "654457d3-04ef-4123-b991-b42a4245ff58",
+        "Name": "Sufi rock"
+      },
+      {
+        "Id": "887e10f7-6401-413e-aa65-e4f2d2f44b6d",
+        "Name": "Surf"
+      },
+      {
+        "Id": "ebbb0b73-9a56-4761-991e-a015bea1ac67",
+        "Name": "Surf rock"
+      },
+      {
+        "Id": "a57f520c-2792-4917-bb9c-5d5db59ced90",
+        "Name": "Symphonic metal"
+      },
+      {
+        "Id": "6c28a776-3468-4eea-ae8e-7f015d08426e",
+        "Name": "Technical death metal"
+      },
+      {
+        "Id": "0132a459-4167-4b90-885e-a5429caa1354",
+        "Name": "Tex-Mex"
+      },
+      {
+        "Id": "f421d809-dbac-4ad4-9404-129d24b9ada2",
+        "Name": "Thrashcore"
+      },
+      {
+        "Id": "cb854bbd-b086-421c-965c-95a3893d5152",
+        "Name": "Thrash metal"
+      },
+      {
+        "Id": "ac06e433-f3e2-4606-926b-9d586d687547",
+        "Name": "Unblack metal"
+      },
+      {
+        "Id": "675f8611-c931-4a5c-a85d-70d77466ecf8",
+        "Name": "Viking metal"
+      },
+      {
+        "Id": "eb5f83dc-7620-429c-83b8-f47cdde19406",
+        "Name": "Visual kei"
+      },
+      {
+        "Id": "6e7d7fd1-ab20-43b1-9c2a-053c97373ba9",
+        "Name": "War metal"
+      },
+      {
+        "Id": "7cf56d80-1e44-4555-85ad-6190f7592138",
+        "Name": "World fusion"
+      }
+    ]
+  },
+  {
+    "Id": "3fca93b3-a76d-4640-954f-dff6c06d9c39",
+    "Name": "Soundtrack",
+    "SubGenres": [
+      {
+        "Id": "ad24c326-11be-4412-8612-e8a8ad0b77b3",
+        "Name": "Foreign Cinema"
+      },
+      {
+        "Id": "62f662e0-a71d-4951-b39a-7179548a9468",
+        "Name": "Musicals"
+      },
+      {
+        "Id": "d8c2826c-a9f8-430e-a60e-aecf84a562d1",
+        "Name": "Original Score"
+      },
+      {
+        "Id": "516cc9ba-72b5-4365-9669-acd513b594cd",
+        "Name": "Soundtrack"
+      },
+      {
+        "Id": "8a5957aa-9a0a-4f89-b176-49b45e736363",
+        "Name": "TV Soundtrack"
+      }
+    ]
+  },
+  {
+    "Id": "5787d6e9-09a8-4bcd-b8c4-6b8f1cd5d601",
+    "Name": "Spoken word",
+    "SubGenres": [
+      {
+        "Id": "4f207e71-0afb-49f2-9b0e-ce3c5b6f2dac",
+        "Name": "Praise & Worship"
+      },
+      {
+        "Id": "81811280-15a2-41d1-ae05-8ce9d4902468",
+        "Name": "Spoken Word"
+      }
+    ]
+  },
+  {
+    "Id": "fdea8748-162c-4894-9957-504ef1b947ae",
+    "Name": "Vocal",
+    "SubGenres": [
+      {
+        "Id": "7e911ac3-cf2b-432b-8705-048e5d9f2fe4",
+        "Name": "Standards"
+      },
+      {
+        "Id": "0ec2c9df-b8a7-4dc3-9411-056c6fa43b52",
+        "Name": "Traditional Pop"
+      },
+      {
+        "Id": "0cc22437-0b5b-4ab0-a1d3-5ba3d8a93420",
+        "Name": "Trot"
+      },
+      {
+        "Id": "c99004ba-d77d-49ae-9be1-8d5b36950081",
+        "Name": "Vocal Jazz"
+      },
+      {
+        "Id": "35320896-ac7c-4242-8f68-ce52bebeb42c",
+        "Name": "Vocal Pop"
+      }
+    ]
+  },
+  {
+    "Id": "695c5101-f6f6-4d92-a196-78b433112a94",
+    "Name": "World",
+    "SubGenres": [
+      {
+        "Id": "9ffd6d1c-120f-423f-a805-54cecb10ef18",
+        "Name": "Africa"
+      },
+      {
+        "Id": "5400b209-64b5-484c-847c-265c4b38c531",
+        "Name": "African heavy metal"
+      },
+      {
+        "Id": "ca853872-9d0f-4255-856a-635e95a1b477",
+        "Name": "African hip hop"
+      },
+      {
+        "Id": "28397ffe-94a0-4ded-8cf9-f1633160eb16",
+        "Name": "Afrobeat"
+      },
+      {
+        "Id": "6b27b8f6-f8d4-46d2-8879-4c53389bc51a",
+        "Name": "Afro-Beat"
+      },
+      {
+        "Id": "295f5438-26f2-485d-8e95-da5294408d6c",
+        "Name": "Afro-Pop"
+      },
+      {
+        "Id": "fe2693ba-8b41-42b9-9ccd-811d4aa7ebed",
+        "Name": "Anison"
+      },
+      {
+        "Id": "620b305e-9328-4596-a37d-2f7a370433da",
+        "Name": "Apala"
+      },
+      {
+        "Id": "1d4ebde7-fb67-4f4c-b6e9-9b32f01ff3b8",
+        "Name": "Asia"
+      },
+      {
+        "Id": "0a7ed30b-9872-4d6b-9b37-453fb8cfe223",
+        "Name": "Australia"
+      },
+      {
+        "Id": "b3e5fc37-b25a-41af-968b-5e55bd56927f",
+        "Name": "Baila"
+      },
+      {
+        "Id": "9fb6cf99-391a-4166-ad16-b95b774f30f1",
+        "Name": "Baithak Gana"
+      },
+      {
+        "Id": "96e57ba4-3d0b-4a84-9093-3271d43dc993",
+        "Name": "Baul"
+      },
+      {
+        "Id": "19d3f6ab-0621-4f31-bb33-b37e17509842",
+        "Name": "Benga"
+      },
+      {
+        "Id": "3757b1fd-a4a2-414d-bff6-530695c514c1",
+        "Name": "Bhangra"
+      },
+      {
+        "Id": "4d1e13ba-d0aa-4253-9314-cdd7cca88af3",
+        "Name": "Bikutsi"
+      },
+      {
+        "Id": "fb17eadf-c9bd-4cfa-91f8-ab1a83899fd3",
+        "Name": "Bollywood"
+      },
+      {
+        "Id": "a346754c-528f-4b0a-a1f1-1169d5f569d2",
+        "Name": "Bongo Flava"
+      },
+      {
+        "Id": "1c4979a6-ec72-4b8b-957f-659b804e1e09",
+        "Name": "Bouyon"
+      },
+      {
+        "Id": "cdf5ea08-21d3-4d09-991a-7f78b8279ca9",
+        "Name": "Cadence-lypso"
+      },
+      {
+        "Id": "42525db3-216d-4d4a-9f57-5d2ecff5cffc",
+        "Name": "Cajun"
+      },
+      {
+        "Id": "d9842910-813d-4974-9813-392d5be87e2b",
+        "Name": "Cajun fiddle tunes"
+      },
+      {
+        "Id": "bb7ee000-a95c-442e-adb1-02f393b90c5f",
+        "Name": "Cape Jazz"
+      },
+      {
+        "Id": "3c68dc5e-0b2a-4267-aa25-dd51c6568ff1",
+        "Name": "Caribbean"
+      },
+      {
+        "Id": "8bbb235d-169d-414a-8dab-3a9b4d9b0d94",
+        "Name": "Celtic"
+      },
+      {
+        "Id": "afc6d32b-6332-4577-b988-2e58810fc3b9",
+        "Name": "Celtic Folk"
+      },
+      {
+        "Id": "48c7df9c-ddbf-4873-9a0e-65b4572ce164",
+        "Name": "Chimurenga"
+      },
+      {
+        "Id": "4b73b5cd-4719-4b52-8359-ecf0ea0d020c",
+        "Name": "Chinese"
+      },
+      {
+        "Id": "feccd859-31df-4241-adc8-b28e3bb3bd15",
+        "Name": "Chutney"
+      },
+      {
+        "Id": "1aa3b1d1-2635-4558-ac04-0a8ab765793d",
+        "Name": "Chutney soca"
+      },
+      {
+        "Id": "a71e4841-c486-4d00-8a47-5fa460f00a5f",
+        "Name": "Congolese rumba"
+      },
+      {
+        "Id": "fa29f722-efdc-496e-a0aa-416d025443b3",
+        "Name": "Contemporary Celtic"
+      },
+      {
+        "Id": "2ac51248-9eeb-481f-924b-e82cdd73f938",
+        "Name": "Coupé-Décalé"
+      },
+      {
+        "Id": "7f5b532b-ab3c-4a38-8cdb-180f84f0366a",
+        "Name": "Dangdut"
+      },
+      {
+        "Id": "f84e0a2c-a193-4e46-8f84-9c6d13351c5d",
+        "Name": "Devotional & Spiritual"
+      },
+      {
+        "Id": "00dc89a7-8b33-433b-909e-68d412d07baa",
+        "Name": "Dini"
+      },
+      {
+        "Id": "1f0ad0b6-65f2-409d-ae9b-a15e99dcafd6",
+        "Name": "Drinking Songs"
+      },
+      {
+        "Id": "f8928cd2-2dfc-4699-9ba6-e81c4382be00",
+        "Name": "Enka"
+      },
+      {
+        "Id": "281874f1-5feb-4db7-bb52-67eab7da4477",
+        "Name": "Europe"
+      },
+      {
+        "Id": "6b0a93a4-a112-4f2d-9b55-bbc1321518ad",
+        "Name": "Fann at-Tanbura"
+      },
+      {
+        "Id": "e5c007ab-9962-4dad-a191-46bf7ebb5cf9",
+        "Name": "Fijiri"
+      },
+      {
+        "Id": "243fe1e2-3b9e-4489-ab96-b5b79ab2391a",
+        "Name": "Filmi"
+      },
+      {
+        "Id": "a5f837cf-49a5-437c-be7a-97c7b553a4b6",
+        "Name": "France"
+      },
+      {
+        "Id": "b77acb4c-3106-4a06-bc97-301ccfd5dfab",
+        "Name": "Fuji music"
+      },
+      {
+        "Id": "81db6f3f-fd2e-4076-b70d-8edb6c94fea1",
+        "Name": "Gamelan"
+      },
+      {
+        "Id": "98c10cce-35eb-4bb3-b41f-8783a51b975d",
+        "Name": "Genge"
+      },
+      {
+        "Id": "a3a21459-8f52-45b0-8ba1-3993df8a3a52",
+        "Name": "Halk"
+      },
+      {
+        "Id": "ade8d233-cd1d-44bb-9a26-627d1ab4c4b2",
+        "Name": "Hawaii"
+      },
+      {
+        "Id": "2326004f-41eb-4d41-9609-24087c1c220c",
+        "Name": "Highlife"
+      },
+      {
+        "Id": "9ee23138-8bff-44a7-aed7-d463ae40ba0a",
+        "Name": "Hiplife"
+      },
+      {
+        "Id": "e05d1a42-ab00-426a-ac5c-b4a3e3bac731",
+        "Name": "Igbo highlife"
+      },
+      {
+        "Id": "722b80d5-10fb-49e2-929b-cd915ce67188",
+        "Name": "Igbo rap"
+      },
+      {
+        "Id": "ab032fd7-b3ae-4335-928e-b81ae2d40205",
+        "Name": "Indian Classical"
+      },
+      {
+        "Id": "a143513b-7400-437a-ac5f-e33d9ac527d1",
+        "Name": "Indian Pop"
+      },
+      {
+        "Id": "4586022c-9726-496a-bf1a-aa13ebf6f5cf",
+        "Name": "Indonesian Religious"
+      },
+      {
+        "Id": "bfb84a0d-9461-40b2-9ba1-61315c8d82b0",
+        "Name": "Isicathamiya"
+      },
+      {
+        "Id": "2617bcfd-7254-44e6-bb43-2580381f1d4a",
+        "Name": "Japan"
+      },
+      {
+        "Id": "0b263d3b-4b5e-42d1-9c1f-42d3b1ae82e4",
+        "Name": "Japanese Pop"
+      },
+      {
+        "Id": "84c7f7af-3b3d-46c8-b657-a83b1a6c2551",
+        "Name": "Jit"
+      },
+      {
+        "Id": "bbc3ba02-dda9-4847-a750-4f032bad4ac2",
+        "Name": "Jùjú"
+      },
+      {
+        "Id": "3d60fe27-6507-42d1-9343-20a6092950fa",
+        "Name": "Kadongo Kamu"
+      },
+      {
+        "Id": "17c39ab4-cca7-40d0-ae38-c2ea3d509a83",
+        "Name": "Kapuka aka Boomba"
+      },
+      {
+        "Id": "bbd7de90-c409-4293-9924-320cd66bf35e",
+        "Name": "Keroncong"
+      },
+      {
+        "Id": "038c572f-0bdd-4ada-a031-b95a1a0754ab",
+        "Name": "Khaliji"
+      },
+      {
+        "Id": "6110ea5d-ed23-4854-8aa9-405f5929560c",
+        "Name": "Kizomba"
+      },
+      {
+        "Id": "78571b1f-18c6-4b10-af9f-19597a5a584a",
+        "Name": "Klezmer"
+      },
+      {
+        "Id": "8ec58e00-9f52-468e-be24-293b8dd07a78",
+        "Name": "Korean"
+      },
+      {
+        "Id": "c1402457-bf24-4a2c-8f12-3b2a3b2bc348",
+        "Name": "Korean Trad Instrumental"
+      },
+      {
+        "Id": "d144872b-8600-412d-8009-b23bedaffcbf",
+        "Name": "Korean Trad Song"
+      },
+      {
+        "Id": "7bbeebc9-3fbd-4715-957a-f554205e4f8b",
+        "Name": "Korean Trad Theater"
+      },
+      {
+        "Id": "ed15d30b-58a8-447f-94ce-3182458ecdba",
+        "Name": "Kuduro"
+      },
+      {
+        "Id": "09ee783d-c2eb-4ce5-925f-d6542a28ec63",
+        "Name": "Kwassa kwassa"
+      },
+      {
+        "Id": "33e9b213-8e15-4424-a0ff-90b617df08f1",
+        "Name": "Kwela"
+      },
+      {
+        "Id": "1f1f3dcf-3c02-4f77-a875-d02909d06387",
+        "Name": "Lavani"
+      },
+      {
+        "Id": "941d1ea0-df15-4726-bc0e-8dafa126c573",
+        "Name": "Liwa"
+      },
+      {
+        "Id": "a1a474e4-7b19-431f-8dd2-747a52f64299",
+        "Name": "Luk Krung"
+      },
+      {
+        "Id": "2f3ee554-8418-4711-8d76-725d155ef7e0",
+        "Name": "Luk Thung"
+      },
+      {
+        "Id": "90a43ede-640e-464f-b300-e059ca72bb44",
+        "Name": "Makossa"
+      },
+      {
+        "Id": "be56fdb7-629e-415a-8a79-d8e26b9842da",
+        "Name": "Maloya"
+      },
+      {
+        "Id": "042ab8f5-033b-41cd-a381-59c4e88ce7d8",
+        "Name": "Mambo (music)"
+      },
+      {
+        "Id": "dfb11829-74c7-4ef2-9cfc-752b0ce3e5dc",
+        "Name": "Manila Sound"
+      },
+      {
+        "Id": "ca369f18-63ba-4cb1-b638-db131c155fd2",
+        "Name": "Manilla Sound"
+      },
+      {
+        "Id": "1f14ea41-857a-48e3-b470-6af9812bf1b5",
+        "Name": "Marrabenta"
+      },
+      {
+        "Id": "4843870d-2b5f-450b-b813-b8d9fd3c955b",
+        "Name": "Mbalax"
+      },
+      {
+        "Id": "d473f8f7-5f8c-41e3-b660-b5d43ebf8c7f",
+        "Name": "Mbaqanga"
+      },
+      {
+        "Id": "2eae1659-30af-40e0-9948-d8792097ceca",
+        "Name": "Mbube"
+      },
+      {
+        "Id": "e51fec2c-53e9-4752-ad98-3e9242b1f473",
+        "Name": "Middle East"
+      },
+      {
+        "Id": "fa483337-b2ac-4e4c-9177-09515b574886",
+        "Name": "Morlam"
+      },
+      {
+        "Id": "b90adbf9-7d63-4d21-a0a3-4b3c920428e9",
+        "Name": "Morna"
+      },
+      {
+        "Id": "2d760054-c571-4bba-8e9b-5136011b9f52",
+        "Name": "MPB"
+      },
+      {
+        "Id": "15ba7946-ab7b-469e-9d1a-08976dfa0f3d",
+        "Name": "Ndombolo"
+      },
+      {
+        "Id": "4251f8c7-1f4c-465f-a86c-fba65a7d5693",
+        "Name": "North America"
+      },
+      {
+        "Id": "ca7f1ca6-914e-4cde-854f-5a78ba42a15e",
+        "Name": "Onkyokei"
+      },
+      {
+        "Id": "0db1c170-56f0-4ac5-ac18-ac2ee13be6e7",
+        "Name": "Original Pilipino Music"
+      },
+      {
+        "Id": "ac0e7545-c353-4eaa-9d1f-0564a0fc455a",
+        "Name": "Palm-wine"
+      },
+      {
+        "Id": "bb6e0c0b-6db1-4726-b309-f41f4856ab20",
+        "Name": "Polka"
+      },
+      {
+        "Id": "19dfadca-5f5d-4508-aff1-ce1dfde87bf7",
+        "Name": "Pop sunda"
+      },
+      {
+        "Id": "9147e0b3-8371-4581-99ba-6893aa928261",
+        "Name": "Ragini"
+      },
+      {
+        "Id": "82e85de3-232a-4f8e-a2d9-337f41acb500",
+        "Name": "Raï"
+      },
+      {
+        "Id": "343110f8-dd4e-4a3f-aa40-30fc24b8685b",
+        "Name": "Regional Indian"
+      },
+      {
+        "Id": "3d542ce5-30a1-42eb-94cd-d91b32cf9e76",
+        "Name": "Russian"
+      },
+      {
+        "Id": "31515130-428f-4ee6-ab0a-2c922fb387c2",
+        "Name": "Russian Chanson"
+      },
+      {
+        "Id": "13d7bae9-3f84-421d-b6eb-836bd1bbde2c",
+        "Name": "Sakara"
+      },
+      {
+        "Id": "d105cf42-6035-421b-8310-a8ae2a150bbf",
+        "Name": "Sanat"
+      },
+      {
+        "Id": "3996cb37-4d17-4f44-9725-8f45eeafd17d",
+        "Name": "Sawt"
+      },
+      {
+        "Id": "021139f7-17ec-4593-8205-3ed7d7f9b0bb",
+        "Name": "Sega"
+      },
+      {
+        "Id": "7c15a76b-e200-4ecd-ad55-11b0f5fd6634",
+        "Name": "Seggae"
+      },
+      {
+        "Id": "210a0ca8-94aa-466f-a7ea-b16bf5b13cc9",
+        "Name": "Semba"
+      },
+      {
+        "Id": "5f1ffcef-62a4-416a-8ebb-8860f289d4cf",
+        "Name": "Sertanejo"
+      },
+      {
+        "Id": "5331f28c-2c48-489f-a559-f141f69c35b6",
+        "Name": "Shangaan electro"
+      },
+      {
+        "Id": "f60a7b0c-ab0e-4a9a-94ce-9410b533545f",
+        "Name": "Songo-salsa"
+      },
+      {
+        "Id": "afa77bdd-7d98-45fd-9aef-0879018cb66b",
+        "Name": "Soukous"
+      },
+      {
+        "Id": "44605cc3-85dd-436e-9ad0-8710afe4e041",
+        "Name": "South Africa"
+      },
+      {
+        "Id": "c58a0e14-44e4-4654-964e-d6b8e27532f0",
+        "Name": "South America"
+      },
+      {
+        "Id": "40aa1bf5-1b23-49f0-93ae-7e6e96b74ed6",
+        "Name": "Sufi and Ghazals"
+      },
+      {
+        "Id": "34387983-e678-42e4-a4b1-b5a7a15653ec",
+        "Name": "Taarab"
+      },
+      {
+        "Id": "5ab16f42-f2b5-41a7-afc1-191bc3151ab5",
+        "Name": "Tamil"
+      },
+      {
+        "Id": "8657e966-7db6-4741-9c59-341355d8004e",
+        "Name": "Telugu"
+      },
+      {
+        "Id": "635ef3e0-7d3f-417e-baf6-a705c13725c9",
+        "Name": "Tibetan Native Music"
+      },
+      {
+        "Id": "e829f9a7-b2dd-4f61-9159-bd2d3cacedcc",
+        "Name": "Traditional Celtic"
+      },
+      {
+        "Id": "8fa6bc4a-76d3-4532-b1dd-3f2f900241a5",
+        "Name": "Turkish"
+      },
+      {
+        "Id": "fc312b81-e6c3-46b3-8694-4038f36c2d85",
+        "Name": "Worldbeat"
+      },
+      {
+        "Id": "39a4d807-8086-40a9-8fd8-87cb647b61fc",
+        "Name": "Zouglou Cote D'Ivoire"
+      },
+      {
+        "Id": "07c3a12c-07fe-4881-a595-fdd0bf4cfe4a",
+        "Name": "Zydeco"
+      }
+    ]
+  }
+]
