@@ -36,7 +36,7 @@ class QuestionsController < ApplicationController
   def delete_file
     file = ActiveStorage::Attachment.find_by(id: params[:id])
     file.purge
-    redirect_to questions_path, notice: 'Deleted'
+    redirect_to questions_path, notice: 'File was deleted'
   end
 
   private
