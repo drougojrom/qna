@@ -6,8 +6,9 @@
   p= question.body
   - if question.files.attached?
     - question.files.each do |file|
-      p= link_to file.filename.to_s, url_for(file)
-      p= link_to 'Remove file', delete_file_question_path(file.id), method: :delete, data: { confirm: 'Are you sure?' }
+      p=
+      => link_to file.filename.to_s, url_for(file)
+      = link_to 'Remove file', delete_file_question_path(file.id), method: :delete, data: { confirm: 'Are you sure?' }
 
   - if current_user&.author_of?(question)
     p=link_to 'Edit question', '#', class: 'edit-question-link', data: { question_id: question.id }
