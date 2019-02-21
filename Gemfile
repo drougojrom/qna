@@ -17,8 +17,8 @@ gem 'devise'
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'devise-bootstrap-views', '~> 1.0'
-gem "mini_racer"
-gem "twitter-bootstrap-rails"
+gem 'mini_racer'
+gem 'twitter-bootstrap-rails'
 gem 'bootstrap-generators'
 gem 'aws-sdk'
 

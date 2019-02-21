@@ -10,10 +10,7 @@
             =link_to 'Right answer', right_answer_answer_path(answer), method: :patch, remote: true
       td
         - if answer.files.attached?
-          - answer.files.each do |file|
-            p
-              => link_to file.filename.to_s, url_for(file)
-              = link_to 'Remove file', delete_file_answer_path(file.id), method: :delete, data: { confirm: 'Are you sure?' }
+          = render partial: 'attachments/list', object: answer, as: :model
       td
         p= answer.body
         - if current_user&.author_of?(answer)
