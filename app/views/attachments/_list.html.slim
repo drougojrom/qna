@@ -3,5 +3,4 @@ p
     - model.files.each do |file|
       li id="file-#{file.id}"
         => link_to file.filename.to_s, url_for(file)
-        = link_to 'Remove file', attachment_path(file.id), method: :delete, data: { confirm: 'Are you sure?' }, remote: true
-
+        = link_to 'Remove file', attachment_url(id: file.id, model: model), method: :delete, data: { confirm: 'Are you sure?' }, remote: true
