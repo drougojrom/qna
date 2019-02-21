@@ -36,9 +36,11 @@ feature 'User can delete a question', %q{
 
       within '.question' do
         expect(page).to have_link 'Remove file'
+        file_url = url_for(question_with_attached_file.files.first)
         click_on 'Remove file'
         page.accept_confirm
         expect(page).to_not have_link 'Remove file'
+        expect(page).to_not have_link file_url
       end
     end
   end
