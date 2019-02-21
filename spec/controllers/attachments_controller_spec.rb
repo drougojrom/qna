@@ -18,7 +18,7 @@ RSpec.describe AttachmentsController, type: :controller do
 
       it 'does not delete the question' do
         expect { delete :destroy, params: { id: question_with_attached_file.files.first.id }, format: :js }.not_to change(ActiveStorage::Attachment, :count)
-        expect(response).to redirect_to question
+        expect(response).to redirect_to question_with_attached_file
       end
     end
   end

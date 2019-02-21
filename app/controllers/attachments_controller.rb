@@ -3,7 +3,11 @@ class AttachmentsController < ApplicationController
 
   def destroy
     @file = ActiveStorage::Attachment.find(params[:id])
-    @file.purge
-    render :destroy
+    if current_user&.author_of?(@file.record)
+      @file.purge
+      render :destroy
+    else
+      redirect_to @file.record
+    end
   end
 end
