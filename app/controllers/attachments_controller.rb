@@ -1,14 +1,10 @@
 class AttachmentsController < ApplicationController
   before_action :authenticate_user!
 
-  def delete_file
+  def destroy
     @file = ActiveStorage::Attachment.find_by(id: params[:id])
-    if current_user.author_of?(@file.attachable)
-      @file.destroy
-      render :destroy
-    else
-      render status: 403
-    end
+    @file.purge
+    render :destroy
   end
 
   private 
