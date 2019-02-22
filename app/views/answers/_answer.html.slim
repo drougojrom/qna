@@ -9,13 +9,17 @@
           - else
             =link_to 'Right answer', right_answer_answer_path(answer), method: :patch, remote: true
       td
+        - if answer.files.attached?
+          = render partial: 'attachments/list', object: answer, as: :model
+      td
         p= answer.body
         - if current_user&.author_of?(answer)
           p
-            = link_to 'Delete', answer, method: :delete, data: {confirm: "Are you sure?"}, remote: true, class: 'delete-answer'
-          p
-            = link_to 'Edit', '#', class: 'edit-answer-link', data: { answer_id: answer.id }
+            => link_to 'Delete', answer, method: :delete, data: {confirm: "Are you sure?"}, remote: true, class: 'delete-answer'
+            => link_to 'Edit', '#', class: 'edit-answer-link', data: { answer_id: answer.id }
             = form_with model: answer, class: 'hidden', html: { id: "edit-answer-#{answer.id}" } do |f|
               =f.label :body, 'Your answer'
               =f.text_area :body
+              =f.label :files
+              =f.file_field :files, multiple: true, direct_upload: true
               =f.submit 'Update'

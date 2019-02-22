@@ -8,6 +8,7 @@ feature 'User can delete a question', %q{
 
   given(:user) { create(:user) }
   given(:question) { create(:question) }
+  given(:question_with_attached_file) { create(:question_with_attached_file) }
 
   describe 'An authenticated user tries to delete a question' do
     scenario 'user is the author of the question' do
@@ -27,6 +28,20 @@ feature 'User can delete a question', %q{
 
       expect(page).not_to have_link 'Delete'
       expect(current_path).to eq question_path(question)
+    end
+
+    scenario 'user is removing the attachment', js: true do
+      sign_in question_with_attached_file.user
+      visit question_path(question_with_attached_file)
+
+      within '.question' do
+        expect(page).to have_link 'Remove file'
+        file_url = url_for(question_with_attached_file.files.first)
+        click_on 'Remove file'
+        page.accept_confirm
+        expect(page).to_not have_link 'Remove file'
+        expect(page).to_not have_link file_url
+      end
     end
   end
 

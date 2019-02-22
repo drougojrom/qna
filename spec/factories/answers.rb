@@ -1,3 +1,5 @@
+include ActionDispatch::TestProcess
+
 FactoryBot.define do
   sequence :body do |n|
     "Text of answer body ##{n}"
@@ -15,5 +17,12 @@ FactoryBot.define do
     trait :invalid do
       body { nil }
     end
+  end
+
+  factory :answer_with_attached_file, class: 'Answer' do
+    body { "MyText" }
+    question
+    user
+    files { fixture_file_upload "#{Rails.root}/spec/rails_helper.rb" }
   end
 end

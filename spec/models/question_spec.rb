@@ -19,4 +19,8 @@ RSpec.describe Question, type: :model do
   it 'right answer on question should be equal to answer' do
     expect(question.right_answer).to eq right_answer
   end
+
+  it 'has many attached files' do
+    expect(Question.new.files).to be_an_instance_of(ActiveStorage::Attached::Many)
+  end
 end
