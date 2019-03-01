@@ -7,7 +7,7 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    answer.links.build
+    answer.links.new
   end
 
   def new
@@ -42,7 +42,7 @@ class QuestionsController < ApplicationController
   end
 
   def answer
-    @answer = Answer.new
+    @answer ||= Answer.new
   end
 
   helper_method :question, :answer
