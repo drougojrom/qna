@@ -5,6 +5,7 @@ RSpec.describe Answer, type: :model do
   describe 'associations' do
     it { should belong_to :question }
     it { should belong_to :user }
+    it { should have_many(:links).dependent(:destroy) }
   end
 
   describe 'validations' do
@@ -32,7 +33,7 @@ RSpec.describe Answer, type: :model do
     it 'validates wrong answer chage to true' do
       answer.make_right_answer(answer.question.user, true)
       right_answer.reload
-      expect(answer.right_answer).to eq true      
+      expect(answer.right_answer).to eq true
     end
 
     it 'is only one right answer' do

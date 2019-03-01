@@ -1,5 +1,5 @@
 class AnswersController < ApplicationController
-  before_action :authenticate_user!  
+  before_action :authenticate_user!
   before_action :authored?, only: %i[update destroy]
 
   def edit
@@ -36,7 +36,7 @@ class AnswersController < ApplicationController
   helper_method :answer, :question
 
   def answer_params
-    params.require(:answer).permit(:body, files: [])
+    params.require(:answer).permit(:body, files: [], links_attributes: [:name, :url])
   end
 
   def answer
@@ -44,7 +44,7 @@ class AnswersController < ApplicationController
   end
 
   def question
-    @question ||= params[:question_id] ? Question.find(params[:question_id]) : answer.question 
+    @question ||= params[:question_id] ? Question.find(params[:question_id]) : answer.question
   end
 
   def authored?

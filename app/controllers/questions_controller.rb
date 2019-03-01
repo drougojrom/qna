@@ -7,6 +7,8 @@ class QuestionsController < ApplicationController
   end
 
   def show
+    answer.links.build
+    binding.pry
   end
 
   def new
