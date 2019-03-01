@@ -8,7 +8,6 @@ class QuestionsController < ApplicationController
 
   def show
     answer.links.build
-    binding.pry
   end
 
   def new
