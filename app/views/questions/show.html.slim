@@ -4,7 +4,8 @@
   p Links:
   ul
     - question.links.each do |link|
-      li= link_to link.name, link.url
+      li id="link-#{link.id}"
+        => render link
 
 .answers
   = render question.answers

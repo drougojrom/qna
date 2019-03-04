@@ -1,0 +1,4 @@
+= link_to link.name, link.url
+p
+  - if current_user&.author_of?(link.linkable)
+    => link_to 'Delete link', link, method: :delete, remote: true, class: 'delete-link'

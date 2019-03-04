@@ -5,21 +5,18 @@ feature 'User can remove links from his question', %q{
   I want to be able to remove
   links from my question
 } do
-  given(:user) { create :user }
-  given(:gist_url) { 'https://gist.github.com/drougojrom/f58ff41d729b2065448e853d3642c6d0' }
+  given(:question) { create :question, :with_link }
 
-  scenario 'User adds links when asks a question' do
-    sign_in user
-    visit new_question_path
+  scenario 'User adds links when asks a question', js: true do
+    sign_in question.user
+    visit question_path(question)
 
-    fill_in 'Title', with: 'Test question'
-    fill_in 'Body', with: 'text text text'
+    expect(page).to have_link 'MyString', href: "MyString"
 
-    fill_in 'Link name', with: 'My gist'
-    fill_in 'Url', with: gist_url
-
-    click_on 'Ask'
-
-    expect(page).to have_link 'My gist', href: gist_url
+    within '.links' do
+      expect(page).to have_link 'Delete link'
+      click_on 'Delete link'
+      expect(page).to_not have_link 'MyString'
+    end
   end
 end

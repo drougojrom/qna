@@ -9,6 +9,12 @@ FactoryBot.define do
     trait :invalid do
       title { nil }
     end
+
+    trait :with_link do
+      after(:create) do |question|
+        create :link, linkable: question
+      end
+    end
   end
 
   factory :question_with_answers, class: 'Question' do
@@ -34,12 +40,5 @@ FactoryBot.define do
     body { "MyText" }
     user
     files { fixture_file_upload "#{Rails.root}/spec/rails_helper.rb" }
-  end
-
-  factory :question_with_links, class: 'Question' do
-    title { "MyString" }
-    body { "MyText" }
-    user
-    link
   end
 end
