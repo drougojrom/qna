@@ -21,6 +21,7 @@ gem 'mini_racer'
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap-generators'
 gem 'aws-sdk'
+gem 'cocoon'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

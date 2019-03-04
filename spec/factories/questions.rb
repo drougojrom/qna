@@ -35,4 +35,11 @@ FactoryBot.define do
     user
     files { fixture_file_upload "#{Rails.root}/spec/rails_helper.rb" }
   end
+
+  factory :question_with_links, class: 'Question' do
+    title { "MyString" }
+    body { "MyText" }
+    user
+    link
+  end
 end
