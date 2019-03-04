@@ -9,7 +9,7 @@ feature 'User can add links to answer', %q{
   given(:gist_url) { 'https://gist.github.com/drougojrom/f58ff41d729b2065448e853d3642c6d0' }
   given(:question) { create :question }
 
-  scenario 'User adds links when asks a question' do
+  scenario 'User adds links when he answers on the question', js: true do
     sign_in user
     visit question_path(question)
 
