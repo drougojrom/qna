@@ -1,4 +1,4 @@
-.link-errors
+.link-error
   = render 'shared/errors', resource: link
 
 .link id="link-#{link.id}"
@@ -9,7 +9,7 @@
       = form_with model: link, class: 'hidden', html: { id: "edit-link-#{link.id}" } do |f|
         =f.label :name, 'Link name'
         =f.text_area :name
-        =f.label :url
+        =f.label :url, 'Link url'
         =f.text_area :url
         =f.submit 'Update link'
     => link_to 'Delete link', link, method: :delete, remote: true, class: 'delete-link'

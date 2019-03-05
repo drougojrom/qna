@@ -1,4 +1,4 @@
-$('.link-errror').html('<%= render 'shared/errors', resource: link %>');
+$('.link-error').html('<%= render 'shared/errors', resource: link %>');
 <% if !link.errors.present? %>
-    $('.link-<%= link.id%>').html('<%= j render link %>');
+    $('#link-<%= link.id %>').html('<%= j render link %>');
 <% end %>

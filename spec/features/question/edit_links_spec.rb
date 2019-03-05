@@ -26,8 +26,7 @@ feature 'User can edit links for his question', %q{
         fill_in 'Link url', with: 'edited link url'
         click_on 'Update link'
 
-        expect(page).to have_content 'edited link name'
-        expect(page).to have_content 'edited link url'
+        expect(page).to have_link 'edited link name', href: 'edited link url'
         expect(page).to_not have_selector 'textarea'
       end
     end
@@ -42,7 +41,7 @@ feature 'User can edit links for his question', %q{
 
         expect(page).to have_selector 'textarea'
       end
-      expect(page).to have_content "Link name can't be blank"
+      expect(page).to have_content "Name can't be blank"
     end
 
     scenario 'tries to edit other users links' do
