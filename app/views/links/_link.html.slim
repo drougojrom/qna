@@ -1,4 +1,15 @@
-= link_to link.name, link.url
-p
-  - if current_user&.author_of?(link.linkable)
+.link-errors
+  = render 'shared/errors', resource: link
+
+.link id="link-#{link.id}"
+  = link_to link.name, link.url
+  p
+    - if current_user&.author_of?(link.linkable)
+      => link_to 'Edit', '#', class: 'edit-url-link-link', data: { link_id: link.id }
+      = form_with model: link, class: 'hidden', html: { id: "edit-link-#{link.id}" } do |f|
+        =f.label :name, 'Link name'
+        =f.text_area :name
+        =f.label :url
+        =f.text_area :url
+        =f.submit 'Update link'
     => link_to 'Delete link', link, method: :delete, remote: true, class: 'delete-link'
