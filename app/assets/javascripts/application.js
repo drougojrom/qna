@@ -16,4 +16,5 @@
 //= require jquery3
 //= require twitter/bootstrap
 //= require activestorage
+//= require cocoon
 //= require_tree .
