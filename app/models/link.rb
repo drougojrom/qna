@@ -12,4 +12,10 @@ class Link < ApplicationRecord
   def gist_link?
     self.url.include?(GIST_URL)
   end
+
+  def gist_id
+    if gist_link?
+      self.url.split("/").last
+    end
+  end
 end
