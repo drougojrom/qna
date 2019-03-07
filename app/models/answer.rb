@@ -22,6 +22,7 @@ class Answer < ApplicationRecord
     if user.author_of?(question)
       transaction do
         question.answers.correct_answers.update_all("right_answer = false")
+        user.rewards.push(question.reward)
         reload.update!(right_answer: true)
       end
     end
@@ -29,6 +30,7 @@ class Answer < ApplicationRecord
 
   def make_not_correct(user)
     if user.author_of?(self.question)
+      user.rewards.where(id: question.reward.id).destroy_all
       self.reload.update(right_answer: false)
     end
   end
