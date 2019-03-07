@@ -6,6 +6,7 @@ feature 'User can edit links for his question', %q{
   edit his questions links
 } do
   given(:question_with_link) { create :question, :with_link }
+  given(:gist_url) { 'https://gist.github.com/drougojrom/f58ff41d729b2065448e853d3642c6d0' }
 
   scenario 'Unauthenticated user can not edit a link to a question' do
     visit question_path(question_with_link)
@@ -23,10 +24,10 @@ feature 'User can edit links for his question', %q{
         click_on 'Edit'
 
         fill_in 'Link name', with: 'edited link name'
-        fill_in 'Link url', with: 'edited link url'
+        fill_in 'Link url', with: gist_url
         click_on 'Update link'
 
-        expect(page).to have_link 'edited link name', href: 'edited link url'
+        expect(page).to have_link 'edited link name', href: gist_url
         expect(page).to_not have_selector 'textarea'
       end
     end

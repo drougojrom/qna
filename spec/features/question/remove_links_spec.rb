@@ -12,12 +12,12 @@ feature 'User can remove links from his question', %q{
     sign_in question.user
     visit question_path(question)
 
-    expect(page).to have_link 'MyString', href: "MyString"
+    expect(page).to have_link 'MyString', href: "https://mylink.com/asas" 
 
     within '.links' do
       expect(page).to have_link 'Delete link'
       click_on 'Delete link'
-      expect(page).to_not have_link 'MyString'
+      expect(page).to_not have_link "https://mylink.com/asas"
       expect(page).to_not have_link 'Delete link'
     end
   end
@@ -27,7 +27,7 @@ feature 'User can remove links from his question', %q{
     visit question_path(question)
 
     within '.links' do
-      expect(page).not_to have_link 'Delete'
+      expect(page).not_to have_link 'Delete link'
     end
   end
 
