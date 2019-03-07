@@ -8,7 +8,6 @@ feature 'User can edit his answer', %q{
   given(:user) { create(:user) }
   given(:question) { create(:question) }
   given(:answer) { create :answer, question: question, user: user }
-  given(:gist_url) { 'https://gist.github.com/drougojrom/f58ff41d729b2065448e853d3642c6d0' }
 
   scenario 'Unauthenticated user can not edit an answer' do
     visit question_path(answer.question)

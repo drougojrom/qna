@@ -3,9 +3,11 @@
 
 .link id="link-#{link.id}"
   - if link.gist_link?
-    code data-gist-id="#{link.gist_id}"
+    p
+      code data-gist-id="#{link.gist_id}"
   - else 
-    = link_to link.name, link.url
+    p
+      = link_to link.name, link.url
   p
     - if current_user&.author_of?(link.linkable)
       => link_to 'Edit', '#', class: 'edit-url-link-link', data: { link_id: link.id }

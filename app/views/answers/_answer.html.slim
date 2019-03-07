@@ -29,4 +29,6 @@
               =f.text_area :body
               =f.label :files
               =f.file_field :files, multiple: true, direct_upload: true
+              .add_links
+                = link_to_add_association 'add another link', f, :links
               =f.submit 'Update'
