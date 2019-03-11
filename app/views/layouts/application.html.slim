@@ -27,6 +27,13 @@ html lang="en"
               li= link_to "Log out", destroy_user_session_path, method: :delete
             - else
               li= link_to "Sign in", new_user_session_path
+          ul.nav.navbar-nav.navbar-right
+            - if user_signed_in?
+              li.dropdown
+                a.dropdown-toggle data-toggle="dropdown" href="#"User rewards
+                ul.dropdown-menu
+                  li= link_to "Rewards", user_rewards_path(current_user)
+
 
     .container
       .row

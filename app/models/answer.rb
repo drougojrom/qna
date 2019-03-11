@@ -22,7 +22,9 @@ class Answer < ApplicationRecord
     if user.author_of?(question)
       transaction do
         question.answers.correct_answers.update_all("right_answer = false")
-        user.rewards.push(question.reward)
+        if !question.reward.nil?
+          user.rewards.push(question.reward)
+        end
         reload.update!(right_answer: true)
       end
     end
