@@ -22,21 +22,23 @@ class Answer < ApplicationRecord
     if user.author_of?(question)
       transaction do
         question.answers.correct_answers.update_all("right_answer = false")
+        reload.update!(right_answer: true)
         if !question.reward.nil?
           user.rewards.push(question.reward)
           question.reward.user = user
         end
-        reload.update!(right_answer: true)
       end
     end
   end
 
   def make_not_correct(user)
     if user.author_of?(self.question)
-      user.rewards.delete(Reward.find_by(id: question.reward.id))
-      Reward.find_by(id: question.reward.id).user = nil
-      user.reload
-      self.reload.update(right_answer: false)
+      if !self.question.reward.nil?
+        user.rewards.delete(Reward.find_by(id: question.reward.id))
+        Reward.find_by(id: question.reward.id).user = nil
+        user.reload
+      end
+      self.reload.update(right_answer: false)      
     end
   end
 end

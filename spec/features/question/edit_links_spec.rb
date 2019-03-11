@@ -6,7 +6,7 @@ feature 'User can edit links for his question', %q{
   edit his questions links
 } do
   given(:question_with_link) { create :question, :with_link }
-  given(:gist_url) { 'https://gist.github.com/drougojrom/f58ff41d729b2065448e853d3642c6d0' }
+  given(:gist_url) { 'https://google.com/asas' }
 
   scenario 'Unauthenticated user can not edit a link to a question' do
     visit question_path(question_with_link)

@@ -6,7 +6,7 @@ feature 'User can add links to answer', %q{
   I want to be able to add links
 } do
   given(:user) { create :user }
-  given(:gist_url) { 'https://gist.github.com/drougojrom/f58ff41d729b2065448e853d3642c6d0' }
+  given(:gist_url) { 'https://google.com/sas' }
   given(:question) { create :question }
 
   scenario 'User adds links when he answers on the question', js: true do
@@ -19,7 +19,6 @@ feature 'User can add links to answer', %q{
     fill_in 'Url', with: gist_url
 
     click_on 'Answer'
-
     expect(page).to have_link 'My gist', href: gist_url
   end
 end
