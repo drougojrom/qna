@@ -32,7 +32,8 @@ class Answer < ApplicationRecord
 
   def make_not_correct(user)
     if user.author_of?(self.question)
-      user.rewards.where(id: question.reward.id).destroy_all
+      user.rewards.delete(Reward.find_by(id: question.reward.id))
+      user.reload
       self.reload.update(right_answer: false)
     end
   end
