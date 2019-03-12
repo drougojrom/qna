@@ -1,12 +1,13 @@
 class LinksController < ApplicationController
 
+  before_action :linkable_author?, only: [:update, :destroy]
+
   def update
     link.update(link_params)
   end
 
   def destroy
-    @link = Link.find(params[:id])
-    @link.destroy
+    link.destroy
   end
 
   private
@@ -19,5 +20,9 @@ class LinksController < ApplicationController
 
   def link_params
     params.require(:link).permit(:name, :url)
+  end
+
+  def linkable_author?
+    current_user.author_of?(link.linkable)
   end
 end

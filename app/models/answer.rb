@@ -25,7 +25,6 @@ class Answer < ApplicationRecord
         reload.update!(right_answer: true)
         if !question.reward.nil?
           user.rewards.push(question.reward)
-          question.reward.user = user
         end
       end
     end
@@ -34,8 +33,7 @@ class Answer < ApplicationRecord
   def make_not_correct(user)
     if user.author_of?(self.question)
       if !self.question.reward.nil?
-        user.rewards.delete(Reward.find_by(id: question.reward.id))
-        Reward.find_by(id: question.reward.id).user = nil
+        user.rewards.delete(question.reward)
         user.reload
       end
       self.reload.update(right_answer: false)      
