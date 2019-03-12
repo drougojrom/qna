@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  resources :users do
+    resources :rewards, shallow: true, only: [:index]
+  end
+
   resources :questions do
     resources :answers, shallow: true do
       member do
@@ -10,6 +15,7 @@ Rails.application.routes.draw do
   end
 
   resources :attachments, only: [:destroy]
+  resources :links, only: [:destroy, :update]
 
   root to: 'questions#index'
 end

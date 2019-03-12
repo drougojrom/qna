@@ -13,6 +13,13 @@
           = render partial: 'attachments/list', object: answer, as: :model
       td
         p= answer.body
+        .links
+          - if !answer.links.empty?
+            p Links:
+            ul
+              - answer.links.each do |link|
+                => render link 
+
         - if current_user&.author_of?(answer)
           p
             => link_to 'Delete', answer, method: :delete, data: {confirm: "Are you sure?"}, remote: true, class: 'delete-answer'
@@ -22,4 +29,6 @@
               =f.text_area :body
               =f.label :files
               =f.file_field :files, multiple: true, direct_upload: true
+              .add_links
+                = link_to_add_association 'add another link', f, :links
               =f.submit 'Update'

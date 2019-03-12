@@ -1,0 +1,6 @@
+- @rewards.each do |r|
+  p= image_tag r.image, size: "120x100"
+  p= r.question.title
+  p= r.title
+
+= link_to 'Back', questions_path

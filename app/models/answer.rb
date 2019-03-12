@@ -1,8 +1,11 @@
 class Answer < ApplicationRecord
   belongs_to :question
   belongs_to :user
+  has_many :links, dependent: :destroy, as: :linkable
 
   has_many_attached :files
+
+  accepts_nested_attributes_for :links, reject_if: :all_blank
 
   validates :body, presence: true
 
@@ -20,13 +23,20 @@ class Answer < ApplicationRecord
       transaction do
         question.answers.correct_answers.update_all("right_answer = false")
         reload.update!(right_answer: true)
+        if !question.reward.nil?
+          user.rewards.push(question.reward)
+        end
       end
     end
   end
 
   def make_not_correct(user)
     if user.author_of?(self.question)
-      self.reload.update(right_answer: false)
+      if !self.question.reward.nil?
+        user.rewards.delete(question.reward)
+        user.reload
+      end
+      self.reload.update(right_answer: false)      
     end
   end
 end

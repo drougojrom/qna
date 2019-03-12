@@ -7,9 +7,12 @@ class QuestionsController < ApplicationController
   end
 
   def show
+    answer.links.new
   end
 
   def new
+    question.links.build
+    question.reward = Reward.new
   end
 
   def edit
@@ -17,7 +20,7 @@ class QuestionsController < ApplicationController
 
   def create
     @question = current_user.questions.new(question_params)
-    if @question.save 
+    if @question.save
       redirect_to @question, notice: 'Your question successfully created'
     else
       render :new
@@ -40,13 +43,15 @@ class QuestionsController < ApplicationController
   end
 
   def answer
-    @answer = Answer.new
+    @answer ||= Answer.new
   end
 
   helper_method :question, :answer
 
   def question_params
-    params.require(:question).permit(:title, :body, files: [])
+    params.require(:question).permit(:title, :body,
+                                     files: [], links_attributes: [:name, :url, :_destroy],
+                                     reward_attributes: [:title, :image])
   end
 
   def authored?
