@@ -12,7 +12,15 @@ class AnswersController < ApplicationController
   def create
     @answer = question.answers.new(answer_params)
     @answer.user = current_user
-    @answer.save
+
+    respond_to do |format| 
+      if @answer.save 
+        format.html { render @answer }
+      else
+        format.html { render partial: 'shared/errors', locals: {resource: @answer},
+                      status: :unprocessable_entity }
+      end
+    end
   end
 
   def destroy
