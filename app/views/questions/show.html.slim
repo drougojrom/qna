@@ -13,7 +13,7 @@
   = render 'shared/errors', resource: answer
 
 .new-answer
-  = form_for [question, answer], remote: true, class: 'new-answer', data: { type: :html } do |f|
+  = form_for [question, answer], remote: true, class: 'new-answer', data: { type: :json } do |f|
     p
       = f.label :body
       = f.text_area :body
