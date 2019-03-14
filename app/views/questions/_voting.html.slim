@@ -1,0 +1,6 @@
+p 
+  =link_to 'Vote up', vote_for_question_path(question), method: :post
+p
+  =link_to 'Vote down', vote_against_question_path(question), method: :post
+p
+  =link_to 'Revoke vote', vote_revoke_question_path(question), method: :post

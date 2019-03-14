@@ -5,12 +5,12 @@ module Votable
     has_many :votes, as: :votable, dependent: :delete_all
   end
 
-  def vote_for
-    votes.create(user: current_user, value: 1)
+  def vote_for(user)
+    votes.create(user: user, value: 1)
   end
 
-  def vote_against
-    votes.create(user: current_user, value: -1)
+  def vote_against(user)
+    votes.create(user: user, value: -1)
   end
 
   def vote_revoke
@@ -19,7 +19,7 @@ module Votable
 
   private
 
-  def vote
-    votes.find_by(user: current_user)
+  def vote(user)
+    votes.find_by(user: user)
   end
 end

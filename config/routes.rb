@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  concern :voting do
+    post :vote_for, :vote_against, :vote_revoke, on: :member
+  end
+
   resources :users do
     resources :rewards, shallow: true, only: [:index]
   end
 
-  resources :questions do
+  resources :questions, concerns: :voting do
     resources :answers, shallow: true do
       member do
         patch :right_answer
