@@ -7,21 +7,18 @@ module Voting
   end
 
   def vote_for
-    if @votable.vote_for(current_user)
-      render partial: 'shared/vote'
-    end
+    @votable.vote_for(current_user)
+    render partial: 'shared/vote'
   end
 
   def vote_against
-    respond_with @votable.vote_against(current_user) do |format|
-      format.json { render partial: 'shared/vote' }
-    end
+    @votable.vote_against(current_user)
+    render partial: 'shared/vote'
   end
 
   def vote_revoke
-    respond_with @votable.vote_revoke(current_user) do |format| 
-      format.json { render partial: 'shared/vote' }
-    end
+    @votable.vote_revoke(current_user)
+    render partial: 'shared/vote'
   end
 
   private 

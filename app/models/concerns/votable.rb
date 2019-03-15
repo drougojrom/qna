@@ -13,13 +13,11 @@ module Votable
     votes.create(user: user, value: -1)
   end
 
-  def vote_revoke
-    vote.destroy if vote.persisted?
+  def vote_revoke(user)
+    user_vote(user).destroy
   end
 
-  private
-
-  def vote(user)
+  def user_vote(user)
     votes.find_by(user: user)
   end
 end

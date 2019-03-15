@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_14_133717) do
+ActiveRecord::Schema.define(version: 2019_03_15_101549) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 2019_03_14_133717) do
     t.bigint "answer_id"
     t.bigint "author_id"
     t.bigint "user_id"
+    t.integer "rating", default: 0
     t.index ["answer_id"], name: "index_questions_on_answer_id"
     t.index ["author_id"], name: "index_questions_on_author_id"
     t.index ["user_id"], name: "index_questions_on_user_id"
