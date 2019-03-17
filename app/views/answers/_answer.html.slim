@@ -19,7 +19,27 @@
             ul
               - answer.links.each do |link|
                 => render link 
-
+      td
+        .anwer_rating
+          p= "The answers rating is #{answer.rating}"
+        .answer_voting
+          p
+            =link_to 'Vote up', vote_for_answer_path(answer),
+              method: :post,
+              remote: true,
+              data: { type: :json }
+          p
+            =link_to 'Vote down', vote_against_answer_path(answer),
+              method: :post,
+              remote: true,
+              data: { type: :json }
+          p
+            =link_to 'Revoke vote',
+              vote_revoke_answer_path(answer),
+              method: :post,
+              remote: true,
+              data: { type: :json } 
+      td
         - if current_user&.author_of?(answer)
           p
             => link_to 'Delete', answer, method: :delete, data: {confirm: "Are you sure?"}, remote: true, class: 'delete-answer'

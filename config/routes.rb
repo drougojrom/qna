@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
 
   resources :questions, concerns: :voting do
-    resources :answers, shallow: true do
+    resources :answers, concerns: :voting, shallow: true do
       member do
         patch :right_answer
         patch :not_right_answer
