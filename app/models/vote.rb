@@ -3,7 +3,7 @@ class Vote < ApplicationRecord
   belongs_to :votable, polymorphic: true
 
   validates :value, numericality: { only_integer: true }
-  validates :user_id, uniqueness: { scope: [:votable_id] }
+  validates :user_id, uniqueness: { scope: [:votable_id, :votable_type] }
 
   delegate :rating, to: :votable
 

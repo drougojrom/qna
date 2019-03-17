@@ -15,4 +15,8 @@ $(document).on('turbolinks:load', function(){
       $('.answer-errors').append('<p>' + value + '</p>');
     });
   });
+  $('.answer_voting').on('ajax:success', function(e){
+    var rating = e.detail[0];
+    $('.answer_rating').text("The answers rating is " + rating.rating);
+  });
 });
