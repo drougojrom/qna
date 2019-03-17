@@ -18,10 +18,10 @@ class AnswersController < ApplicationController
 
     respond_to do |format| 
       if @answer.save 
-        format.json { render json: @answer }
+        format.js { render 'create' }
       else
-        format.json do
-          render json: @answer.errors.full_messages, status: :unprocessable_entity
+        format.js do
+          render 'create'
         end
       end
     end

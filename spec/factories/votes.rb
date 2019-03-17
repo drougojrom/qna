@@ -1,6 +1,7 @@
 FactoryBot.define do
   factory :vote do
-    user { "" }
+    user
     value { 1 }
+    question
   end
 end
