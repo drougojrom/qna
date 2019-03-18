@@ -18,6 +18,6 @@ module Votable
   end
 
   def user_vote(user)
-    votes.find_by(user: user)
+    votes.find_or_initialize_by(user: user)
   end
 end

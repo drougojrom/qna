@@ -7,17 +7,17 @@
       method: :post,
       remote: true,
       data: { type: :json },
-      class: "btn btn-success", id: "vote_for_question_#{question.id}"
+      class: "btn btn-success #{vote_for_btn_state question}", id: "vote_for_question_#{question.id}"
   p
     =link_to 'Vote down', vote_against_question_path(question),
       method: :post,
       remote: true,
       data: { type: :json },
-      class: "btn btn-success", id: "vote_against_question_#{question.id}"
+      class: "btn btn-success #{vote_against_btn_state question}", id: "vote_against_question_#{question.id}"
   p
     =link_to 'Revoke vote',
       vote_revoke_question_path(question),
       method: :post,
       remote: true,
       data: { type: :json },
-      class: "btn btn-success", id: "vote_revoke_question_#{question.id}"
+      class: "btn btn-success #{vote_revoke_btn_state question}", id: "vote_revoke_question_#{question.id}"
