@@ -7,6 +7,6 @@ module FeatureHelpers
   end
 
   def sign_out
-    click_on 'Logout'
+    click_on 'Log out'
   end
 end
