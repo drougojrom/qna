@@ -4,6 +4,8 @@ RSpec.describe AnswersController, type: :controller do
   let(:user) { create(:user) }  
   let(:question) { create(:question) }
   let(:answer) { create :answer, question: question, user: user }
+  
+  it_behaves_like 'voting'
 
   describe 'POST #create' do
     before { log_in(user) }    

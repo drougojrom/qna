@@ -5,6 +5,8 @@ RSpec.describe QuestionsController, type: :controller do
   let(:user) { create(:user) }
   before { log_in(user) }
 
+  it_behaves_like 'voting'
+
   describe 'GET #index' do
     let!(:questions) { create_list(:question, 3) }
     before { get :index }
