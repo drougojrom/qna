@@ -6,15 +6,18 @@
     =link_to 'Vote up', vote_for_question_path(question),
       method: :post,
       remote: true,
-      data: { type: :json }
+      data: { type: :json },
+      class: "btn btn-success", id: "vote_for_question_#{question.id}"
   p
     =link_to 'Vote down', vote_against_question_path(question),
       method: :post,
       remote: true,
-      data: { type: :json }
+      data: { type: :json },
+      class: "btn btn-success", id: "vote_against_question_#{question.id}"
   p
     =link_to 'Revoke vote',
       vote_revoke_question_path(question),
       method: :post,
       remote: true,
-      data: { type: :json }
+      data: { type: :json },
+      class: "btn btn-success", id: "vote_revoke_question_#{question.id}"
