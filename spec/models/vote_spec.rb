@@ -2,10 +2,17 @@ require 'rails_helper'
 
 RSpec.describe Vote, type: :model do
   it { should validate_numericality_of :value }
-  it { should validate_uniqueness_of(:user_id).scoped_to([:votable_id, :votable_type]) }
   it { should delegate_method(:rating).to(:votable) }
 
   let(:question) { create(:question) }
+
+  describe 'validate uniqueness' do
+    it 'should validate uniquesness of name' do
+      Vote.create(user: question.user, value: 1, votable: question)
+      vote = Vote.new(user: question.user, value: 1, votable: question)
+      expect(vote).not_to be_valid
+    end
+  end
 
   describe '#create' do
     context 'vote for' do
