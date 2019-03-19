@@ -15,16 +15,7 @@ class AnswersController < ApplicationController
   def create
     @answer = question.answers.new(answer_params)
     @answer.user = current_user
-
-    respond_to do |format| 
-      if @answer.save 
-        format.js { render 'create' }
-      else
-        format.js do
-          render 'create'
-        end
-      end
-    end
+    @answer.save 
   end
 
   def destroy

@@ -6,11 +6,11 @@ module Votable
   end
 
   def vote_for(user)
-    votes.create(user: user, value: 1)
+    create_vote_with_params(user, 1)
   end
 
   def vote_against(user)
-    votes.create(user: user, value: -1)
+    create_vote_with_params(user, -1)
   end
 
   def vote_revoke(user)
@@ -19,5 +19,11 @@ module Votable
 
   def user_vote(user)
     votes.find_or_initialize_by(user: user)
+  end
+
+  private 
+
+  def create_vote_with_params(user, value)
+    votes.create(user: user, value: value)
   end
 end

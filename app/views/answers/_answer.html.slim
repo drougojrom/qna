@@ -22,7 +22,7 @@
       td
         .answer_rating id="answer_rating_#{answer.id}"
           p= "The answers rating is #{answer.rating}"
-        .answer_voting
+        .voting
           p
             =link_to 'Vote up', vote_for_answer_path(answer),
               method: :post,

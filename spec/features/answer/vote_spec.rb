@@ -23,7 +23,7 @@ feature 'Vote for an answer', %q{
         within "#answer_rating_#{answer.id}" do
           expect(page).to have_content('0')
         end
-        within '.answer_voting' do
+        within '.voting' do
           click_on('Vote up')
         end
         within "#answer_rating_#{answer.id}" do
@@ -33,20 +33,23 @@ feature 'Vote for an answer', %q{
       sign_out
       sign_in third_user
       visit question_path answer.question
-      within '.answer_voting' do
-        click_on('Vote up')
-      end
-      within "#answer_rating_#{answer.id}" do
-        expect(page).to have_content('2')
+      within '.answers' do
+        within '.voting' do
+          click_on('Vote up')
+        end
+
+        within "#answer_rating_#{answer.id}" do
+          expect(page).to have_content('2')
+        end
       end
     end
 
     scenario 'can not vote twice', js: true do
       within '.answers' do
         expect(page).to_not have_css("#vote_for_answer_#{answer.id}.disabled")
-      end
-      within '.answer_voting' do
-        click_on('Vote up')
+        within '.voting' do
+          click_on('Vote up')
+        end
       end
       within '.answers' do
         expect(page).to have_css("#vote_for_answer_#{answer.id}.disabled")
@@ -59,11 +62,11 @@ feature 'Vote for an answer', %q{
         expect(page).to have_css("#vote_for_answer_#{answer.id}")
         expect(page).to_not have_css("#vote_for_answer_#{answer.id}.disabled")
         expect(page).to have_css("#vote_revoke_answer_#{answer.id}.disabled")
+        within '.voting' do
+          click_on('Vote up')
+        end
       end
-      within '.answer_voting' do
-        click_on('Vote up')
-      end
-      within '.answer_voting' do
+      within '.answers' do
         expect(page).to have_css("#vote_revoke_answer_#{answer.id}")
         expect(page).to_not have_css("#vote_revoke_answer_#{answer.id}.disabled")
         expect(page).to have_css("#vote_for_answer_#{answer.id}.disabled")
