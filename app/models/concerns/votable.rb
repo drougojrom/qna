@@ -24,6 +24,6 @@ module Votable
   private 
 
   def create_vote_with_params(user, value)
-    votes.create(user: user, value: value)
+    votes.create!(user: user, value: value)
   end
 end

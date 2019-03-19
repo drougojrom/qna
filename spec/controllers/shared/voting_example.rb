@@ -77,12 +77,7 @@ shared_examples 'voting' do
       end
 
       it 'not increases votable rating' do
-        post :vote_for, params: {id: votable.id}, format: :json
-        expect { votable.reload }.to_not change(votable, :rating)
-      end
-
-      it 'not change votes count in db' do
-        expect { post :vote_for, params: {id: votable.id} , format: :json }.to_not change(Vote, :count)
+        expect { post :vote_for, params: {id: votable.id}, format: :json }.to raise_error(ActiveRecord::RecordInvalid)
       end
     end
   end

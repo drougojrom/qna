@@ -2,22 +2,4 @@
   p= "The questions rating is #{question.rating}"
 
 .voting
-  p
-    =link_to 'Vote up', vote_for_question_path(question),
-      method: :post,
-      remote: true,
-      data: { type: :json },
-      class: "btn btn-success #{vote_for_btn_state question}", id: "vote_for_question_#{question.id}"
-  p
-    =link_to 'Vote down', vote_against_question_path(question),
-      method: :post,
-      remote: true,
-      data: { type: :json },
-      class: "btn btn-success #{vote_against_btn_state question}", id: "vote_against_question_#{question.id}"
-  p
-    =link_to 'Revoke vote',
-      vote_revoke_question_path(question),
-      method: :post,
-      remote: true,
-      data: { type: :json },
-      class: "btn btn-success #{vote_revoke_btn_state question}", id: "vote_revoke_question_#{question.id}"
+  = render 'shared/voting', locals: { type: :question, vote_obj: question}

@@ -23,26 +23,7 @@
         .answer_rating id="answer_rating_#{answer.id}"
           p= "The answers rating is #{answer.rating}"
         .voting
-          p
-            =link_to 'Vote up', vote_for_answer_path(answer),
-              method: :post,
-              remote: true,
-              data: { type: :json },
-              class: "btn btn-link #{ vote_for_btn_state answer }", id: "vote_for_answer_#{answer.id}"
-              
-          p
-            =link_to 'Vote down', vote_against_answer_path(answer),
-              method: :post,
-              remote: true,
-              data: { type: :json },
-              class: "btn btn-link #{ vote_against_btn_state answer }", id: "vote_against_answer_#{answer.id}"
-          p
-            =link_to 'Revoke vote',
-              vote_revoke_answer_path(answer),
-              method: :post,
-              remote: true,
-              data: { type: :json },
-              class: "btn btn-link #{ vote_revoke_btn_state answer }", id: "vote_revoke_answer_#{answer.id}"
+          = render 'shared/voting', locals: { type: :answer, vote_obj: answer}
       td
         - if current_user&.author_of?(answer)
           p
