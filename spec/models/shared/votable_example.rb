@@ -13,6 +13,7 @@ shared_examples 'votable' do
       it 'creates a vote in db' do
         expect { votable.vote_for user }.to change(Vote, :count).by(1)
       end
+
       it 'increases votable rating' do
         expect {
           votable.vote_for(user)
@@ -20,11 +21,13 @@ shared_examples 'votable' do
         }.to change(votable, :rating).by(1)
       end
     end
+
     context 'already voted' do
       before do
         votable.vote_for user
         votable.reload
       end
+
       it 'does not create a vote in db' do
         expect { votable.vote_for user }.to raise_error ActiveRecord::RecordInvalid
       end
@@ -36,6 +39,7 @@ shared_examples 'votable' do
       it 'creates a vote in db' do
         expect { votable.vote_against user }.to change(Vote, :count).by(1)
       end
+
       it 'increases votable rating' do
         expect {
           votable.vote_against(user)
@@ -43,11 +47,13 @@ shared_examples 'votable' do
         }.to change(votable, :rating).by(-1)
       end
     end
+
     context 'already voted' do
       before do
         votable.vote_for user
         votable.reload
       end
+
       it 'does not create a vote in db' do
         expect { votable.vote_against user }.to raise_error ActiveRecord::RecordInvalid
       end
@@ -60,11 +66,13 @@ shared_examples 'votable' do
         expect { votable.vote_revoke user }.to_not change(Vote, :count)
       end
     end
+
     context 'already voted' do
       before do
         votable.vote_for user
         votable.reload
       end
+
        it 'decreases votable rating' do
         expect {
           votable.vote_revoke(user)

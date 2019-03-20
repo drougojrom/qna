@@ -6,11 +6,16 @@ module Votable
   end
 
   def vote_for(user)
-    create_vote_with_params(user, 1)
+    create_vote(user, 1)
   end
 
   def vote_against(user)
-    create_vote_with_params(user, -1)
+    create_vote(user, -1)
+  end
+
+  def votable_state(current_user)
+    @vote = user_vote(current_user)
+    @vote.new_vote?(current_user)
   end
 
   def vote_revoke(user)
@@ -23,7 +28,7 @@ module Votable
 
   private 
 
-  def create_vote_with_params(user, value)
+  def create_vote(user, value)
     votes.create!(user: user, value: value)
   end
 end

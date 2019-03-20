@@ -54,9 +54,7 @@ feature 'Vote for a question', %q{
   context 'unauthenticated user' do
     scenario 'can not vote', js: true do
       visit question_path question
-      expect(page).to have_css("#vote_for_question_#{question.id}.disabled")
-      expect(page).to have_css("#vote_against_question_#{question.id}.disabled")
-      expect(page).to have_css("#vote_revoke_question_#{question.id}.disabled")
+      expect(page).to_not have_css('.voting')
     end
   end
 end

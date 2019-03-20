@@ -1,5 +1,6 @@
 .question_rating id="rating_question_#{question.id}"
   p= "The questions rating is #{question.rating}"
 
-.voting
-  = render 'shared/voting', locals: { type: :question, vote_obj: question}
+- if signed_in?
+  .voting
+    = render 'shared/voting', locals: { type: :question, vote_obj: question}

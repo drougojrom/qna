@@ -22,8 +22,9 @@
       td
         .answer_rating id="answer_rating_#{answer.id}"
           p= "The answers rating is #{answer.rating}"
-        .voting
-          = render 'shared/voting', locals: { type: :answer, vote_obj: answer}
+        - if signed_in?  
+          .voting
+            = render 'shared/voting', locals: { type: :answer, vote_obj: answer}
       td
         - if current_user&.author_of?(answer)
           p

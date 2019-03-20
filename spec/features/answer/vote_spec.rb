@@ -78,9 +78,7 @@ feature 'Vote for an answer', %q{
     scenario 'can not vote', js: true do
       visit question_path answer.question
       within '.answers' do
-        expect(page).to have_css("#vote_for_answer_#{answer.id}.disabled")
-        expect(page).to have_css("#vote_against_answer_#{answer.id}.disabled")
-        expect(page).to have_css("#vote_revoke_answer_#{answer.id}.disabled")
+        expect(page).to_not have_css('.voting')
       end
     end
   end
