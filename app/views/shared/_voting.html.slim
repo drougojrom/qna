@@ -1,0 +1,21 @@
+  p
+    =link_to 'Vote up',
+      polymorphic_path(locals[:vote_obj], action: :vote_for),
+      method: :post,
+      remote: true,
+      data: { type: :json },
+      class: "btn btn-success #{ locals[:vote_obj].votable_state(current_user) ? 'enabled' : 'disabled'}", id: "vote_for_#{locals[:type]}_#{locals[:vote_obj].id}"
+  p
+    =link_to 'Vote down',
+      polymorphic_path(locals[:vote_obj], action: :vote_against),
+      method: :post,
+      remote: true,
+      data: { type: :json },
+      class: "btn btn-success #{ locals[:vote_obj].votable_state(current_user) ? 'enabled' : 'disabled'}", id: "vote_against_#{locals[:type]}_#{locals[:vote_obj].id}"
+  p
+    =link_to 'Revoke vote',
+      polymorphic_path(locals[:vote_obj], action: :vote_revoke),
+      method: :post,
+      remote: true,
+      data: { type: :json },
+      class: "btn btn-success #{ !locals[:vote_obj].votable_state(current_user) ? 'enabled' : 'disabled'}", id: "vote_revoke_#{locals[:type]}_#{locals[:vote_obj].id}"

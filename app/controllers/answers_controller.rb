@@ -1,4 +1,7 @@
 class AnswersController < ApplicationController
+
+  include Voting
+
   before_action :authenticate_user!
   before_action :authored?, only: %i[update destroy]
 
@@ -12,7 +15,7 @@ class AnswersController < ApplicationController
   def create
     @answer = question.answers.new(answer_params)
     @answer.user = current_user
-    @answer.save
+    @answer.save 
   end
 
   def destroy

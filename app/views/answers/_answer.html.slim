@@ -19,7 +19,13 @@
             ul
               - answer.links.each do |link|
                 => render link 
-
+      td
+        .answer_rating id="answer_rating_#{answer.id}"
+          p= "The answers rating is #{answer.rating}"
+        - if signed_in?  
+          .voting
+            = render 'shared/voting', locals: { type: :answer, vote_obj: answer}
+      td
         - if current_user&.author_of?(answer)
           p
             => link_to 'Delete', answer, method: :delete, data: {confirm: "Are you sure?"}, remote: true, class: 'delete-answer'

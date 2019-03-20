@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_11_102938) do
+ActiveRecord::Schema.define(version: 2019_03_17_184059) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 2019_03_11_102938) do
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.boolean "right_answer", default: false
+    t.integer "rating", default: 0
     t.index ["question_id"], name: "index_answers_on_question_id"
     t.index ["user_id"], name: "index_answers_on_user_id"
   end
@@ -65,6 +66,7 @@ ActiveRecord::Schema.define(version: 2019_03_11_102938) do
     t.bigint "answer_id"
     t.bigint "author_id"
     t.bigint "user_id"
+    t.integer "rating", default: 0
     t.index ["answer_id"], name: "index_questions_on_answer_id"
     t.index ["author_id"], name: "index_questions_on_author_id"
     t.index ["user_id"], name: "index_questions_on_user_id"
@@ -94,10 +96,22 @@ ActiveRecord::Schema.define(version: 2019_03_11_102938) do
     t.index ["reward_id"], name: "index_users_on_reward_id"
   end
 
+  create_table "votes", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "votable_type"
+    t.bigint "votable_id"
+    t.integer "value", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_votes_on_user_id"
+    t.index ["votable_type", "votable_id"], name: "index_votes_on_votable_type_and_votable_id"
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "answers", "questions"
   add_foreign_key "questions", "answers"
   add_foreign_key "questions", "users", column: "author_id"
   add_foreign_key "rewards", "users"
   add_foreign_key "users", "rewards"
+  add_foreign_key "votes", "users"
 end
