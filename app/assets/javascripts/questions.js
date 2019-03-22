@@ -16,7 +16,7 @@ $(document).on('turbolinks:load', function(){
     vote.vote_for ? $(vote_for_id).removeClass('disabled') : $(vote_for_id).addClass('disabled') 
     vote.vote_against ? $(vote_against_id).removeClass('disabled') : $(vote_against_id).addClass('disabled') 
     vote.vote_revoke ? $(vote_revoke_id).removeClass('disabled') : $(vote_revoke_id).addClass('disabled') 
-    
+
     $('.' + voteClass + '_rating').text("The " + voteClass + "s rating is " + rating);
   });
 });

@@ -23,6 +23,7 @@ gem 'bootstrap-generators'
 gem 'aws-sdk'
 gem 'cocoon'
 gem 'gist-embed-rails'
+gem 'gon'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

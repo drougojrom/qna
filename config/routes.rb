@@ -22,4 +22,6 @@ Rails.application.routes.draw do
   resources :links, only: [:destroy, :update]
 
   root to: 'questions#index'
+
+  mount ActionCable.server => '/cable'
 end

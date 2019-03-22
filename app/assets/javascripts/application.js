@@ -16,7 +16,12 @@
 //= require jquery3
 //= require twitter/bootstrap
 //= require activestorage
+//= require action_cable
 //= require cocoon
 //= require gist-embed
 //= require jquery
 //= require_tree .
+
+var App = App || {};
+App.cable = ActionCable.createConsumer();
+
