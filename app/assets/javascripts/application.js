@@ -20,6 +20,7 @@
 //= require cocoon
 //= require gist-embed
 //= require jquery
+//= require skim
 //= require_tree .
 
 var App = App || {};

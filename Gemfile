@@ -24,6 +24,7 @@ gem 'aws-sdk'
 gem 'cocoon'
 gem 'gist-embed-rails'
 gem 'gon'
+gem 'skim'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
