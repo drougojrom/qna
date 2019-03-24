@@ -4,18 +4,22 @@
 - rating = @data['rating']
 - id = @data['id']
 
+table.table
 tr
   td
     div[class = "answer-#{id}"]
       = answer_body
-      div[class = "answer-rating-#{id}"]
-        div[class = "answer-rating-value-#{id}"]
-          p = "Answer Rating: #{rating}"
-        div[class = "answer-rating-actions-#{id}"]
-          - if gon.current_user_id && gon.current_user_id != answer_user_id
-            div[class = "rating-saved-vote-answer-#{id}"]
-              a class="change-rate-answer" data-type="json" data-answer-id="#{id}" data-remote="true" data-method="post" href="/questions/#{question_id}/answers/#{id}/vote_for"
+  td
+    div[class = "answer-rating-#{id}"]
+      div[class = "answer-rating-value-#{id}"]
+        p = "The answers rating is #{rating}"
+      div[class = "voting"]
+	p
+	  a class="btn btn-success" data-type="json" data-answer-id="#{id}" data-remote="true" data-method="post" href="/answers/#{id}/vote_for"
                 |Vote up
-
-              a class="change-rate-answer" data-type="json" data-answer-id="#{id}" data-remote="true" data-method="post" href="/questions/#{question_id}/answers/#{id}/vote_against"
+	p
+	  a class="btn btn-success" data-type="json" data-answer-id="#{id}" data-remote="true" data-method="post" href="/answers/#{id}/vote_against"
                 |Vote against
+	p
+	  a class="btn btn-success" data-type="json" data-answer-id="#{id}" data-remote="true" data-method="post" href="/answers/#{id}/vote_revoke"
+                |Vote revoke
