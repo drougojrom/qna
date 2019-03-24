@@ -5,6 +5,8 @@ class AnswersController < ApplicationController
   before_action :authenticate_user!
   before_action :authored?, only: %i[update destroy]
 
+  after_action :publish_answer, only: [:create]
+
   def edit
   end
 
@@ -54,5 +56,13 @@ class AnswersController < ApplicationController
     unless current_user.author_of?(answer)
       redirect_to answer.question, notice: "You aren't an author of that question"
     end
+  end
+
+  def publish_answer
+    return if answer.errors.any?
+    ActionCable.server.broadcast(
+      'answers', 
+      ApplicationController.render(json: answer)
+    )
   end
 end

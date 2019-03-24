@@ -1,0 +1,21 @@
+- question_id = @data['question_id']
+- answer_body = @data['body']
+- answer_user_id = @data['user_id']
+- rating = @data['rating']
+- id = @data['id']
+
+tr
+  td
+    div[class = "answer-#{id}"]
+      = answer_body
+      div[class = "answer-rating-#{id}"]
+        div[class = "answer-rating-value-#{id}"]
+          p = "Answer Rating: #{rating}"
+        div[class = "answer-rating-actions-#{id}"]
+          - if gon.current_user_id && gon.current_user_id != answer_user_id
+            div[class = "rating-saved-vote-answer-#{id}"]
+              a class="change-rate-answer" data-type="json" data-answer-id="#{id}" data-remote="true" data-method="post" href="/questions/#{question_id}/answers/#{id}/vote_for"
+                |Vote up
+
+              a class="change-rate-answer" data-type="json" data-answer-id="#{id}" data-remote="true" data-method="post" href="/questions/#{question_id}/answers/#{id}/vote_against"
+                |Vote against
