@@ -8,8 +8,9 @@ ready = function() {
     received: function(data) {
       var answer = JSON.parse(data)
       var current_user_id = gon.current_user_id;
-      $('.answers').append(JST["templates/answer"]({ data: answer}));
-      console.log(answer)
+      if (current_user_id !== answer.user_id) {
+        $('.answers').append(JST["templates/answer"]({ data: answer}));
+      }
     }
   });
 }

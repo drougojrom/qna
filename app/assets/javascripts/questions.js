@@ -7,6 +7,7 @@ $(document).on('turbolinks:load', function(){
   });
   $('.voting').on('ajax:success', function(e){
     var vote = e.detail[0];
+    console.log(vote);
     var rating = vote.rating;
     var voteClass = vote.class
     var vote_for_id = "#vote_for_" + voteClass + "_" + vote.id
@@ -18,5 +19,7 @@ $(document).on('turbolinks:load', function(){
     vote.vote_revoke ? $(vote_revoke_id).removeClass('disabled') : $(vote_revoke_id).addClass('disabled') 
 
     $('.' + voteClass + '_rating').text("The " + voteClass + "s rating is " + rating);
+    console.log(voteClass);
+    console.log(rating);
   });
 });
