@@ -1,6 +1,7 @@
 class QuestionsController < ApplicationController
 
   include Voting
+  include Commenting
 
   before_action :authenticate_user!, except: [:index, :show]
   before_action :authored?, only: [:update, :destroy]
@@ -50,7 +51,11 @@ class QuestionsController < ApplicationController
     @answer ||= Answer.new
   end
 
-  helper_method :question, :answer
+  def comment
+    @comment ||= Comment.new
+  end
+
+  helper_method :question, :answer, :comment
 
   def question_params
     params.require(:question).permit(:title, :body,

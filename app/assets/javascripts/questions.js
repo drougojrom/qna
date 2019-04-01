@@ -22,4 +22,10 @@ $(document).on('turbolinks:load', function(){
     console.log(voteClass);
     console.log(rating);
   });
+  $('.new-comment').on('ajax:success', function(e) {
+    var comment = e.detail[0];
+    var commentClass = comment.class
+    $('.' + commentClass + '_comments').append(comment.body + " by " + comment.user);
+    console.log(comment);
+  });
 });

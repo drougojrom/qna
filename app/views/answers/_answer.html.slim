@@ -20,6 +20,14 @@
               - answer.links.each do |link|
                 => render link 
       td
+        .answer_comments
+          p Comments:
+          ul
+            - answer.comments.each do |comment|
+              => render comment
+              p
+                = render 'shared/commenting', locals: { comment_obj: answer }
+      td
         .answer_rating id="answer_rating_#{answer.id}"
           p= "The answers rating is #{answer.rating}"
         - if signed_in?  

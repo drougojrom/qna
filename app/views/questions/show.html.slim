@@ -5,6 +5,12 @@
   ul
     - question.links.each do |link|
         => render link
+  p Comments:
+  ul.question_comments
+    - question.comments.each do |comment|
+      => render comment
+  p
+    = render 'shared/commenting', locals: { comment_obj: question }
 
 .answers
   = render question.answers
