@@ -22,8 +22,9 @@ $(document).on('turbolinks:load', function(){
   });
   $('.new-comment').on('ajax:success', function(e) {
     var comment = e.detail[0];
-    var commentClass = comment.class
-    $('.new-comment #comment_body').val(''); 
+    var commentClass = comment.class;
+    $('.new-comment #comment_body').val('');
+    console.log('123');
     $('.' + commentClass + '_comments').append(comment.body + " by " + comment.user_email);
   });
 });

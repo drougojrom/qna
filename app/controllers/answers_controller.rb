@@ -39,7 +39,7 @@ class AnswersController < ApplicationController
 
   private
 
-  helper_method :answer, :question
+  helper_method :answer, :question, :comment
 
   def answer_params
     params.require(:answer).permit(:body, files: [], links_attributes: [:name, :url])
@@ -51,6 +51,10 @@ class AnswersController < ApplicationController
 
   def question
     @question ||= params[:question_id] ? Question.find(params[:question_id]) : answer.question
+  end
+
+  def comment
+    @comment ||= Comment.new
   end
 
   def authored?

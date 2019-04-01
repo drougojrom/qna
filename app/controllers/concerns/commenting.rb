@@ -22,6 +22,7 @@ module Commenting
     ActionCable.server.broadcast('comments',
       data
     )
+    return data
   end
 
   private 
