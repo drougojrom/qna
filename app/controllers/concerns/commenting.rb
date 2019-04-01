@@ -12,12 +12,16 @@ module Commenting
   end
 
   def format_json
-    {
+    data = {
       class: @commentable.class.name.downcase,
       id: @commentable.id,
       body: @comment.body,
-      user: @comment.user.email
+      user_email: @comment.user.email,
+      user_id: @comment.user.id
     }
+    ActionCable.server.broadcast('comments',
+      data
+    )
   end
 
   private 

@@ -24,6 +24,6 @@ $(document).on('turbolinks:load', function(){
     var comment = e.detail[0];
     var commentClass = comment.class
     $('.new-comment #comment_body').val(''); 
-    $('.' + commentClass + '_comments').append(comment.body + " by " + comment.user);
+    $('.' + commentClass + '_comments').append(comment.body + " by " + comment.user_email);
   });
 });
