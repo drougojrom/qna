@@ -19,13 +19,11 @@ $(document).on('turbolinks:load', function(){
     vote.vote_revoke ? $(vote_revoke_id).removeClass('disabled') : $(vote_revoke_id).addClass('disabled') 
 
     $('.' + voteClass + '_rating').text("The " + voteClass + "s rating is " + rating);
-    console.log(voteClass);
-    console.log(rating);
   });
   $('.new-comment').on('ajax:success', function(e) {
     var comment = e.detail[0];
     var commentClass = comment.class
+    $('.new-comment #comment_body').val(''); 
     $('.' + commentClass + '_comments').append(comment.body + " by " + comment.user);
-    console.log(comment);
   });
 });
