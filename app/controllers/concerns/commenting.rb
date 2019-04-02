@@ -8,10 +8,10 @@ module Commenting
 
   def make_comment
     @comment = @commentable.make_comment(current_user, comment_params[:body])
-    render json: format_json
+    render json: comment_format_json
   end
 
-  def format_json
+  def comment_format_json
     data = {
       class: @commentable.class.name.downcase,
       id: @commentable.id,
