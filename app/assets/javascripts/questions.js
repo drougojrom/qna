@@ -5,7 +5,7 @@ $(document).on('turbolinks:load', function(){
     var questionId = $(this).data('questionId');
     $('form#edit-question-' + questionId).removeClass('hidden');
   });
-  $('.voting').on('ajax:success', function(e){
+  $(document).on('ajax:success','.voting', function(e){
     var vote = e.detail[0];
     console.log(vote);
     var rating = vote.rating;
