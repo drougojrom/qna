@@ -10,7 +10,7 @@ ready = function() {
       var current_user_id = gon.current_user_id;
       if (current_user_id !== answer.user_id) {
         $('.answers').append(JST["templates/answer"]({ data: answer}));
-        if (current_user_id !== null) {
+        if (current_user_id != null) {
           $('.answer container').append(JST["templates/voting"]({ data: answer}));
         }
       }

@@ -1,11 +1,14 @@
 class CommentsController < ApplicationController
 
   before_action :set_commentable, only: [:create]
+  before_action :authenticate_user!, only: [:create]
 
   def create
     @comment = @commentable.make_comment(current_user, comment_params[:body])
     render json: comment_format_json
   end
+
+  private 
 
   def comment_format_json
     data = {
@@ -19,8 +22,6 @@ class CommentsController < ApplicationController
                                  data)
     return data
   end
-
-  private 
 
   def set_commentable
     @commentable = Question.find(params[:question_id]) if params[:question_id].present?
