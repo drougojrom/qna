@@ -21,9 +21,10 @@ feature 'User can create an answer for a question', %q{
     end
 
     scenario 'answers on a question' do
-      fill_in 'Body', with: 'test answer'
-      click_on 'Answer'
-
+      within '.new-answer' do 
+        fill_in 'Body', with: 'test answer'
+        click_on 'Answer'
+      end
       expect(page).to have_content 'test answer'
     end
   end

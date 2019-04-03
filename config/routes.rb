@@ -5,16 +5,14 @@ Rails.application.routes.draw do
     post :vote_for, :vote_against, :vote_revoke, on: :member
   end
 
-  concern :commenting do
-    post :make_comment, on: :member
-  end
-
   resources :users do
     resources :rewards, shallow: true, only: [:index]
   end
 
-  resources :questions, concerns: [:voting, :commenting] do
-    resources :answers, concerns: [:voting, :commenting], shallow: true do
+  resources :questions, concerns: [:voting] do
+    resources :comments, only: [:create]
+    resources :answers, concerns: [:voting], shallow: true do
+      resources :comments, only: [:create]
       member do
         patch :right_answer
         patch :not_right_answer

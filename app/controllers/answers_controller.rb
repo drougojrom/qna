@@ -1,7 +1,6 @@
 class AnswersController < ApplicationController
 
   include Voting
-  include Commenting
 
   before_action :authenticate_user!
   before_action :authored?, only: %i[update destroy]

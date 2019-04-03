@@ -20,7 +20,7 @@ feature 'User can edit links for his question', %q{
       sign_in(question_with_link.user)
       visit question_path(question_with_link)
 
-      within '.links' do
+      within '.question_links' do
         click_on 'Edit'
 
         fill_in 'Link name', with: 'edited link name'

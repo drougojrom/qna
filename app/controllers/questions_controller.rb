@@ -1,7 +1,6 @@
 class QuestionsController < ApplicationController
 
   include Voting
-  include Commenting
 
   before_action :authenticate_user!, except: [:index, :show]
   before_action :authored?, only: [:update, :destroy]

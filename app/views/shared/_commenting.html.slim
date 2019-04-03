@@ -1,6 +1,6 @@
 .new-comment
-  = form_for [locals[:comment_obj],
-    comment], url: polymorphic_path(locals[:comment_obj], action: :make_comment),
+  = form_for [locals[:comment_obj], comment],
+    url: polymorphic_path([locals[:comment_obj], comment]), action: :post,
     remote: true, class: 'new-comment', data: { type: :json } do |f|
     p
       = f.label :body

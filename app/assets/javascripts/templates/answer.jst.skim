@@ -3,6 +3,7 @@
 - answer_user_id = @data['user_id']
 - rating = @data['rating']
 - id = @data['id']
+- current_user = @data['current_user']
 
 div[class = "answer container" id="answer-#{id}"]
   tr
@@ -12,11 +13,3 @@ div[class = "answer container" id="answer-#{id}"]
     td
       div[class = "answer_rating" id="answer_rating_#{id}"]
         p = "The answers rating is #{rating}"
-    td
-      div[class = "voting"]
-        p
-          a class="btn btn-success" data-type="json" id="vote_for_answer_#{id}" data-remote="true" data-method="post" href="/answers/#{id}/vote_for" Vote up
-        p
-          a class="btn btn-success" data-type="json" id="vote_against_answer_#{id}" data-remote="true" data-method="post" href="/answers/#{id}/vote_against" Vote against
-        p
-          a class="btn btn-success" data-type="json" id="vote_revoke_answer_#{id}" data-remote="true" data-method="post" href="/answers/#{id}/vote_revoke" Vote revoke

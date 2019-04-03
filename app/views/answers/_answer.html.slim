@@ -32,11 +32,13 @@
         - if signed_in?  
       td 
         .voting
-          = render 'shared/voting', locals: { type: :answer, vote_obj: answer}
+          - if current_user
+            = render 'shared/voting', locals: { type: :answer, vote_obj: answer}
       td
         - if current_user&.author_of?(answer)
           p
             => link_to 'Delete', answer, method: :delete, data: {confirm: "Are you sure?"}, remote: true, class: 'delete-answer'
+          p.edit-answer
             => link_to 'Edit', '#', class: 'edit-answer-link', data: { answer_id: answer.id }
             = form_with model: answer, class: 'hidden', html: { id: "edit-answer-#{answer.id}" } do |f|
               =f.label :body, 'Your answer'

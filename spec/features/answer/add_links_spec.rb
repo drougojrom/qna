@@ -13,12 +13,13 @@ feature 'User can add links to answer', %q{
     sign_in user
     visit question_path(question)
 
-    fill_in 'Body', with: 'text text text'
+    within '.new-answer' do
+      fill_in 'Body', with: 'text text text'
+      fill_in 'Link name', with: 'My gist'
+      fill_in 'Url', with: gist_url
 
-    fill_in 'Link name', with: 'My gist'
-    fill_in 'Url', with: gist_url
-
-    click_on 'Answer'
+      click_on 'Answer'
+    end
     expect(page).to have_link 'My gist', href: gist_url
   end
 end

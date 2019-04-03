@@ -15,7 +15,6 @@ module Voting
   def vote_against
     @votable.vote_against(current_user)
     set_vote(current_user)
-    binding.pry
     render json: vote_format_json
   end
 

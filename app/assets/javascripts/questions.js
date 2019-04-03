@@ -7,7 +7,6 @@ $(document).on('turbolinks:load', function(){
   });
   $(document).on('ajax:success','.voting', function(e){
     var vote = e.detail[0];
-    console.log(vote);
     var rating = vote.rating;
     var voteClass = vote.class
     var vote_for_id = "#vote_for_" + voteClass + "_" + vote.id
@@ -20,11 +19,10 @@ $(document).on('turbolinks:load', function(){
 
     $('.' + voteClass + '_rating').text("The " + voteClass + "s rating is " + rating);
   });
-  $('.new-comment').on('ajax:success', function(e) {
+  $(document).on('ajax:success', '.new-comment', function(e) {
     var comment = e.detail[0];
     var commentClass = comment.class;
     $('.new-comment #comment_body').val('');
-    console.log('123');
     $('.' + commentClass + '_comments').append(comment.body + " by " + comment.user_email);
   });
 });
