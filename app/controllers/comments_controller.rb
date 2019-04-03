@@ -1,12 +1,8 @@
-module Commenting
-  extend ActiveSupport::Concern
+class CommentsController < ApplicationController
 
-  included do 
-    before_action :set_commentable, only: [:make_comment]
-    respond_to :json
-  end
+  before_action :set_commentable, only: [:create]
 
-  def make_comment
+  def create
     @comment = @commentable.make_comment(current_user, comment_params[:body])
     render json: comment_format_json
   end
@@ -20,15 +16,15 @@ module Commenting
       user_id: @comment.user.id
     }
     ActionCable.server.broadcast('comments',
-      data
-    )
+                                 data)
     return data
   end
 
   private 
 
   def set_commentable
-    @commentable = controller_name.classify.constantize.find(params[:id])
+    @commentable = Question.find(params[:question_id]) if params[:question_id].present?
+    @commentable = Answer.find(params[:answer_id]) if params[:answer_id].present?
   end
 
   def comment_params

@@ -21,6 +21,12 @@ FactoryBot.define do
        create :reward, question: question
       end
     end
+
+    trait :with_comment do
+      after(:create) do |question|
+        create :comment, question: question
+      end
+    end
   end
 
   factory :question_with_answers, class: 'Question' do

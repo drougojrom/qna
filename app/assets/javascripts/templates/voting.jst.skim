@@ -1,0 +1,10 @@
+- id = @data['id']
+
+td
+  div[class = "voting"]
+    p
+      a class="btn btn-success" data-type="json" id="vote_for_answer_#{id}" data-remote="true" data-method="post" href="/answers/#{id}/vote_for" Vote up
+    p
+      a class="btn btn-success" data-type="json" id="vote_against_answer_#{id}" data-remote="true" data-method="post" href="/answers/#{id}/vote_against" Vote against
+    p
+      a class="btn btn-success" data-type="json" id="vote_revoke_answer_#{id}" data-remote="true" data-method="post" href="/answers/#{id}/vote_revoke" Vote revoke
