@@ -771,6 +771,7 @@ GEM
     chromedriver-helper (2.1.0)
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
+    cliver (0.3.2)
     cocoon (1.2.12)
     coderay (1.1.2)
     coffee-rails (4.2.2)
@@ -783,6 +784,7 @@ GEM
     commonjs (0.2.7)
     concurrent-ruby (1.1.4)
     crass (1.0.4)
+    database_cleaner (1.7.0)
     devise (4.5.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -852,6 +854,10 @@ GEM
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
     pg (1.1.4)
+    poltergeist (1.18.1)
+      capybara (>= 2.1, < 4)
+      cliver (~> 0.3.1)
+      websocket-driver (>= 0.2.0)
     popper_js (1.14.5)
     pry (0.12.2)
       coderay (~> 1.1.0)
@@ -1000,6 +1006,7 @@ DEPENDENCIES
   chromedriver-helper
   cocoon
   coffee-rails (~> 4.2)
+  database_cleaner
   devise
   devise-bootstrap-views (~> 1.0)
   factory_bot_rails
@@ -1011,6 +1018,7 @@ DEPENDENCIES
   listen (>= 3.0.5, < 3.2)
   mini_racer
   pg (>= 0.18, < 2.0)
+  poltergeist
   pry
   puma (~> 3.11)
   rails (~> 5.2.2)
