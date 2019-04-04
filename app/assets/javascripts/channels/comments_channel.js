@@ -10,7 +10,7 @@ ready = function() {
       var commentClass = comment.class
       var current_user_id = gon.current_user_id;
       if (current_user_id != comment.user_id) {
-	$('.' + commentClass + '_comments').append(JST["templates/comment"]({ data: comment}));
+        $('.' + commentClass + '_comments').append(JST["templates/comment"]({ data: comment}));
       }
     }
   });
