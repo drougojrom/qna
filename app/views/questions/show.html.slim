@@ -6,7 +6,7 @@
     - question.links.each do |link|
         => render link
   p Comments:
-  ul.question_comments
+  ul.comments-list id="comments-question-#{question.id}"
     - question.comments.each do |comment|
       => render comment
   p

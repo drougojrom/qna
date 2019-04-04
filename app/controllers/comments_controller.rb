@@ -18,7 +18,7 @@ class CommentsController < ApplicationController
       user_email: @comment.user.email,
       user_id: @comment.user.id
     }
-    ActionCable.server.broadcast('comments',
+    ActionCable.server.broadcast("comments_for_#{@comment.commentable_type == 'Question' ? @commentable.id : @commentable.question_id}",
                                  data)
     return data
   end

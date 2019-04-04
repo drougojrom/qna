@@ -19,10 +19,12 @@ $(document).on('turbolinks:load', function(){
 
     $('.' + voteClass + '_rating').text("The " + voteClass + "s rating is " + rating);
   });
-  $(document).on('ajax:success', '.new-comment', function(e) {
+  $(document).on('ajax:success', '.new-comment', function(e, data) {
     var comment = e.detail[0];
     var commentClass = comment.class;
+    
     $('.new-comment #comment_body').val('');
-    $('.' + commentClass + '_comments').append(comment.body + " by " + comment.user_email);
+    var comments_list = '#comments-' + comment.class + '-' + comment.id;
+    $(comments_list).append(JST["templates/comment"]({ data: comment }));
   });
 });
