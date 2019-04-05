@@ -1,0 +1,32 @@
+- question_id = @data['question_id']
+- answer_body = @data['body']
+- answer_user_id = @data['user_id']
+- rating = @data['rating']
+- id = @data['id']
+
+div[class = "answer container" id="answer-#{id}"]
+  tr
+    td
+      div[class = "answer-#{id}"]
+        p = answer_body
+    td
+      div[class = "answer_rating" id="answer_rating_#{id}"]
+        p = "The answers rating is #{rating}"
+    td
+      div[class = "voting"]
+        p
+          a class="btn btn-success" data-type="json" id="vote_for_answer_#{id}" data-remote="true" data-method="post" href="/answers/#{id}/vote_for" Vote up
+        p
+          a class="btn btn-success" data-type="json" id="vote_against_answer_#{id}" data-remote="true" data-method="post" href="/answers/#{id}/vote_against" Vote against
+        p
+          a class="btn btn-success disabled" data-type="json" id="vote_revoke_answer_#{id}" data-remote="true" data-method="post" href="/answers/#{id}/vote_revoke" Vote revoke
+    td
+      p
+        div[class="new-comment"]
+          form class="new_comment" id="new_comment" data-type="json" action="/answers/#{id}/comments" accept-charset="UTF-8" data-remote="true" method="post"
+          input name="utf8" type="hidden" value="&#x2713;"
+          p
+            label for="comment_body" Body
+            textarea name="comment[body]" id="comment_body"
+          p
+            input type="submit" name="commit" value="Post comment" data-disable-with="Post comment"

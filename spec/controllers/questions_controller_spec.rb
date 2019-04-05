@@ -51,7 +51,7 @@ RSpec.describe QuestionsController, type: :controller do
 
       context 'with valid attributes' do
         it 'saves a new question into db' do
-          expect { post :create, params: { question: attributes_for(:question) }}.to change(Question, :count).by(1)
+          expect { post :create, params: { question: attributes_for(:question) }, format: :js}.to change(Question, :count).by(1)
         end
 
         it 'redirects to show' do

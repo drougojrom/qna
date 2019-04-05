@@ -1,0 +1,7 @@
+- question_id = @data['id']
+- question_title = @data['title']
+- question_user_id = @data['user_id']
+
+tr
+  td.title
+    a href="/questions/#{question_id}" data-type='html' #{question_title}

@@ -23,6 +23,8 @@ gem 'bootstrap-generators'
 gem 'aws-sdk'
 gem 'cocoon'
 gem 'gist-embed-rails'
+gem 'gon'
+gem 'skim'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -45,6 +47,7 @@ group :test do
   gem 'shoulda-matchers', '4.0.0.rc1'
   gem 'rails-controller-testing' # If you are using Rails 5.x
   gem 'launchy'
+  gem 'database_cleaner'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

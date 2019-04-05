@@ -1,6 +1,6 @@
 = render 'shared/errors', resource: question
 
-= form_with model: question, local: true do |f|
+= form_with model: question, remote: true, data: { type: :json } do |f|
   .question
     p
       = f.label :title

@@ -5,6 +5,8 @@ class AnswersController < ApplicationController
   before_action :authenticate_user!
   before_action :authored?, only: %i[update destroy]
 
+  after_action :publish_answer, only: [:create]
+
   def edit
   end
 
@@ -36,7 +38,7 @@ class AnswersController < ApplicationController
 
   private
 
-  helper_method :answer, :question
+  helper_method :answer, :question, :comment
 
   def answer_params
     params.require(:answer).permit(:body, files: [], links_attributes: [:name, :url])
@@ -50,9 +52,21 @@ class AnswersController < ApplicationController
     @question ||= params[:question_id] ? Question.find(params[:question_id]) : answer.question
   end
 
+  def comment
+    @comment ||= Comment.new
+  end
+
   def authored?
     unless current_user.author_of?(answer)
       redirect_to answer.question, notice: "You aren't an author of that question"
     end
+  end
+
+  def publish_answer
+    return if answer.errors.any?
+    ActionCable.server.broadcast(
+      "question_#{@answer.question.id}", 
+      ApplicationController.render(json: answer)
+    )
   end
 end

@@ -5,7 +5,7 @@ $(document).on('turbolinks:load', function(){
     var questionId = $(this).data('questionId');
     $('form#edit-question-' + questionId).removeClass('hidden');
   });
-  $('.voting').on('ajax:success', function(e){
+  $(document).on('ajax:success','.voting', function(e){
     var vote = e.detail[0];
     var rating = vote.rating;
     var voteClass = vote.class
@@ -16,7 +16,15 @@ $(document).on('turbolinks:load', function(){
     vote.vote_for ? $(vote_for_id).removeClass('disabled') : $(vote_for_id).addClass('disabled') 
     vote.vote_against ? $(vote_against_id).removeClass('disabled') : $(vote_against_id).addClass('disabled') 
     vote.vote_revoke ? $(vote_revoke_id).removeClass('disabled') : $(vote_revoke_id).addClass('disabled') 
-    
+
     $('.' + voteClass + '_rating').text("The " + voteClass + "s rating is " + rating);
+  });
+  $(document).on('ajax:success', '.new-comment', function(e, data) {
+    var comment = e.detail[0];
+    var commentClass = comment.class;
+    
+    $('.new-comment #comment_body').val('');
+    var comments_list = '#comments-' + comment.class + '-' + comment.id;
+    $(comments_list).append(JST["templates/comment"]({ data: comment }));
   });
 });

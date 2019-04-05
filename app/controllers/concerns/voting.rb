@@ -9,19 +9,19 @@ module Voting
   def vote_for
     @votable.vote_for(current_user)
     set_vote(current_user)
-    render json: format_json
+    render json: vote_format_json
   end
 
   def vote_against
     @votable.vote_against(current_user)
     set_vote(current_user)
-    render json: format_json
+    render json: vote_format_json
   end
 
   def vote_revoke
     @votable.vote_revoke(current_user)
     set_vote(current_user)
-    render json: format_json
+    render json: vote_format_json
   end
 
   private 
@@ -34,7 +34,7 @@ module Voting
     @vote = @votable.reload.user_vote(current_user)
   end
 
-  def format_json
+  def vote_format_json
     {
       class: @votable.class.name.downcase,
       vote_for: new_vote?,

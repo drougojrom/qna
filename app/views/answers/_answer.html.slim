@@ -20,15 +20,25 @@
               - answer.links.each do |link|
                 => render link 
       td
+        p Comments:
+        ul.comments-list id="comments-answer-#{answer.id}"
+          - answer.comments.each do |comment|
+            => render comment
+        p
+          = render 'shared/commenting', locals: { comment_obj: answer }
+      td
         .answer_rating id="answer_rating_#{answer.id}"
           p= "The answers rating is #{answer.rating}"
         - if signed_in?  
-          .voting
+      td 
+        .voting
+          - if current_user
             = render 'shared/voting', locals: { type: :answer, vote_obj: answer}
       td
         - if current_user&.author_of?(answer)
           p
             => link_to 'Delete', answer, method: :delete, data: {confirm: "Are you sure?"}, remote: true, class: 'delete-answer'
+          p.edit-answer
             => link_to 'Edit', '#', class: 'edit-answer-link', data: { answer_id: answer.id }
             = form_with model: answer, class: 'hidden', html: { id: "edit-answer-#{answer.id}" } do |f|
               =f.label :body, 'Your answer'
