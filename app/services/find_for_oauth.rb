@@ -1,5 +1,7 @@
 class Services::FindForOauth
 
+  TEMP_EMAIL_PREFIX = 'change@me'
+
   attr_reader :auth
 
   def initialize(auth)
@@ -16,7 +18,10 @@ class Services::FindForOauth
       user.create_authorization(auth)
     else
       password = Devise.friendly_token[0, 20]
-      user = User.create!(email: email, password: password, password_confirmation: password)
+      user = User.new(email: email ? email : "#{TEMP_EMAIL_PREFIX}-#{auth.uid}-#{auth.provider}.com", 
+                      password: password,
+                      password_confirmation: password)
+      user.save!      
       user.create_authorization(auth)
     end
     user
