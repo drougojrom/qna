@@ -21,6 +21,7 @@ class Services::FindForOauth
       user = User.new(email: email ? email : "#{TEMP_EMAIL_PREFIX}-#{auth.uid}-#{auth.provider}.com", 
                       password: password,
                       password_confirmation: password)
+      user.skip_confirmation!
       user.save!      
       user.create_authorization(auth)
     end

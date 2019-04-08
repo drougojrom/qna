@@ -1,11 +1,13 @@
 class UsersController < ApplicationController
 
-  before_action :set_user, only: [:finish_signup]
+  before_action :set_user, only: [:finish_signup, :profile]
 
   def finish_signup
-    if @user.update(user_params)
-      sign_in(@user, :bypass => true)
-      redirect_to root_path, notice: 'Your profile was successfully updated.'
+    if request.patch? && params[:user][:email]
+      if @user.update(user_params)
+        @user.send_confirmation_instructions
+        redirect_to root_path, notice: 'Confirm your email'
+      end
     end
   end
 

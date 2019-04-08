@@ -1,6 +1,6 @@
 div id="add-email" class="container"
   h1 Add Email
-  = form_for(current_user, :as => 'user', :url => finish_signup_path(current_user), :html => { role: 'form'}) do |f|
+  = form_for(@user, :as => 'user', :url => finish_signup_path(@user), :html => { role: 'form'}) do |f|
     .form-group
       = f.label :email
     .controls
