@@ -74,5 +74,20 @@ RSpec.describe OauthCallbacksController, type: :controller do
         expect(response).to redirect_to root_path
       end
     end
+
+     context 'user does not exist' do
+      before do
+        allow(User).to receive(:find_for_oauth)
+        get :twitter
+      end
+
+      it 'redirects to root path if user does not exist' do
+        expect(response).to redirect_to root_path
+      end
+
+      it 'does not log in user' do
+        expect(subject.current_user).to_not be
+      end
+    end
   end
 end

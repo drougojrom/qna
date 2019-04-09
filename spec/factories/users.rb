@@ -9,4 +9,8 @@ FactoryBot.define do
     password_confirmation { '123123123' }
     confirmed_at { Date.today }
   end
+
+  trait :uncorfirmed do
+    confirmed_at { nil }
+  end
 end
