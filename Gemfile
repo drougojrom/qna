@@ -28,13 +28,13 @@ gem 'skim'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'omniauth-twitter'
-gem 'capybara-email'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 3.8'
   gem 'factory_bot_rails'
   gem 'pry'
+  gem 'capybara-email'  
 end
 
 group :development do

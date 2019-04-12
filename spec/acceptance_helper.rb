@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'capybara/email/rspec'
 
 RSpec.configure do |config|
   Capybara.server = :puma
@@ -26,3 +27,4 @@ RSpec.configure do |config|
   end
 end 
 
+OmniAuth.config.test_mode = true
