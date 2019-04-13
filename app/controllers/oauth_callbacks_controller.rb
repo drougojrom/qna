@@ -11,9 +11,7 @@ class OauthCallbacksController < Devise::OmniauthCallbacksController
 
   def handle_oauth
     @user = User.find_for_oauth(oauth_hash)
-    if @user&.persisted? && @user.email_verified?
-      sign_in_user(oauth_hash.provider)
-    elsif @user&.persisted? && oauth_hash.provider == 'github'
+    if @user&.persisted? && (@user.email_verified? || oauth_hash.provider == 'github')
       sign_in_user(oauth_hash.provider)
     elsif @user
       finish_signup_for(@user)
