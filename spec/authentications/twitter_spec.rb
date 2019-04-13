@@ -16,7 +16,7 @@ feature 'Twitter Authentication', %q{
       auth_with :twitter, auth.user.email
       visit new_user_session_path
       click_on 'Sign in with Twitter'
-      expect(page).to have_content 'Successfully authenticated from Twitter account'
+      expect(page).to have_content 'Successfully authenticated from twitter account'
     end
   end
 

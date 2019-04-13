@@ -2,12 +2,13 @@ require 'rails_helper'
 
 RSpec.describe OauthCallbacksController, type: :controller do
   before do
-    @request.env["devise.mapping"] = Devise.mappings[:user] 
+    @request.env["devise.mapping"] = Devise.mappings[:user]
+    request.env['omniauth.auth'] = oauth_data
   end
 
   describe '#GET Github' do
-
-    let(:oauth_data) { { 'provider' => 'github', 'uid' => '123' } }
+    let(:oauth_data) { OmniAuth::AuthHash.new( provider: 'github', uid: '123',
+                                              info: { email: 'test@33user.com' } ) }
 
     it 'finds user from oauth data' do
       allow(request.env).to receive(:[]).and_call_original
@@ -50,7 +51,8 @@ RSpec.describe OauthCallbacksController, type: :controller do
   end
 
   describe '#GET twitter' do
-    let(:oauth_data) { { 'provider' => 'twitter', 'uid' => '123' } }
+    let(:oauth_data) { OmniAuth::AuthHash.new( provider: 'twitter', uid: '123',
+                                              info: { email: 'test@33user.com' } ) }
     it 'finds user from oauth data' do
       allow(request.env).to receive(:[]).and_call_original
       allow(request.env).to receive(:[]).with('omniauth.auth').and_return(oauth_data)
@@ -75,7 +77,7 @@ RSpec.describe OauthCallbacksController, type: :controller do
       end
     end
 
-     context 'user does not exist' do
+    context 'user does not exist' do
       before do
         allow(User).to receive(:find_for_oauth)
         get :twitter
