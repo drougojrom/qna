@@ -28,7 +28,7 @@ class OauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def oauth_hash
-    request.env['omniauth.auth'] || session[:oauth_hash]
+    request.env['omniauth.auth']
   end
 
   def finish_signup_for(resource)
