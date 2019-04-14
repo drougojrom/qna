@@ -32,6 +32,9 @@ Rails.application.configure do
   config.active_storage.service = :test
 
   config.action_mailer.perform_caching = false
+  config.action_mailer.perform_deliveries = true 
+  config.action_mailer.default_url_options = { host: 'localhost', 
+                                             port: 3001 }
 
   config.action_cable.disable_request_forgery_protection = true
 
@@ -45,4 +48,6 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  #
+  OmniAuth.config.test_mode = true
 end
