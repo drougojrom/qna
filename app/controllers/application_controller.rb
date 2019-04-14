@@ -8,6 +8,8 @@ class ApplicationController < ActionController::Base
     redirect_to root_url, alert: exception.message
   end
 
+  check_authorization
+
   def ensure_signup_complete
     return if action_name == 'finish_signup'
 
