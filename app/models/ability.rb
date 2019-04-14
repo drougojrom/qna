@@ -31,7 +31,9 @@ class Ability
     can :vote_for, [Question, Answer, Comment]
     can :vote_against, [Question, Answer, Comment]
     can :vote_revoke, [Question, Answer, Comment]
+    can :manage, ActiveStorage::Attachment
     answers_abilities
+    rewards_abilities
   end
 
   private 
@@ -41,11 +43,7 @@ class Ability
     can :not_right_answer, Answer, user_id: user.id
   end
 
-  def questions_abilities
-
-  end
-
-  def comments_abilities
-
+  def rewards_abilities
+    can :index, Reward
   end
 end
