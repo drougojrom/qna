@@ -27,5 +27,25 @@ class Ability
     guest_abilities
     can :create, [Question, Answer, Comment]
     can :update, [Question, Answer, Comment], user_id: user.id
+    can :destroy, [Question, Answer, Comment], user_id: user.id
+    can :vote_for, [Question, Answer, Comment]
+    can :vote_against, [Question, Answer, Comment]
+    can :vote_revoke, [Question, Answer, Comment]
+    answers_abilities
+  end
+
+  private 
+
+  def answers_abilities
+    can :right_answer, Answer, user_id: user.id
+    can :not_right_answer, Answer, user_id: user.id
+  end
+
+  def questions_abilities
+
+  end
+
+  def comments_abilities
+
   end
 end
