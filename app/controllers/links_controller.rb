@@ -2,6 +2,8 @@ class LinksController < ApplicationController
 
   before_action :linkable_author?, only: [:update, :destroy]
 
+  authorize_resource
+
   def update
     link.update(link_params)
   end

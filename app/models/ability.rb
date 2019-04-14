@@ -34,6 +34,7 @@ class Ability
     can :manage, ActiveStorage::Attachment
     answers_abilities
     rewards_abilities
+    links_abilities
   end
 
   private 
@@ -45,5 +46,10 @@ class Ability
 
   def rewards_abilities
     can :index, Reward
+  end
+
+  def links_abilities
+    can :update, Link
+    can :destroy, Link
   end
 end
