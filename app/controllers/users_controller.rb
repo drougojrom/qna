@@ -2,6 +2,8 @@ class UsersController < ApplicationController
 
   before_action :set_user, only: [:finish_signup, :profile]
 
+  skip_authorization_check
+
   def finish_signup
     if request.patch? && params[:user][:email]
       if @user.update(user_params)

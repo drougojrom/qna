@@ -3,6 +3,8 @@ class CommentsController < ApplicationController
   before_action :set_commentable, only: [:create]
   before_action :authenticate_user!, only: [:create]
 
+  authorize_resource
+
   def create
     @comment = @commentable.make_comment(current_user, comment_params[:body])
     render json: comment_format_json

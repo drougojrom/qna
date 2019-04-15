@@ -28,6 +28,8 @@ gem 'skim'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'omniauth-twitter'
+gem 'cancancan'
+gem 'pundit'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
