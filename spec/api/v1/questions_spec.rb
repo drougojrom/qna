@@ -4,66 +4,56 @@ describe 'Questions API', type: :request do
   let(:headers) { { "CONTENT-TYPE" => "application/json", "ACCEPT" => "application/json"} }
 
   describe 'GET /api/v1/questions' do
-    context 'unauthorized user' do
-      it 'returns 401 status if no access token' do
-        get '/api/v1/questions/', headers: headers
-        expect(response.status).to eq 401
+    let(:api_path) { '/api/v1/questions' }
+
+    it_behaves_like 'API Authorizable' do
+      let(:method) { :get }
+    end
+
+    context 'authorized' do
+      let(:access_token) { create(:access_token) }
+      let!(:questions) { create_list(:question, 2) }
+      let(:question) { questions.first }
+      let(:question_response) { json['questions'].first }
+      let!(:answers) { create_list(:answer, 3, question: question) }
+
+      before do
+        get api_path, params: { access_token: access_token.token }, headers: headers
       end
 
-      it 'returns 401 status if token invalid' do
-        get '/api/v1/questions',
-            params: { access_token: '123123' },
-            headers: headers
-        expect(response.status).to eq 401
+      it 'returns 200 status' do
+        expect(response).to be_successful
       end
 
-      context 'authorized' do
-        let(:access_token) { create(:access_token) }
-        let!(:questions) { create_list(:question, 2) }
-        let(:question) { questions.first }
-        let(:question_response) { json['questions'].first }
-        let!(:answers) { create_list(:answer, 3, question: question) }
+      it 'returns a list of questions' do
+        expect(json['questions'].size).to eq 2
+      end
 
-        before do
-          get '/api/v1/questions',
-              params: { access_token: access_token.token },
-              headers: headers
+      it 'returns all public fields for question' do
+        %w[id title body created_at updated_at].each do |attr|
+          expect(json['questions'].first[attr]).to eq questions.first.send(attr).as_json
         end
+      end
 
-        it 'returns 200 status' do
-          expect(response).to be_successful
-        end
+      it 'contains user object' do
+        expect(question_response['user']['id']).to eq question.user.id
+      end
+
+      it 'contains short title' do
+        expect(question_response['short_title']).to eq question.title.truncate(7)
+      end
+
+      describe 'answers' do
+        let(:answer) { answers.last }
+        let(:answer_response) { question_response['answers'].first }
 
         it 'returns a list of questions' do
-          expect(json['questions'].size).to eq 2
+          expect(question_response['answers'].size).to eq 3
         end
 
         it 'returns all public fields for question' do
-          %w[id title body created_at updated_at].each do |attr|
-            expect(json['questions'].first[attr]).to eq questions.first.send(attr).as_json
-          end
-        end
-
-        it 'contains user object' do
-          expect(question_response['user']['id']).to eq question.user.id
-        end
-
-        it 'contains short title' do
-          expect(question_response['short_title']).to eq question.title.truncate(7)
-        end
-
-        describe 'answers' do
-          let(:answer) { answers.last }
-          let(:answer_response) { question_response['answers'].first }
-
-          it 'returns a list of questions' do
-            expect(question_response['answers'].size).to eq 3
-          end
-
-          it 'returns all public fields for question' do
-            %w[id body user_id created_at updated_at].each do |attr|
-              expect(answer_response[attr]).to eq answer.send(attr).as_json
-            end
+          %w[id body user_id created_at updated_at].each do |attr|
+            expect(answer_response[attr]).to eq answer.send(attr).as_json
           end
         end
       end
