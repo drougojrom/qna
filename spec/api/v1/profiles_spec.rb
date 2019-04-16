@@ -7,7 +7,7 @@ describe 'Profiles API', type: :request do
 
   describe 'GET /api/v1/profiles/me' do
     context 'unauthorized user' do
-      it 'returns 401 status if no access toke' do
+      it 'returns 401 status if no access token' do
         get '/api/v1/profiles/me', headers: headers
         expect(response.status).to eq 401
       end

@@ -24,7 +24,7 @@ module Voting
     render json: vote_format_json
   end
 
-  private 
+  private
 
   def set_votable
     @votable = controller_name.classify.constantize.find(params[:id])
@@ -36,12 +36,12 @@ module Voting
 
   def vote_format_json
     {
-      class: @votable.class.name.downcase,
-      vote_for: new_vote?,
-      vote_against: new_vote?,
-      vote_revoke: !new_vote?,
-      id: @votable.id,
-      rating: @votable.rating
+        class: @votable.class.name.downcase,
+        vote_for: new_vote?,
+        vote_against: new_vote?,
+        vote_revoke: !new_vote?,
+        id: @votable.id,
+        rating: @votable.rating
     }
   end
 
