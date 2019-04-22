@@ -1,10 +1,20 @@
 class QuestionSerializer < ActiveModel::Serializer
-  attributes :id, :title, :body, :created_at, :updated_at, :short_title
+
+  include Rails.application.routes.url_helpers
+
+  attributes :id, :title, :body, :created_at, :updated_at, :short_title, :attached_files
   has_many :answers
   has_many :comments
+
   belongs_to :user
 
   def short_title
     object.title.truncate(7)
+  end
+
+  def attached_files
+    @files = Question.with_attached_files.find(object.id).files.each do |file|
+      return { file.filename => rails_blob_path(file) }
+    end
   end
 end

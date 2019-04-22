@@ -1,5 +1,7 @@
 class Api::V1::BaseController < ApplicationController
 
+  include ActionController::Serialization
+
   before_action :doorkeeper_authorize!
 
   # TODO: remove later
