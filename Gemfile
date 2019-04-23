@@ -58,6 +58,7 @@ group :test do
   gem 'rails-controller-testing' # If you are using Rails 5.x
   gem 'launchy'
   gem 'database_cleaner'
+  gem 'json_spec'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
