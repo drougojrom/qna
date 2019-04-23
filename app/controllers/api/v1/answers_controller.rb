@@ -1,5 +1,7 @@
 class Api::V1::AnswersController < Api::V1::BaseController
 
+  load_and_authorize_resource
+
   def index
     render json: question.answers
   end
