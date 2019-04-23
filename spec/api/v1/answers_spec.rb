@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-describe 'Questions API', type: :request do
+describe 'Answers API', type: :request do
   let(:headers) { { "CONTENT-TYPE" => "application/json", "ACCEPT" => "application/json"} }
 
-  describe 'GET /api/v1/questions' do
+  describe 'GET /api/v1/questions/1/answers/1' do
     let(:api_path) { '/api/v1/questions/1/answers/1' }
 
     it_behaves_like 'API Authorizable' do
@@ -16,6 +16,7 @@ describe 'Questions API', type: :request do
       let(:question_id) { question.id }
       let!(:answer) { create(:answer, question: question) }
       let(:answer_id) { answer.id }
+      let(:answer_response) { json['answer'] }
 
       before { get "/api/v1/questions/#{question_id}/answers/#{answer_id}", params: { format: :json, access_token: access_token.token } }
 
@@ -23,37 +24,14 @@ describe 'Questions API', type: :request do
         expect(response).to be_successful
       end
 
-      it 'returns a list of questions' do
-        expect(json['questions'].size).to eq 2
-      end
-
-      it 'returns all public fields for question' do
+      it 'returns all public fields for answer' do
         %w[id body created_at updated_at].each do |attr|
-          expect(json['answers'].first[attr]).to eq answer.first.send(attr).as_json
+          expect(json['answer'][attr]).to eq answer.send(attr).as_json
         end
       end
 
       it 'contains user object' do
-        expect(question_response['user']['id']).to eq question.user.id
-      end
-
-      it 'contains short title' do
-        expect(question_response['short_title']).to eq question.title.truncate(7)
-      end
-
-      describe 'answers' do
-        let(:answer) { answers.last }
-        let(:answer_response) { question_response['answers'].first }
-
-        it 'returns a list of questions' do
-          expect(question_response['answers'].size).to eq 3
-        end
-
-        it 'returns all public fields for question' do
-          %w[id body user_id created_at updated_at].each do |attr|
-            expect(answer_response[attr]).to eq answer.send(attr).as_json
-          end
-        end
+        expect(answer_response['user']['id']).to eq answer.user.id
       end
     end
   end
