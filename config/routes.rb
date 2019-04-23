@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   use_doorkeeper
   devise_for :users, controllers: { omniauth_callbacks: 'oauth_callbacks', confirmations: 'confirmations' }
   devise_scope :users do
-     get 'profile', to: 'users#profile'
+    get 'profile', to: 'users#profile'
   end
 
   match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
@@ -36,7 +36,7 @@ Rails.application.routes.draw do
         get :all_users, on: :collection
       end
       resources :questions, only: %i[index show] do
-
+        resources :answers, only: %i[index show]
       end
     end
   end
