@@ -36,7 +36,7 @@ Rails.application.routes.draw do
         get :all_users, on: :collection
       end
       resources :questions do
-        resources :answers, only: %i[index show]
+        resources :answers
       end
     end
   end

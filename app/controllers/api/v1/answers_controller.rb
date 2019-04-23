@@ -10,12 +10,26 @@ class Api::V1::AnswersController < Api::V1::BaseController
     render json: answer
   end
 
+  def create
+    @answer = question.answers.new(answer_params)
+    @answer.user = current_resource_owner
+    render json: @answer if @answer.save 
+  end
+
+  def destroy
+    answer.destroy
+  end
+
+  def update
+    answer.update(answer_params)
+  end
+
   private
 
   helper_method :answer, :question
 
   def answer_params
-    params.require(:answer).permit(:body, files: [], links_attributes: [:name, :url])
+    params.require(:answer).permit(:body)
   end
 
   def answer
