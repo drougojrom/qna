@@ -28,7 +28,7 @@ describe 'Answers API', type: :request do
       end
 
       it 'returns all public fields for answer' do
-        %w[id body user_id created_at updated_at].each do |attr|
+        %w[id body created_at updated_at].each do |attr|
           expect(json['answer'][attr]).to eq answer.send(attr).as_json
         end
       end
@@ -85,7 +85,7 @@ describe 'Answers API', type: :request do
         expect(response.body).to have_json_size(1)
       end
 
-      %w(id body created_at updated_at question_id user_id).each do |attr|
+      %w(id body created_at updated_at question_id).each do |attr|
         it "contains #{attr}" do
           post_answer_create_request
           expect(response.body).to be_json_eql(assigns(:answer).send(attr.to_sym).to_json).at_path("answer/#{attr}")

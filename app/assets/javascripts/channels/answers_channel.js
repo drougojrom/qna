@@ -11,7 +11,7 @@ ready = function() {
             }
         },
         received: function(data) {
-            var answer = JSON.parse(data)
+            var answer = data.answer
             console.log(data);
             var current_user_id = gon.current_user_id;
             if (current_user_id !== answer.user_id) {

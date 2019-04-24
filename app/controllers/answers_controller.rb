@@ -68,7 +68,7 @@ class AnswersController < ApplicationController
     return if answer.errors.any?
     ActionCable.server.broadcast(
       "question_#{@answer.question.id}", 
-      ApplicationController.render(json: answer)
+      answer: answer
     )
   end
 end
