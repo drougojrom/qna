@@ -6,7 +6,7 @@ ready = function() {
       this.perform('follow');
     },
     received: function(data) {
-      var question = JSON.parse(data['question'])
+      var question = data.question
       var current_user_id = gon.current_user_id;
       $('.questions').append(JST["templates/question"]({ data: question}));
       console.log(data)
