@@ -32,7 +32,7 @@ class Ability
     can :vote_against, [Question, Answer, Comment]
     can :vote_revoke, [Question, Answer, Comment]
     can :manage, ActiveStorage::Attachment
-    can :me, Profile
+    can :manage, :profile
     answers_abilities
     rewards_abilities
     links_abilities
