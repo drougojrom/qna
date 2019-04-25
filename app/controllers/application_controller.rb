@@ -2,8 +2,6 @@ class ApplicationController < ActionController::Base
 
   #include Pundit
 
-  protect_from_forgery with: :exception
-
   before_action :gon_user, unless: :devise_controller?
 
   respond_to :html, :js, :json

@@ -8,7 +8,9 @@ class User < ApplicationRecord
   has_many :rewards
   has_many :authorizations, dependent: :destroy
 
-  TEMP_EMAIL_REGEX = /\Achange@me/ 
+  scope :all_except, ->(user) { where.not(id: user) }
+
+  TEMP_EMAIL_REGEX = /\Achange@me/
 
   def self.find_for_oauth(auth)
     Services::FindForOauth.new(auth).call
@@ -19,7 +21,7 @@ class User < ApplicationRecord
   end
 
   def create_authorization(auth)
-    authorizations.create(provider: auth.provider, uid: auth.uid)      
+    authorizations.create(provider: auth.provider, uid: auth.uid)
   end
 
   def email_verified?

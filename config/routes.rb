@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  use_doorkeeper
   devise_for :users, controllers: { omniauth_callbacks: 'oauth_callbacks', confirmations: 'confirmations' }
   devise_scope :users do
-     get 'profile', to: 'users#profile'
+    get 'profile', to: 'users#profile'
   end
 
   match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
@@ -27,6 +28,18 @@ Rails.application.routes.draw do
 
   resources :attachments, only: [:destroy]
   resources :links, only: [:destroy, :update]
+
+  namespace :api do
+    namespace :v1 do
+      resources :profiles, only: [] do
+        get :me, on: :collection
+        get :all_users, on: :collection
+      end
+      resources :questions do
+        resources :answers
+      end
+    end
+  end
 
   root to: 'questions#index'
 

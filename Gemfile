@@ -30,6 +30,9 @@ gem 'omniauth-github'
 gem 'omniauth-twitter'
 gem 'cancancan'
 gem 'pundit'
+gem 'doorkeeper'
+gem 'active_model_serializers', '~> 0.10'
+gem 'oj'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -55,6 +58,7 @@ group :test do
   gem 'rails-controller-testing' # If you are using Rails 5.x
   gem 'launchy'
   gem 'database_cleaner'
+  gem 'json_spec'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

@@ -18,7 +18,7 @@
             p Links:
             ul
               - answer.links.each do |link|
-                => render link 
+                => render link
       td
         p Comments:
         ul.comments-list id="comments-answer-#{answer.id}"
@@ -29,8 +29,8 @@
       td
         .answer_rating id="answer_rating_#{answer.id}"
           p= "The answers rating is #{answer.rating}"
-        - if signed_in?  
-      td 
+        - if signed_in?
+      td
         .voting
           - if current_user
             = render 'shared/voting', locals: { type: :answer, vote_obj: answer}
