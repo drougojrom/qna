@@ -6,8 +6,7 @@ class AnswerSerializer < ActiveModel::Serializer
   belongs_to :user
 
   def attached_files
-    @files = Answer.with_attached_files.find(object.id).files.each do |file|
-      return { file.filename => rails_blob_path(file) }
-    end
+    answer = Answer.with_attached_files.find(object.id)
+    @files = answer.files.map { |file| [file.filename, rails_blob_path(file)] }.to_h
   end
 end

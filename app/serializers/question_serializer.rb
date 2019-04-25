@@ -13,8 +13,7 @@ class QuestionSerializer < ActiveModel::Serializer
   end
 
   def attached_files
-    @files = Question.with_attached_files.find(object.id).files.each do |file|
-      return { file.filename => rails_blob_path(file) }
-    end
+    question = Question.with_attached_files.find(object.id)
+    @files = question.files.map { |file| [file.filename, rails_blob_path(file)] }.to_h
   end
 end
