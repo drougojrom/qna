@@ -15,7 +15,15 @@ class Question < ApplicationRecord
 
   validates :title, :body, presence: true
 
+  after_save :calculate_reputation, on: :create
+
   def right_answer
     self.answers.correct_answers.first
+  end
+
+  private
+
+  def calculate_reputation
+    ReputationJob.perform_later(self)
   end
 end
