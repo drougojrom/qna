@@ -16,6 +16,12 @@ class Answer < ApplicationRecord
   default_scope { order("right_answer DESC").order("created_at DESC") }
   scope :correct_answers, -> { where(right_answer: true) }
 
+  def send_notification_to_subscribers
+    question.subscriptions.each do |subscription|
+      NotificationMailer.notification(question, subscription.user).deliver_later
+    end
+  end
+
   def make_right_answer(user, correct)
     correct ? make_correct(user) : make_not_correct(user)
   end
