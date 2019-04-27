@@ -22,7 +22,11 @@ class User < ApplicationRecord
   end
 
   def author_of?(obj)
-    self.id == obj.user_id
+    id == obj.user_id
+  end
+
+  def subscribed?(question_id)
+    subscriptions.find_by(question_id: question_id).nil?
   end
 
   def create_authorization(auth)

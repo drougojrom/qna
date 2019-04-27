@@ -27,7 +27,11 @@ class Question < ApplicationRecord
   end
 
   def add_subscription(user)
-    Subscription.create!(question_id: self.id, user_id: user.id)
+    Subscription.create!(question_id: id, user_id: user.id)
+  end
+
+  def remove_subscription(user)
+    user.subscriptions.find_by(question_id: id).destroy
   end
 
   private

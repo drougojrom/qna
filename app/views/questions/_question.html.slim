@@ -4,6 +4,11 @@
 .question data-id="#{question.id}"
   p= question.title
   p= question.body
+  - if current_user&.subscribed?(question.id)
+    = link_to 'Subscribe', subscribe_question_path(question), method: :patch, remote: true
+  - else
+    = link_to 'Unsubscribe', unsubscribe_question_path(question), method: :patch, remote: true
+
   - if question.files.attached?
     = render partial: 'attachments/list', object: question, as: :model
 

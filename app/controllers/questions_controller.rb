@@ -43,6 +43,14 @@ class QuestionsController < ApplicationController
     redirect_to questions_path, notice: 'Your question was deleted'
   end
 
+  def subscribe
+    question.add_subscription(question.user)
+  end
+
+  def unsubscribe
+    question.remove_subscription(question.user)
+  end
+
   private
 
   helper_method :question, :answer, :comment
@@ -77,9 +85,5 @@ class QuestionsController < ApplicationController
         'questions',
         question: question
     )
-  end
-
-  def subscribe
-    question.add_subscription(question.user)
   end
 end
