@@ -5,6 +5,7 @@ class QuestionsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :authored?, only: [:update, :destroy]
   after_action :publish_question, only: [:create]
+  after_action :subscribe, only: [:create]
 
   authorize_resource
 
@@ -44,6 +45,8 @@ class QuestionsController < ApplicationController
 
   private
 
+  helper_method :question, :answer, :comment
+
   def question
     @question ||= params[:id] ? Question.with_attached_files.find(params[:id]) : Question.new
   end
@@ -55,8 +58,6 @@ class QuestionsController < ApplicationController
   def comment
     @comment ||= Comment.new
   end
-
-  helper_method :question, :answer, :comment
 
   def question_params
     params.require(:question).permit(:title, :body,
@@ -76,5 +77,9 @@ class QuestionsController < ApplicationController
         'questions',
         question: question
     )
+  end
+
+  def subscribe
+    question.add_subscription(question.user)
   end
 end

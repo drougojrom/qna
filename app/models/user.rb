@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :answers
   has_many :rewards
   has_many :authorizations, dependent: :destroy
+  has_many :subscriptions, dependent: :destroy
 
   scope :all_except, ->(user) { where.not(id: user) }
 
@@ -14,6 +15,10 @@ class User < ApplicationRecord
 
   def self.find_for_oauth(auth)
     Services::FindForOauth.new(auth).call
+  end
+
+  def self.send_daily_digest
+    find_each.each { |user| DailyDigestMailer.digest(user, Question.new_question_titles).deliver_later }
   end
 
   def author_of?(obj)
