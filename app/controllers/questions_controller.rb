@@ -5,7 +5,6 @@ class QuestionsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :authored?, only: [:update, :destroy]
   after_action :publish_question, only: [:create]
-  after_action :subscribe, only: [:create]
 
   authorize_resource
 
@@ -28,6 +27,7 @@ class QuestionsController < ApplicationController
   def create
     @question = current_user.questions.new(question_params)
     if @question.save
+      subscribe
       redirect_to @question, notice: 'Your question successfully created'
     else
       render :new
