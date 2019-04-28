@@ -44,13 +44,11 @@ class QuestionsController < ApplicationController
   end
 
   def subscribe
-    question.add_subscription(question.user)
+    question.add_subscription(current_user)
   end
 
   def unsubscribe
-    if question.remove_subscription(question.user)
-      render :subscribe
-    end
+    render :subscribe if question.remove_subscription(current_user)
   end
 
   private

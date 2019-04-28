@@ -33,6 +33,8 @@ class Ability
     can :vote_revoke, [Question, Answer, Comment]
     can :manage, ActiveStorage::Attachment
     can :manage, User
+    can :subscribe, [Question]
+    can :unsubscribe, [Question]
     answers_abilities
     rewards_abilities
     links_abilities
