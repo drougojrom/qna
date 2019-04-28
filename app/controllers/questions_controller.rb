@@ -48,7 +48,9 @@ class QuestionsController < ApplicationController
   end
 
   def unsubscribe
-    question.remove_subscription(question.user)
+    if question.remove_subscription(question.user)
+      render :subscribe
+    end
   end
 
   private

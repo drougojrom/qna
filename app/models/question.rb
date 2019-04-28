@@ -23,7 +23,7 @@ class Question < ApplicationRecord
   end
 
   def right_answer
-    self.answers.correct_answers.first
+    answers.correct_answers.first
   end
 
   def add_subscription(user)
