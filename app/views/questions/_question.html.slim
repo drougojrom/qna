@@ -5,7 +5,8 @@
   p= question.title
   p= question.body
 
-  = render 'shared/subscription', resource: question
+  .subscription
+    = render 'shared/subscription', resource: question
 
   - if question.files.attached?
     = render partial: 'attachments/list', object: question, as: :model
