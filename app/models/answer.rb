@@ -19,9 +19,7 @@ class Answer < ApplicationRecord
   after_create :send_notification_to_subscribers
 
   def send_notification_to_subscribers
-    question.subscriptions.each do |subscription|
-      NotificationMailer.notification(question, subscription.user).deliver_later
-    end
+    NotifyAuthorJob.perform_later(question)
   end
 
   def make_right_answer(user, correct)

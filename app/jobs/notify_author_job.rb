@@ -1,7 +1,9 @@
 class NotifyAuthorJob < ApplicationJob
   queue_as :default
 
-  def perform(answer)
-    answer.send_notification_to_subscribers
+  def perform(question)
+    question.subscriptions.each do |subscription|
+      NotificationMailer.notification(question, subscription.user).deliver_later
+    end
   end
 end
