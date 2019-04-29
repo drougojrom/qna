@@ -23,10 +23,7 @@ Rails.application.routes.draw do
   end
 
   resources :questions, concerns: [:voting] do
-    member do
-      patch :subscribe
-      patch :unsubscribe
-    end
+    resources :subscriptions, only: %i[create destroy]
     resources :comments, only: [:create]
     resources :answers, concerns: [:voting], shallow: true do
       resources :comments, only: [:create]

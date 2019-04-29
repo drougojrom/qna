@@ -26,7 +26,11 @@ class User < ApplicationRecord
   end
 
   def subscribed?(question_id)
-    subscriptions.find_by(question_id: question_id).nil?
+    subscription(question_id).nil?
+  end
+
+  def current_subscription(question_id)
+    subscription(question_id)
   end
 
   def create_authorization(auth)
@@ -35,5 +39,11 @@ class User < ApplicationRecord
 
   def email_verified?
     self.email && self.email !~ TEMP_EMAIL_REGEX
+  end
+
+  private
+
+  def subscription(question_id)
+    subscriptions.find_by(question_id: question_id)
   end
 end

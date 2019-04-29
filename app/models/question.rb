@@ -17,21 +17,21 @@ class Question < ApplicationRecord
   validates :title, :body, presence: true
 
   after_save :calculate_reputation, on: :create
+  after_save :add_subscription, on: :create
 
-  def self.new_question_titles
-    Question.where(created_at: (Time.now - 24.hours)..Time.now)
-  end
+  scope :new_question_titles, -> { where(created_at: Time.now - 24.hours)..Time.now }
 
   def right_answer
     answers.correct_answers.first
   end
 
-  def add_subscription(user)
-    Subscription.create!(question_id: id, user_id: user.id)
+  def add_subscription(current_user = nil)
+    user_id ||= current_user ? current_user.id : user.id
+    subscriptions.create!(user_id: user_id)
   end
 
   def remove_subscription(user)
-    user.subscriptions.find_by(question_id: id).destroy
+    subscriptions.where(user: user).first.destroy
   end
 
   private

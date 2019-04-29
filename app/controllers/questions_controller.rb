@@ -27,7 +27,6 @@ class QuestionsController < ApplicationController
   def create
     @question = current_user.questions.new(question_params)
     if @question.save
-      subscribe
       redirect_to @question, notice: 'Your question successfully created'
     else
       render :new
@@ -41,14 +40,6 @@ class QuestionsController < ApplicationController
   def destroy
     question.destroy
     redirect_to questions_path, notice: 'Your question was deleted'
-  end
-
-  def subscribe
-    question.add_subscription(current_user)
-  end
-
-  def unsubscribe
-    render :subscribe if question.remove_subscription(current_user)
   end
 
   private

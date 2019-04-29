@@ -6,12 +6,10 @@ class AnswersController < ApplicationController
   before_action :authored?, only: %i[update destroy]
 
   after_action :publish_answer, only: [:create]
-  after_action :notify_subscribers, only: [:create]
 
   authorize_resource
 
-  def edit
-  end
+  def edit; end
 
   def update
     answer.update(answer_params)
@@ -20,7 +18,7 @@ class AnswersController < ApplicationController
   def create
     @answer = question.answers.new(answer_params)
     @answer.user = current_user
-    @answer.save 
+    @answer.save
   end
 
   def destroy
@@ -71,9 +69,5 @@ class AnswersController < ApplicationController
       "question_#{@answer.question.id}", 
       answer: answer
     )
-  end
-
-  def notify_subscribers
-    answer.send_notification_to_subscribers
   end
 end
