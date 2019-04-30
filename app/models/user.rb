@@ -17,10 +17,6 @@ class User < ApplicationRecord
     Services::FindForOauth.new(auth).call
   end
 
-  def self.send_daily_digest
-    find_each.each { |user| DailyDigestMailer.digest(user, Question.new_question_titles).deliver_later }
-  end
-
   def author_of?(obj)
     id == obj.user_id
   end

@@ -19,7 +19,7 @@ class Question < ApplicationRecord
   after_save :calculate_reputation, on: :create
   after_save :add_subscription, on: :create
 
-  scope :new_question_titles, -> { where(created_at: Time.now - 24.hours)..Time.now }
+  scope :new_question_titles, -> { where(created_at: 24.hours.ago..Time.now) }
 
   def right_answer
     answers.correct_answers.first
