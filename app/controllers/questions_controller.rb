@@ -72,6 +72,7 @@ class QuestionsController < ApplicationController
 
   def publish_question
     return if question.errors.any?
+
     ActionCable.server.broadcast(
         'questions',
         question: question
