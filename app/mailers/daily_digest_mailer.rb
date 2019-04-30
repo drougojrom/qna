@@ -1,8 +1,7 @@
 class DailyDigestMailer < ApplicationMailer
-  def digest(user, questions)
+  def digest(user)
     @greeting = "Hi"
-
-    @titles = questions.map { |question| question.title }
+    @titles = Question.new_question_titles.to_a.map { |question| question.title }
     mail to: user.email
   end
 end
