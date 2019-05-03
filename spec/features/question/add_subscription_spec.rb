@@ -6,22 +6,15 @@ feature 'User can subscribe to question', %q{
 } do
   given(:question) { create :question }
 
-  scenario 'User can unsubscribe from question', js: true do
+  scenario 'User can subscribe to question', js: true do
     sign_in(question.user)
     visit question_path(question)
-
-    within '.question' do
-      click_on 'Unsubscribe'
-    end
-
-    expect(page).to_not have_link 'Unsubscribe'
-    expect(page).to have_link 'Subscribe'
 
     within '.question' do
       click_on 'Subscribe'
     end
 
-    expect(page).to have_link 'Unsubscribe'
     expect(page).to_not have_link 'Subscribe'
+    expect(page).to have_link 'Unsubscribe'
   end
 end

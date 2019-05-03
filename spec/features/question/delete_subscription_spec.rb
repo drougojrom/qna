@@ -5,10 +5,15 @@ feature 'User can unsubscribe from question', %q{
   able to unsubscribe from the questions update on new answers
 } do
   given(:question) { create :question }
+  
+  scenario 'User can unsubscribe from question', js: true do
 
-  scenario 'User can subscribe to question', js: true do
     sign_in(question.user)
     visit question_path(question)
+
+    within '.question' do
+      click_on 'Subscribe'
+    end
 
     within '.question' do
       click_on 'Unsubscribe'
