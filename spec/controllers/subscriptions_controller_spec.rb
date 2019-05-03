@@ -25,46 +25,57 @@ RSpec.describe SubscriptionsController, type: :controller do
       before { log_in(new_user) }
 
       it 'allows to subscribe to question' do
-        expect { post :create, params: { id: question.id }, format: :js}.to change(Subscription, :count).by(1)
+        expect { post :create, params: { question_id: question.id }, format: :js}.to change(Subscription, :count).by(1)
       end
 
       it 'adds subscription to another user' do
-        expect { post :create, params: { question: attributes_for(:question) }, format: :js}.to change(new_user.subscriptions, :count).by(1)
+        expect { post :create, params: { question_id: question.id }, format: :js}.to change(new_user.subscriptions, :count).by(1)
       end
     end
   end
 
-  describe 'PATCH #unsubscribe' do
-    let!(:question) { create(:question) }
+  describe 'DELETE #destroy' do
+    let!(:user) { create :user }
+    let!(:subscription) { create :subscription, question: question, user: user }
 
     context 'user is the author of question' do
+
       before do
-        log_in(question.user)
-        patch :subscribe, params: { id: question.id }, format: :js
+        log_in(user)
       end
 
       it 'decreases the number of subscriptions' do
-        expect { patch :unsubscribe, params: { id: question.id }, format: :js}.to change(Subscription, :count).by(-1)
+        expect { delete :destroy, params: { id: subscription.id,
+                                            question_id: question.id },
+                        format: :js}.to change(Subscription, :count).by(-1)
       end
 
       it 'removes subscription from the author of question' do
-        expect { patch :unsubscribe, params: { id: question.id }, format: :js}.to change(question.user.subscriptions, :count).by(-1)
+        expect { delete :destroy, params: { id: subscription.id,
+                                            question_id: question.id },
+                        format: :js}.to change(user.subscriptions, :count).by(-1)
       end
     end
 
     context 'user is not the author of question' do
       let!(:new_user) { create(:user) }
+      let!(:user) { create :user }
+      let!(:subscription) { create :subscription, question: question, user: user }
       before do
         log_in(new_user)
-        patch :subscribe, params: { id: question.id }, format: :js
+        post :create, params: { question_id: question.id }, format: :js
       end
 
       it 'decreases the number of subscriptions' do
-        expect { patch :unsubscribe, params: { id: question.id }, format: :js}.to change(Subscription, :count).by(-1)
+        expect { delete :destroy, params: { id: subscription.id,
+                                            question_id: question.id },
+                        format: :js}.to change(Subscription, :count).by(-1)
       end
 
       it 'removes subscription from the new user' do
-        expect { patch :unsubscribe, params: { id: question.id }, format: :js}.to change(new_user.subscriptions, :count).by(-1)
+        expect { delete :destroy, params: { id: subscription.id,
+                                            question_id: question.id },
+                        format: :js}.to change(new_user.subscriptions, :count).by(-1)
       end
     end
   end
