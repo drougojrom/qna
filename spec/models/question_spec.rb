@@ -37,4 +37,17 @@ RSpec.describe Question, type: :model do
       question.save!
     end
   end
+
+  describe 'subscription' do
+    let(:question) { create :question, user: user }
+
+    it 'add subscription to the question' do
+      expect { question.add_subscription(user) }.to change(Subscription, :count).by 1
+    end
+
+    it 'removes an existing subscription' do
+      question.add_subscription(question.user)
+      expect { question.remove_subscription(user) }.to change(Subscription, :count).by -1
+    end
+  end
 end
