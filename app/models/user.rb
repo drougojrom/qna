@@ -22,7 +22,7 @@ class User < ApplicationRecord
   end
 
   def subscribed?(question_id)
-    subscription(question_id).nil?
+    !subscription(question_id).nil?
   end
 
   def current_subscription(question_id)

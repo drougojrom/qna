@@ -49,5 +49,10 @@ RSpec.describe Question, type: :model do
       question.add_subscription(question.user)
       expect { question.remove_subscription(user) }.to change(Subscription, :count).by -1
     end
+
+    it 'checks if user is subscribed' do
+      question.add_subscription(question.user)
+      expect(question.user.subscribed?(question.id)).to eq true
+    end
   end
 end
