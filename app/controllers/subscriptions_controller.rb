@@ -15,6 +15,6 @@ class SubscriptionsController < ApplicationController
   helper_method :question
 
   def question
-    @question = Question.find(params[:question_id]) if params[:question_id].present?
+    @question ||= Question.find(params[:question_id]) if params[:question_id].present?
   end
 end

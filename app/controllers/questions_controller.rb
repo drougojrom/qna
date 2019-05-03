@@ -21,12 +21,12 @@ class QuestionsController < ApplicationController
     question.reward = Reward.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @question = current_user.questions.new(question_params)
     if @question.save
+      @question.add_subscription(current_user)
       redirect_to @question, notice: 'Your question successfully created'
     else
       render :new
