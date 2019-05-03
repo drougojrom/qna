@@ -1,11 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe ReputationJob, type: :job do
-  let(:question) { build(:question) }
+  let(:question) { create(:question) }
 
   it 'calls ReputationJob' do
     expect(Services::Reputation).to receive(:calculate).with(question)
-    question.save!
     ReputationJob.perform_now(question)
   end
 end

@@ -5,8 +5,8 @@ RSpec.describe NotifyAuthorJob, type: :job do
   let!(:answer) { create :answer, question: question }
 
   it 'sends notification' do
+    NotifyAuthorJob.perform_now(answer.question)
     expect(answer).to receive(:send_notification_to_subscribers)
     answer.send_notification_to_subscribers
-    NotifyAuthorJob.perform_now(answer.question)
   end
 end
