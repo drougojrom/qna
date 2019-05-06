@@ -4,6 +4,11 @@
 .question data-id="#{question.id}"
   p= question.title
   p= question.body
+
+  .subscription
+    - if current_user
+      = render 'shared/subscription', resource: question
+
   - if question.files.attached?
     = render partial: 'attachments/list', object: question, as: :model
 

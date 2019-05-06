@@ -10,7 +10,7 @@ feature 'User can edit links for his question', %q{
 
   scenario 'Unauthenticated user can not edit a link to a question' do
     visit question_path(question_with_link)
-    within '.links' do 
+    within '.links' do
       expect(page).to_not have_link 'Edit link'
     end
   end

@@ -118,7 +118,7 @@ RSpec.describe QuestionsController, type: :controller do
 
       context 'user is not the author of the question' do
         let!(:new_user) { create(:user) }
-        before { log_in(new_user) } 
+        before { log_in(new_user) }
 
         it 'does not change answers attributes' do
           patch :update, params: { id: question, question: { body: "New Body" }}
@@ -133,10 +133,10 @@ RSpec.describe QuestionsController, type: :controller do
       let!(:question) { create(:question) }
 
       context 'user is the author of question' do
-        before { log_in(question.user) }    
+        before { log_in(question.user) }
 
         it 'deletes the question' do
-          expect { delete :destroy, params: { id: question } }.to change(Question, :count).by(-1) 
+          expect { delete :destroy, params: { id: question } }.to change(Question, :count).by(-1)
         end
 
         it 'redirects to index' do
@@ -150,7 +150,7 @@ RSpec.describe QuestionsController, type: :controller do
         before { log_in(new_user) }
 
         it 'does not delete the question' do
-          expect { delete :destroy, params: { id: question } }.not_to change(Question, :count)    
+          expect { delete :destroy, params: { id: question } }.not_to change(Question, :count)
           expect(response).to redirect_to question
         end
       end

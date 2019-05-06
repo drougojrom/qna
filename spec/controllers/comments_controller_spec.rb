@@ -9,7 +9,8 @@ RSpec.describe CommentsController, type: :controller do
     context 'with valid attributes' do
       it 'saves a new comment into db' do
         expect { post :create, params: { question_id: question.id,
-                                         comment: attributes_for(:comment) }, format: :js }.to change(question.comments, :count).by 1
+                                         comment: attributes_for(:comment) },
+                      format: :js }.to change(question.comments, :count).by 1
       end
 
       it 'adds the comment to the question' do

@@ -28,4 +28,31 @@ RSpec.describe Question, type: :model do
   it 'has many attached files' do
     expect(Question.new.files).to be_an_instance_of(ActiveStorage::Attached::Many)
   end
+
+  describe 'reputation' do
+    let(:question) { build(:question) }
+
+    it 'calls ReputationJob' do
+      expect(ReputationJob).to receive(:perform_later).with(question)
+      question.save!
+    end
+  end
+
+  describe 'subscription' do
+    let(:question) { create :question, user: user }
+
+    it 'add subscription to the question' do
+      expect { question.add_subscription(user) }.to change(Subscription, :count).by 1
+    end
+
+    it 'removes an existing subscription' do
+      question.add_subscription(question.user)
+      expect { question.remove_subscription(user) }.to change(Subscription, :count).by -1
+    end
+
+    it 'checks if user is subscribed' do
+      question.add_subscription(question.user)
+      expect(question.user.subscribed?(question.id)).to eq true
+    end
+  end
 end

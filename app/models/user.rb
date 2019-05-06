@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :answers
   has_many :rewards
   has_many :authorizations, dependent: :destroy
+  has_many :subscriptions, dependent: :destroy
 
   scope :all_except, ->(user) { where.not(id: user) }
 
@@ -17,7 +18,15 @@ class User < ApplicationRecord
   end
 
   def author_of?(obj)
-    self.id == obj.user_id
+    id == obj.user_id
+  end
+
+  def subscribed?(question_id)
+    !subscription(question_id).nil?
+  end
+
+  def current_subscription(question_id)
+    subscription(question_id)
   end
 
   def create_authorization(auth)
@@ -26,5 +35,11 @@ class User < ApplicationRecord
 
   def email_verified?
     self.email && self.email !~ TEMP_EMAIL_REGEX
+  end
+
+  private
+
+  def subscription(question_id)
+    subscriptions.find_by(question_id: question_id)
   end
 end

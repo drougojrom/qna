@@ -21,12 +21,12 @@ class QuestionsController < ApplicationController
     question.reward = Reward.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @question = current_user.questions.new(question_params)
     if @question.save
+      @question.add_subscription(current_user)
       redirect_to @question, notice: 'Your question successfully created'
     else
       render :new
@@ -44,6 +44,8 @@ class QuestionsController < ApplicationController
 
   private
 
+  helper_method :question, :answer, :comment
+
   def question
     @question ||= params[:id] ? Question.with_attached_files.find(params[:id]) : Question.new
   end
@@ -55,8 +57,6 @@ class QuestionsController < ApplicationController
   def comment
     @comment ||= Comment.new
   end
-
-  helper_method :question, :answer, :comment
 
   def question_params
     params.require(:question).permit(:title, :body,
@@ -72,6 +72,7 @@ class QuestionsController < ApplicationController
 
   def publish_question
     return if question.errors.any?
+
     ActionCable.server.broadcast(
         'questions',
         question: question

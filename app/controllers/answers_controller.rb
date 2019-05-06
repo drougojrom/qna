@@ -9,8 +9,7 @@ class AnswersController < ApplicationController
 
   authorize_resource
 
-  def edit
-  end
+  def edit; end
 
   def update
     answer.update(answer_params)
@@ -19,7 +18,7 @@ class AnswersController < ApplicationController
   def create
     @answer = question.answers.new(answer_params)
     @answer.user = current_user
-    @answer.save 
+    @answer.save
   end
 
   def destroy
