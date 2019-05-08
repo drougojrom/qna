@@ -9,6 +9,10 @@ development:
   <<: *default
   database: tn_qna_development
 
+production:
+  <<: *default
+  database: tn_qna_production
+
 test:
   <<: *default
   database: tn_qna_test
