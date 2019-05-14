@@ -40,6 +40,7 @@ gem 'mysql2'
 gem 'thinking-sphinx'
 gem 'mini_racer'
 gem 'capistrano-sidekiq', require: false
+gem 'unicorn'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -60,6 +61,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'letter_opener'
+  gem 'capistrano3-unicorn'
 end
 
 group :test do
