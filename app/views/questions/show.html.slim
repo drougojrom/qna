@@ -1,22 +1,23 @@
-= render question
+- cache question do
+  = render question
 
-.links
-  p Links:
-  ul.question_links
-    - question.links.each do |link|
+  .links
+    p Links:
+    ul.question_links
+      - question.links.each do |link|
         => render link
-  p Comments:
-  ul.comments-list id="comments-question-#{question.id}"
-    - question.comments.each do |comment|
-      => render comment
-  p
-    = render 'shared/commenting', locals: { comment_obj: question }
+    p Comments:
+    ul.comments-list id="comments-question-#{question.id}"
+      - question.comments.each do |comment|
+        => render comment
+    p
+      = render 'shared/commenting', locals: { comment_obj: question }
 
-.answers
-  = render question.answers
+  .answers
+    = render question.answers
 
-.answer-errors
-  = render 'shared/errors', resource: answer
+  .answer-errors
+    = render 'shared/errors', resource: answer
 
 .new-answer
   = form_for [question, answer], remote: true, class: 'new-answer', data: { type: :json } do |f|

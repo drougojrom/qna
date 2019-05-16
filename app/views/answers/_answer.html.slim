@@ -1,50 +1,51 @@
-- unless answer.new_record?
-  .answer.container id="answer-#{answer.id}" 
-    table.table
-    tr
-      td
-        - if current_user&.author_of?(answer.question)
-          - if answer.right_answer && current_user&.author_of?(answer)
-            =link_to 'Not right answer', not_right_answer_answer_path(answer), method: :patch, remote: true
-          - else
-            =link_to 'Right answer', right_answer_answer_path(answer), method: :patch, remote: true
-      td
-        - if answer.files.attached?
-          = render partial: 'attachments/list', object: answer, as: :model
-      td
-        p= answer.body
-        .links
-          - if !answer.links.empty?
-            p Links:
-            ul
-              - answer.links.each do |link|
-                => render link
-      td
-        p Comments:
-        ul.comments-list id="comments-answer-#{answer.id}"
-          - answer.comments.each do |comment|
-            => render comment
-        p
-          = render 'shared/commenting', locals: { comment_obj: answer }
-      td
-        .answer_rating id="answer_rating_#{answer.id}"
-          p= "The answers rating is #{answer.rating}"
-        - if signed_in?
-      td
-        .voting
-          - if current_user
-            = render 'shared/voting', locals: { type: :answer, vote_obj: answer}
-      td
-        - if current_user&.author_of?(answer)
+- cache answer do
+  - unless answer.new_record?
+    .answer.container id="answer-#{answer.id}"
+      table.table
+      tr
+        td
+          - if current_user&.author_of?(answer.question)
+            - if answer.right_answer && current_user&.author_of?(answer)
+              =link_to 'Not right answer', not_right_answer_answer_path(answer), method: :patch, remote: true
+            - else
+              =link_to 'Right answer', right_answer_answer_path(answer), method: :patch, remote: true
+        td
+          - if answer.files.attached?
+            = render partial: 'attachments/list', object: answer, as: :model
+        td
+          p= answer.body
+          .links
+            - if !answer.links.empty?
+              p Links:
+              ul
+                - answer.links.each do |link|
+                  => render link
+        td
+          p Comments:
+          ul.comments-list id="comments-answer-#{answer.id}"
+            - answer.comments.each do |comment|
+              => render comment
           p
-            => link_to 'Delete', answer, method: :delete, data: {confirm: "Are you sure?"}, remote: true, class: 'delete-answer'
-          p.edit-answer
-            => link_to 'Edit', '#', class: 'edit-answer-link', data: { answer_id: answer.id }
-            = form_with model: answer, class: 'hidden', html: { id: "edit-answer-#{answer.id}" } do |f|
-              =f.label :body, 'Your answer'
-              =f.text_area :body
-              =f.label :files
-              =f.file_field :files, multiple: true, direct_upload: true
-              .add_links
-                = link_to_add_association 'add another link', f, :links
-              =f.submit 'Update'
+            = render 'shared/commenting', locals: { comment_obj: answer }
+        td
+          .answer_rating id="answer_rating_#{answer.id}"
+            p= "The answers rating is #{answer.rating}"
+          - if signed_in?
+        td
+          .voting
+            - if current_user
+              = render 'shared/voting', locals: { type: :answer, vote_obj: answer}
+        td
+          - if current_user&.author_of?(answer)
+            p
+              => link_to 'Delete', answer, method: :delete, data: {confirm: "Are you sure?"}, remote: true, class: 'delete-answer'
+            p.edit-answer
+              => link_to 'Edit', '#', class: 'edit-answer-link', data: { answer_id: answer.id }
+              = form_with model: answer, class: 'hidden', html: { id: "edit-answer-#{answer.id}" } do |f|
+                =f.label :body, 'Your answer'
+                =f.text_area :body
+                =f.label :files
+                =f.file_field :files, multiple: true, direct_upload: true
+                .add_links
+                  = link_to_add_association 'add another link', f, :links
+                =f.submit 'Update'
